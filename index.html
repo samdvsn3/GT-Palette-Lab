@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#101218">
-<title>GT Palette Lab v6 — Growtopia Color Finder</title>
+<title>GT Palette Lab v7 — Growtopia Color Finder</title>
 <style>
 :root{color-scheme:dark;--bg:#0d0f14;--panel:#151922;--panel2:#1b202b;--line:#2b3341;--muted:#929cad;--text:#f3f5f8;--accent:#b7f36b;--accent2:#82c83b;--danger:#ff7777;--shadow:0 16px 45px rgba(0,0,0,.28)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(900px 520px at 8% -10%,rgba(183,243,107,.12),transparent 60%),radial-gradient(700px 400px at 100% 0%,rgba(93,145,255,.09),transparent 55%),var(--bg);color:var(--text);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}button,input,select{font:inherit}button{cursor:pointer}.shell{max-width:1440px;margin:auto;padding:28px 28px 50px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:34px}.brand{display:flex;gap:12px;align-items:center}.brand-mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#d8ff9b,#74b83b);display:grid;place-items:center;box-shadow:0 7px 24px rgba(139,214,76,.2);color:#18210e;font-weight:1000;font-size:18px;letter-spacing:-2px}.brand-name{font-size:16px;font-weight:850;letter-spacing:.2px}.brand-sub{font-size:11px;color:var(--muted);letter-spacing:1.8px;text-transform:uppercase}.top-tag{border:1px solid #3c4b2a;background:rgba(183,243,107,.08);color:#cbf79e;border-radius:99px;padding:7px 12px;font-size:11px;font-weight:700;letter-spacing:.5px}.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:end;margin-bottom:24px}.eyebrow{font-size:11px;letter-spacing:2.3px;color:var(--accent);font-weight:800;text-transform:uppercase;margin-bottom:10px}.hero h1{margin:0;font-size:clamp(34px,5vw,58px);line-height:1.02;letter-spacing:-2.7px;max-width:760px}.hero h1 span{color:var(--accent)}.hero p{color:#aab2c0;max-width:640px;font-size:15px;margin:16px 0 0}.hero-note{background:linear-gradient(145deg,rgba(183,243,107,.09),rgba(183,243,107,.025));border:1px solid #35402b;border-radius:18px;padding:17px 18px;color:#c9d3c1;font-size:12px}.hero-note strong{color:#e4f6ce;display:block;font-size:13px;margin-bottom:4px}.search-panel{background:rgba(21,25,34,.94);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow);margin-bottom:18px}.search-row{display:grid;grid-template-columns:minmax(220px,1.1fr) minmax(180px,.8fr) auto;gap:12px;align-items:end}.field label{font-size:11px;color:#a3adbd;font-weight:750;display:block;margin:0 0 8px 2px;letter-spacing:.7px;text-transform:uppercase}.input-wrap{height:52px;display:flex;align-items:center;gap:10px;padding:0 14px;background:#0f131a;border:1px solid #333c4b;border-radius:13px;transition:.2s}.input-wrap:focus-within{border-color:#91cd54;box-shadow:0 0 0 3px rgba(183,243,107,.1)}.input-wrap input{background:transparent;color:#fff;border:0;outline:0;width:100%;min-width:0;font-size:15px}.input-wrap input::placeholder{color:#677183}.search-icon{color:var(--accent);font-size:18px}.color-picker{width:35px;height:35px;flex:0 0 auto;border:0;background:transparent;padding:0;cursor:pointer}.color-picker::-webkit-color-swatch-wrapper{padding:0}.color-picker::-webkit-color-swatch{border:2px solid #ffffff33;border-radius:9px}.go-btn{height:52px;padding:0 23px;border:0;border-radius:13px;background:var(--accent);color:#19220f;font-weight:900;letter-spacing:.2px;box-shadow:0 8px 20px rgba(183,243,107,.16);transition:.18s}.go-btn:hover{background:#cbff8d;transform:translateY(-1px)}.helper-row{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:13px;flex-wrap:wrap}.examples{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.examples span{font-size:11px;color:#7f8999}.example{border:1px solid #303847;background:#1a202a;color:#bdc6d3;border-radius:99px;padding:5px 10px;font-size:11px}.example:hover{border-color:#a0d96a;color:#e9f6dc}.tolerance{display:flex;align-items:center;gap:9px;color:#a0aabd;font-size:11px;flex-wrap:wrap}.tolerance input{accent-color:var(--accent);width:100px}.tolerance strong{color:#e2edda;min-width:38px}.coverage-control{display:flex;align-items:center;gap:9px;color:#a0aabd;font-size:11px;flex-wrap:wrap}.coverage-control input{accent-color:var(--accent);width:110px}.coverage-control strong{color:#e2edda;min-width:38px}.helper-row{align-items:flex-start}.filter-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:18px 0 16px}.filter-label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#768294;margin-right:5px;font-weight:800}.filter-btn{padding:8px 13px;border-radius:99px;border:1px solid #303847;background:#151a23;color:#aab4c3;font-size:12px;font-weight:650}.filter-btn:hover{color:white;border-color:#67768b}.filter-btn.active{background:rgba(183,243,107,.13);border-color:#719c45;color:#d7f7b0}.filter-help{font-size:11px;color:#7f8999;margin:-6px 2px 13px}.filter-actions{display:flex;gap:7px;margin-left:auto}.filter-mini{border:1px solid #303847;background:#151a23;color:#9eabbc;padding:6px 10px;border-radius:9px;font-size:10px}.filter-mini:hover{border-color:#789d51;color:#e4f4d4}.category-tag{max-width:100%}.item-meta{align-items:center}.item-meta-left{display:flex;align-items:center;gap:5px;min-width:0;flex-wrap:wrap}.category-tag.block{color:#d5f4b4;background:#27351f}.category-tag.wallpaper{color:#c8d8ff;background:#202c47}.category-tag.clothes{color:#ffd4e7;background:#45263a}.category-tag.seed{color:#e2d1a8;background:#403821}.status-row{display:flex;justify-content:space-between;gap:14px;align-items:center;margin:18px 2px 12px;flex-wrap:wrap}.result-count{font-size:13px;color:#dce2eb;font-weight:750}.result-count span{color:var(--accent)}.status-message{font-size:11px;color:#8792a3}.progress-wrap{display:none;height:5px;border-radius:99px;background:#252c38;overflow:hidden;margin:10px 0 17px}.progress-bar{width:0;height:100%;background:linear-gradient(90deg,#79b93b,#c5fa83);transition:width .18s}.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:13px}.item-card{min-width:0;position:relative;overflow:hidden;background:linear-gradient(155deg,#1a202b,#141922);border:1px solid #2b3341;border-radius:17px;padding:13px;transition:transform .16s,border-color .16s,box-shadow .16s;cursor:pointer}.item-card:hover{transform:translateY(-3px);border-color:#627b48;box-shadow:0 13px 26px rgba(0,0,0,.22)}.item-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.thumb-wrap{height:112px;border-radius:12px;background:radial-gradient(ellipse at 50% 55%,#283140,#141922 72%);display:grid;place-items:center;margin-bottom:11px;position:relative;overflow:hidden}.sprite{width:64px;height:64px;image-rendering:pixelated;image-rendering:crisp-edges;filter:drop-shadow(0 5px 7px rgba(0,0,0,.4));background-repeat:no-repeat}.match-badge{position:absolute;top:8px;right:8px;background:#111821db;border:1px solid #414c5d;color:#d6e7c5;border-radius:8px;padding:4px 6px;font-size:10px;font-weight:800}.item-name{font-size:13px;font-weight:800;line-height:1.3;min-height:34px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:#f1f3f7}.item-meta{display:flex;justify-content:space-between;align-items:center;gap:6px;margin-top:9px}.category-tag{display:inline-block;background:#252d3a;color:#aeb9c8;padding:4px 7px;border-radius:7px;font-size:9px;font-weight:750;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}.item-id{font-size:10px;color:#788596;font-variant-numeric:tabular-nums}.empty{grid-column:1/-1;border:1px dashed #3a4658;border-radius:18px;padding:44px 20px;text-align:center;color:#98a4b4;background:#141923}.empty strong{color:#ecf3e4;display:block;font-size:16px;margin-bottom:5px}.empty .empty-icon{font-size:30px;margin-bottom:10px}.more-row{text-align:center;margin:24px 0 0}.more-btn{border:1px solid #46543a;background:#1c2618;color:#d5f4b4;padding:11px 20px;border-radius:12px;font-weight:800}.more-btn:hover{background:#26351d}.footer{margin-top:42px;padding-top:20px;border-top:1px solid #252c37;color:#798494;font-size:11px;line-height:1.7;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer a{color:#b9d89b;text-decoration:none}.footer a:hover{text-decoration:underline}.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(3,5,8,.78);backdrop-filter:blur(8px);z-index:20}.modal.open{display:flex}.modal-card{width:min(520px,100%);background:#181e29;border:1px solid #414d60;border-radius:22px;padding:22px;box-shadow:0 24px 80px #000a;position:relative}.modal-close{position:absolute;right:14px;top:14px;border:1px solid #3c4657;background:#222a37;color:#d5dce6;width:34px;height:34px;border-radius:10px;font-size:18px}.modal-preview{height:190px;display:grid;place-items:center;background:radial-gradient(ellipse,#30394a,#141923 68%);border-radius:15px;margin-bottom:17px}.modal-preview .sprite{width:128px;height:128px;filter:drop-shadow(0 10px 14px #0009)}.modal-title{font-size:21px;font-weight:900;margin:0 40px 5px 0}.modal-sub{color:#9aa6b6;font-size:12px}.modal-details{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:17px 0}.detail{background:#111720;border:1px solid #2d3746;border-radius:11px;padding:10px}.detail span{display:block;font-size:10px;color:#8491a2;text-transform:uppercase;letter-spacing:.7px}.detail strong{display:block;font-size:13px;margin-top:3px}.wiki-link{display:inline-flex;text-decoration:none;color:#19210f;font-weight:850;font-size:12px;background:var(--accent);border-radius:10px;padding:10px 13px}.note{color:#7f8a9b;font-size:10px;margin-top:13px}.load-error{display:none;background:#2a1a1d;border:1px solid #6d363b;color:#ffc6c6;border-radius:13px;padding:14px;margin:12px 0;font-size:12px}.small-spinner{display:inline-block;width:12px;height:12px;border:2px solid #556247;border-top-color:#d7ffa5;border-radius:50%;animation:spin .75s linear infinite;vertical-align:-2px;margin-right:6px}@keyframes spin{to{transform:rotate(360deg)}}
@@ -24,7 +24,7 @@
       <h1>Find the right item.<br><span>Match your palette.</span></h1>
       <p>Search Growtopia items by the colors in their actual sprites. Find the reds, dusty pinks, deep maroons, warm oranges and every shade in between.</p>
     </div>
-    <aside class="hero-note"><strong>Dominant-color coverage</strong>Results are ranked and filtered by the actual percentage of visible sprite pixels matching your color. A tiny gray edge on a white item will not count as a gray match.</aside>
+    <aside class="hero-note"><strong>Adjustable color similarity</strong>Set strictness to 100% for a close match, or lower it to include nearby shades and hues. Minimum color area is a separate control, so tiny accents still do not qualify.</aside>
   </section>
 
   <section class="search-panel">
@@ -41,7 +41,7 @@
     </div>
     <div class="helper-row">
       <div class="examples"><span>TRY:</span><button class="example" data-color="red">Red</button><button class="example" data-color="blue">Blue</button><button class="example" data-color="pink">Pink</button><button class="example" data-color="brown">Brown</button><button class="example" data-color="purple">Purple</button><button class="example" data-color="gold">Gold</button></div>
-      <div class="tolerance"><label for="tolerance">Hue range</label><input id="tolerance" type="range" min="10" max="40" step="2" value="18"><strong id="toleranceValue">18°</strong><span>smaller = stricter hue window</span></div>
+      <div class="tolerance"><label for="strictness">Color matching strictness</label><input id="strictness" type="range" min="0" max="100" step="5" value="75"><strong id="strictnessValue">75%</strong><span>0% = broad match · 100% = strict match</span></div>
       <div class="coverage-control"><label for="minCoverage">Minimum color area</label><input id="minCoverage" type="range" min="20" max="100" step="5" value="50"><strong id="minCoverageValue">50%</strong><span>minimum percentage of the whole visible sprite</span></div>
     </div>
     <div id="loadError" class="load-error"></div>
@@ -72,7 +72,7 @@
 
   <footer class="footer">
     <div>Unofficial fan-made tool. Growtopia names and game art belong to Ubisoft / Robinson Technologies.<br>Item metadata & sprite coordinates: <a href="https://github.com/araeys/growtopia-explorer" target="_blank" rel="noopener">Growtopia Explorer — Raey (@araeys)</a>.</div>
-    <div>GT Palette Lab v6 · Asset index: community extraction of <b>items.dat v26</b> (not a guaranteed live 2026 snapshot) · Images are inventory sprites, not full equipped character renders.<br><a href="https://growpedia.cc/wiki" target="_blank" rel="noopener">Growpedia item reference</a> · <a href="https://growtopia-explorer.vercel.app" target="_blank" rel="noopener">Growtopia Explorer</a></div>
+    <div>GT Palette Lab v7 · Asset index: community extraction of <b>items.dat v26</b> (not a guaranteed live 2026 snapshot) · Images are inventory sprites, not full equipped character renders.<br><a href="https://growpedia.cc/wiki" target="_blank" rel="noopener">Growpedia item reference</a> · <a href="https://growtopia-explorer.vercel.app" target="_blank" rel="noopener">Growtopia Explorer</a></div>
   </footer>
 </div>
 
@@ -81,7 +81,7 @@
     <button id="modalClose" class="modal-close" aria-label="Close">×</button>
     <div class="modal-preview"><div id="modalSprite" class="sprite"></div></div>
     <h2 id="modalTitle" class="modal-title"></h2><div id="modalSub" class="modal-sub"></div>
-    <div class="modal-details"><div class="detail"><span>Item ID</span><strong id="modalId">—</strong></div><div class="detail"><span>Category</span><strong id="modalCategory">—</strong></div><div class="detail"><span>Texture</span><strong id="modalTexture">—</strong></div><div class="detail"><span>Dominant color coverage</span><strong id="modalMatch">—</strong></div></div>
+    <div class="modal-details"><div class="detail"><span>Item ID</span><strong id="modalId">—</strong></div><div class="detail"><span>Category</span><strong id="modalCategory">—</strong></div><div class="detail"><span>Texture</span><strong id="modalTexture">—</strong></div><div class="detail"><span>Color area match</span><strong id="modalMatch">—</strong></div></div>
     <a id="wikiLink" class="wiki-link" href="#" target="_blank" rel="noopener">OPEN ITEM REFERENCE ↗</a>
     <div class="note">Sprite shown at 4× native size with pixel edges preserved. Some animated or multi-part items may look different in-game.</div>
   </div>
@@ -136,7 +136,9 @@
     r/=255;g/=255;b/=255;const max=Math.max(r,g,b),min=Math.min(r,g,b),d=max-min;
     let h=0,s=0,l=(max+min)/2;
     if(d!==0){s=d/(1-Math.abs(2*l-1));switch(max){case r:h=((g-b)/d)%6;break;case g:h=(b-r)/d+2;break;default:h=(r-g)/d+4;}h*=60;if(h<0)h+=360;}
-    return {h,s,l};
+    const v=max;
+    const sv=max===0?0:d/max;
+    return {h,s,l,sv,v};
   }
   function parseColor(raw){
     const query=(raw||'').trim().toLowerCase(); if(!query) return null;
@@ -268,26 +270,35 @@
     ctx.clearRect(0,0,TILE_SIZE,TILE_SIZE);
     ctx.drawImage(img,sx*TILE_SIZE,sy*TILE_SIZE,TILE_SIZE,TILE_SIZE,0,0,TILE_SIZE,TILE_SIZE);
     const data=ctx.getImageData(0,0,TILE_SIZE,TILE_SIZE).data;
-    const HUE_BINS=72,LIGHT_BINS=16,CELLS=HUE_BINS*LIGHT_BINS;
+    const HUE_BINS=72,LIGHT_BINS=16,SAT_BINS=16,CELLS=HUE_BINS*LIGHT_BINS;
     const hueLightnessCount=new Uint16Array(CELLS);
     const satSum=new Float32Array(CELLS);
     const hueLightnessAvgSat=new Uint8Array(CELLS);
-    const neutral=new Uint16Array(32);
+    // Neutral/light shades are stored in a lightness × low-saturation histogram.
+    // This lets white searches include light gray/off-white when strictness is lowered.
+    const neutral=new Uint16Array(32*SAT_BINS);
     let total=0,chromaticTotal=0,neutralTotal=0;
     for(let i=0;i<data.length;i+=4){
       const alpha=data[i+3]/255;
       if(alpha<0.5)continue;
-      const {h,s,l}=rgbToHsl(data[i],data[i+1],data[i+2]);
+      const {h,l,sv}=rgbToHsl(data[i],data[i+1],data[i+2]);
       total++;
-      if(s<0.18){
-        const bin=Math.max(0,Math.min(31,Math.floor(l*32)));
-        neutral[bin]++;neutralTotal++;
-      }else{
+
+      if(sv<0.42){
+        const lightBin=Math.max(0,Math.min(31,Math.floor(l*32)));
+        const satBin=Math.max(0,Math.min(SAT_BINS-1,Math.floor(sv/0.42*SAT_BINS)));
+        neutral[lightBin*SAT_BINS+satBin]++;
+        neutralTotal++;
+      }
+
+      // Keep lightly tinted pixels in the hue profile too, but don't assign
+      // arbitrary hue to truly achromatic pixels.
+      if(sv>=0.04){
         const hueBin=Math.max(0,Math.min(HUE_BINS-1,Math.floor(h/5)));
         const lightBin=Math.max(0,Math.min(LIGHT_BINS-1,Math.floor(l*LIGHT_BINS)));
         const index=hueBin*LIGHT_BINS+lightBin;
         hueLightnessCount[index]++;
-        satSum[index]+=s;
+        satSum[index]+=sv;
         chromaticTotal++;
       }
     }
@@ -298,103 +309,93 @@
     return {hueLightnessCount,hueLightnessAvgSat,neutral,total,chromaticTotal,neutralTotal};
   }
 
-  function neutralLightnessRange(target){
-    const key=String(target.key||'').toLowerCase();
-    let range;
-    if(key==='white') range=[0.80,1.00];
-    else if(key==='black') range=[0.00,0.20];
-    else if(key==='charcoal') range=[0.10,0.43];
-    else if(key==='silver') range=[0.58,0.91];
-    else if(key==='gray'||key==='grey') range=[0.22,0.80];
-    else range=[Math.max(0,target.l-0.11),Math.min(1,target.l+0.11)];
-
-    if(/dark|deep|tua|gelap/.test(target.modifier||'')){
-      range=[Math.max(0,range[0]-0.12),Math.min(range[1],0.53)];
-    }
-    if(/light|pale|pastel|muda|terang/.test(target.modifier||'')){
-      range=[Math.max(range[0],0.48),Math.min(1,range[1]+0.08)];
-    }
-    return range;
-  }
-
-  async function analyzeDatabase(){
-    if(analysisPromise)return analysisPromise;
-    analysisPromise=(async()=>{
-      const groups=new Map();
-      for(const item of items){if(!item.texture||!Number.isFinite(Number(item.tx))||!Number.isFinite(Number(item.ty)))continue;const key=item.texture;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(item);}
-      const groupList=[...groups.entries()];let processed=0,failed=0;const total=items.length;
-      $('progressWrap').style.display='block';$('progressBar').style.width='0%';
-      statusEl.innerHTML='<span class="small-spinner"></span>Reading sprite pixels…';
-      const canvas=document.createElement('canvas');canvas.width=TILE_SIZE;canvas.height=TILE_SIZE;const ctx=canvas.getContext('2d',{willReadFrequently:true});
-      let cursor=0;
-      async function worker(){
-        while(true){const index=cursor++;if(index>=groupList.length)break;const [texture,list]=groupList[index];
-          try{const img=await loadImage(TILE_URL+encodeURIComponent(texture));
-            for(const item of list){try{const p=profileSprite(ctx,img,item);if(p)profiles.set(item.id,p);}catch(_){failed++;}}
-          }catch(_){failed+=list.length;}
-          processed+=list.length;
-          const pct=Math.min(100,Math.round(processed/Math.max(1,total)*100));$('progressBar').style.width=pct+'%';
-          statusEl.textContent=`Analyzing sprites · ${processed.toLocaleString()} / ${total.toLocaleString()} items`;
-        }
-      }
-      await Promise.all(Array.from({length:Math.min(4,groupList.length)},()=>worker()));
-      $('progressBar').style.width='100%';
-      statusEl.textContent=`Color index ready · ${profiles.size.toLocaleString()} sprites sampled${failed?` · ${failed.toLocaleString()} unavailable`:''}`;
-      return profiles.size;
-    })();
-    return analysisPromise;
-  }
-  function hueDistance(a,b){const d=Math.abs(a-b)%360;return Math.min(d,360-d);}
   function chromaticLightnessRange(target){
     const modifier=String(target.modifier||'').toLowerCase();
     const key=String(target.key||'').toLowerCase();
-    // Shade words now alter the measured pixel lightness instead of being ignored.
     if(/deep|very dark|sangat tua/.test(modifier)) return [0.04,0.32];
     if(/dark|tua|gelap/.test(modifier)) return [0.07,0.43];
     if(/light|pale|pastel|muda|terang/.test(modifier)) return [0.48,0.94];
     if(key==='brown'||key==='maroon'||key==='burgundy') return [0.07,0.53];
     if(key==='tan'||key==='khaki') return [0.30,0.78];
     if(key==='cream'||key==='beige') return [0.62,0.98];
-    return [0.06,0.94];
+    return [0.02,0.98];
   }
-  function scoreProfile(p,target,tolerance){
+  function scoreProfile(p,target,strictness){
     if(!p||!p.total)return {coverage:0};
-    let matchedArea=0;
+    const strict=Math.max(0,Math.min(100,Number(strictness)||0))/100;
     const key=String(target.key||'').toLowerCase();
     const neutralNames=['white','black','gray','grey','silver','charcoal'];
-    const neutralQuery=neutralNames.includes(key)||target.s<0.17;
+    const neutralQuery=neutralNames.includes(key)||target.sv<0.14;
+    let matchedArea=0;
 
     if(neutralQuery){
-      const [minL,maxL]=neutralLightnessRange(target);
-      for(let i=0;i<32;i++){
-        const binMin=i/32,binMax=(i+1)/32;
-        const overlap=Math.max(0,Math.min(binMax,maxL)-Math.max(binMin,minL));
-        if(overlap>0)matchedArea+=p.neutral[i]*Math.min(1,overlap*32);
+      // At 100%, match close neutral values. Lower values progressively admit
+      // lighter/darker gray and slightly tinted off-white shades.
+      const lightTolerance=0.035+(1-strict)*0.36;
+      const neutralModifier=String(target.modifier||'').toLowerCase();
+      let neutralCenter=target.l;
+      if(/dark|deep|tua|gelap/.test(neutralModifier)) neutralCenter=target.l*0.58;
+      if(/light|pale|pastel|muda|terang/.test(neutralModifier)) neutralCenter=target.l+(1-target.l)*0.38;
+      const minL=Math.max(0,neutralCenter-lightTolerance);
+      const maxL=Math.min(1,neutralCenter+lightTolerance);
+      const maxPixelSat=Math.min(0.42,target.sv+0.025+(1-strict)*0.30);
+      const SAT_BINS=16;
+      for(let lBin=0;lBin<32;lBin++){
+        const binMin=lBin/32,binMax=(lBin+1)/32;
+        const lightOverlap=Math.max(0,Math.min(binMax,maxL)-Math.max(binMin,minL));
+        if(lightOverlap<=0)continue;
+        const lightWeight=Math.min(1,lightOverlap*32);
+        for(let sBin=0;sBin<SAT_BINS;sBin++){
+          const satMin=sBin*(0.42/SAT_BINS),satMax=(sBin+1)*(0.42/SAT_BINS);
+          const satOverlap=Math.max(0,Math.min(satMax,maxPixelSat)-satMin);
+          if(satOverlap<=0)continue;
+          const satWeight=Math.min(1,satOverlap/(satMax-satMin));
+          matchedArea+=p.neutral[lBin*SAT_BINS+sBin]*lightWeight*satWeight;
+        }
       }
     }else{
-      const [minL,maxL]=chromaticLightnessRange(target);
-      const halfWidth=Math.max(4,Math.min(22,tolerance/2));
-      // Reject weakly tinted beige/cream/grey pixels from saturated color families.
-      // Dark red uses a stronger saturation floor so brown/cream shading cannot pass.
-      let minSaturation=Math.max(0.26,Math.min(0.48,target.s*0.50));
-      if(/dark|deep|tua|gelap/.test(target.modifier||'')) minSaturation=Math.max(minSaturation,0.40);
+      const [hardMin,hardMax]=chromaticLightnessRange(target);
+      const modifier=String(target.modifier||'').toLowerCase();
+      const hasShadeModifier=/deep|very dark|dark|light|pale|pastel|tua|gelap|muda|terang/.test(modifier);
+      let minL,maxL;
+      if(hasShadeModifier){
+        // Shade modifiers such as "dark red" center on the requested shade band,
+        // not on the base color's unmodified reference lightness.
+        const center=(hardMin+hardMax)/2;
+        const half=(hardMax-hardMin)/2*(0.35+(1-strict)*1.30);
+        minL=Math.max(hardMin,center-half);
+        maxL=Math.min(hardMax,center+half);
+      }else{
+        const lightTolerance=0.055+(1-strict)*0.34;
+        minL=Math.max(hardMin,target.l-lightTolerance);
+        maxL=Math.min(hardMax,target.l+lightTolerance);
+      }
+      if(minL>maxL)return {coverage:0};
+
+      // Hue, saturation, and lightness all tighten/loosen together.
+      const hueHalfWidth=5+(1-strict)*50;
+      let satTolerance=0.07+(1-strict)*0.58;
+      if(/dark|deep|tua|gelap/.test(modifier))satTolerance+=0.10;
+      if(/light|pale|pastel|muda|terang/.test(modifier))satTolerance+=0.14;
+      const minSat=Math.max(0,target.sv-satTolerance);
+      const maxSat=Math.min(1,target.sv+satTolerance);
       const LIGHT_BINS=16;
       for(let hBin=0;hBin<72;hBin++){
         const hueCenter=hBin*5+2.5;
         const d=hueDistance(hueCenter,target.h);
-        const hueWeight=d<=halfWidth-2.5?1:(d<halfWidth+2.5?Math.max(0,(halfWidth+2.5-d)/5):0);
+        const hueWeight=d<=hueHalfWidth-2.5?1:(d<hueHalfWidth+2.5?Math.max(0,(hueHalfWidth+2.5-d)/5):0);
         if(hueWeight<=0)continue;
         for(let lBin=0;lBin<LIGHT_BINS;lBin++){
           const index=hBin*LIGHT_BINS+lBin;
           const count=p.hueLightnessCount[index];
           if(!count)continue;
           const binMin=lBin/LIGHT_BINS,binMax=(lBin+1)/LIGHT_BINS;
-          const overlap=Math.max(0,Math.min(binMax,maxL)-Math.max(binMin,minL));
-          if(overlap<=0)continue;
-          const lightWeight=Math.min(1,overlap*LIGHT_BINS);
+          const lightOverlap=Math.max(0,Math.min(binMax,maxL)-Math.max(binMin,minL));
+          if(lightOverlap<=0)continue;
+          const lightWeight=Math.min(1,lightOverlap*LIGHT_BINS);
           const avgSat=(p.hueLightnessAvgSat[index]||0)/255;
-          const satWeight=avgSat>=minSaturation?1:0;
-          if(satWeight)matchedArea+=count*hueWeight*lightWeight;
+          if(avgSat<minSat||avgSat>maxSat)continue;
+          matchedArea+=count*hueWeight*lightWeight;
         }
       }
     }
@@ -403,7 +404,7 @@
   }
 
   function getMinCoverage(){return (Number($('minCoverage').value)||50)/100;}
-  function getTolerance(){return Number($('tolerance').value)||26;}
+  function getStrictness(){const value=Number($('strictness').value);return Number.isFinite(value)?value:75;}
   function applyFilters(){
     const nameTerm=nameInput.value.trim().toLowerCase();
     const hasCategoryFilter=activeFilters.size>0;
@@ -413,11 +414,11 @@
       return true;
     });
     if(currentColor){
-      const tolerance=getTolerance();
+      const strictness=getStrictness();
       // Require a substantial share of the complete sprite AND require the
       // query color to be close to the item's leading palette family.
       const minCoverage=getMinCoverage();
-      list=list.map(item=>({item,...scoreProfile(profiles.get(item.id),currentColor,tolerance)}))
+      list=list.map(item=>({item,...scoreProfile(profiles.get(item.id),currentColor,strictness)}))
         .filter(x=>x.coverage>=minCoverage);
       list.sort((a,b)=>b.coverage-a.coverage||a.item.id-b.item.id);
       filtered=list;
@@ -484,7 +485,7 @@
   $('searchBtn').addEventListener('click',runSearch);
   colorInput.addEventListener('keydown',e=>{if(e.key==='Enter')runSearch();});
   nameInput.addEventListener('input',()=>{if(profiles.size||!currentColor)applyFilters();});
-  $('tolerance').addEventListener('input',()=>{$('toleranceValue').textContent=getTolerance()+'°';if(profiles.size&&currentColor)applyFilters();});
+  $('strictness').addEventListener('input',()=>{$('strictnessValue').textContent=getStrictness()+'%';if(profiles.size&&currentColor)applyFilters();});
   $('minCoverage').addEventListener('input',()=>{$('minCoverageValue').textContent=getMinCoverage()*100+'%';if(profiles.size&&currentColor)applyFilters();});
   $('moreBtn').addEventListener('click',()=>{visibleCount+=PAGE_SIZE;renderResults();});
   document.querySelectorAll('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{
