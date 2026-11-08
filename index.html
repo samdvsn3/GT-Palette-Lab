@@ -7,7 +7,7 @@
 <title>GT Palette Lab — Growtopia Color Finder</title>
 <style>
 :root{color-scheme:dark;--bg:#0d0f14;--panel:#151922;--panel2:#1b202b;--line:#2b3341;--muted:#929cad;--text:#f3f5f8;--accent:#b7f36b;--accent2:#82c83b;--danger:#ff7777;--shadow:0 16px 45px rgba(0,0,0,.28)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(900px 520px at 8% -10%,rgba(183,243,107,.12),transparent 60%),radial-gradient(700px 400px at 100% 0%,rgba(93,145,255,.09),transparent 55%),var(--bg);color:var(--text);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}button,input,select{font:inherit}button{cursor:pointer}.shell{max-width:1440px;margin:auto;padding:28px 28px 50px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:34px}.brand{display:flex;gap:12px;align-items:center}.brand-mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#d8ff9b,#74b83b);display:grid;place-items:center;box-shadow:0 7px 24px rgba(139,214,76,.2);color:#18210e;font-weight:1000;font-size:18px;letter-spacing:-2px}.brand-name{font-size:16px;font-weight:850;letter-spacing:.2px}.brand-sub{font-size:11px;color:var(--muted);letter-spacing:1.8px;text-transform:uppercase}.top-tag{border:1px solid #3c4b2a;background:rgba(183,243,107,.08);color:#cbf79e;border-radius:99px;padding:7px 12px;font-size:11px;font-weight:700;letter-spacing:.5px}.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:end;margin-bottom:24px}.eyebrow{font-size:11px;letter-spacing:2.3px;color:var(--accent);font-weight:800;text-transform:uppercase;margin-bottom:10px}.hero h1{margin:0;font-size:clamp(34px,5vw,58px);line-height:1.02;letter-spacing:-2.7px;max-width:760px}.hero h1 span{color:var(--accent)}.hero p{color:#aab2c0;max-width:640px;font-size:15px;margin:16px 0 0}.hero-note{background:linear-gradient(145deg,rgba(183,243,107,.09),rgba(183,243,107,.025));border:1px solid #35402b;border-radius:18px;padding:17px 18px;color:#c9d3c1;font-size:12px}.hero-note strong{color:#e4f6ce;display:block;font-size:13px;margin-bottom:4px}.search-panel{background:rgba(21,25,34,.94);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow);margin-bottom:18px}.search-row{display:grid;grid-template-columns:minmax(220px,1.1fr) minmax(180px,.8fr) auto;gap:12px;align-items:end}.field label{font-size:11px;color:#a3adbd;font-weight:750;display:block;margin:0 0 8px 2px;letter-spacing:.7px;text-transform:uppercase}.input-wrap{height:52px;display:flex;align-items:center;gap:10px;padding:0 14px;background:#0f131a;border:1px solid #333c4b;border-radius:13px;transition:.2s}.input-wrap:focus-within{border-color:#91cd54;box-shadow:0 0 0 3px rgba(183,243,107,.1)}.input-wrap input{background:transparent;color:#fff;border:0;outline:0;width:100%;min-width:0;font-size:15px}.input-wrap input::placeholder{color:#677183}.search-icon{color:var(--accent);font-size:18px}.color-picker{width:35px;height:35px;flex:0 0 auto;border:0;background:transparent;padding:0;cursor:pointer}.color-picker::-webkit-color-swatch-wrapper{padding:0}.color-picker::-webkit-color-swatch{border:2px solid #ffffff33;border-radius:9px}.go-btn{height:52px;padding:0 23px;border:0;border-radius:13px;background:var(--accent);color:#19220f;font-weight:900;letter-spacing:.2px;box-shadow:0 8px 20px rgba(183,243,107,.16);transition:.18s}.go-btn:hover{background:#cbff8d;transform:translateY(-1px)}.helper-row{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:13px;flex-wrap:wrap}.examples{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.examples span{font-size:11px;color:#7f8999}.example{border:1px solid #303847;background:#1a202a;color:#bdc6d3;border-radius:99px;padding:5px 10px;font-size:11px}.example:hover{border-color:#a0d96a;color:#e9f6dc}.tolerance{display:flex;align-items:center;gap:9px;color:#a0aabd;font-size:11px}.tolerance input{accent-color:var(--accent);width:100px}.tolerance strong{color:#e2edda;min-width:32px}.filter-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:18px 0 16px}.filter-label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#768294;margin-right:5px;font-weight:800}.filter-btn{padding:8px 13px;border-radius:99px;border:1px solid #303847;background:#151a23;color:#aab4c3;font-size:12px;font-weight:650}.filter-btn:hover{color:white;border-color:#67768b}.filter-btn.active{background:rgba(183,243,107,.13);border-color:#719c45;color:#d7f7b0}.status-row{display:flex;justify-content:space-between;gap:14px;align-items:center;margin:18px 2px 12px;flex-wrap:wrap}.result-count{font-size:13px;color:#dce2eb;font-weight:750}.result-count span{color:var(--accent)}.status-message{font-size:11px;color:#8792a3}.progress-wrap{display:none;height:5px;border-radius:99px;background:#252c38;overflow:hidden;margin:10px 0 17px}.progress-bar{width:0;height:100%;background:linear-gradient(90deg,#79b93b,#c5fa83);transition:width .18s}.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:13px}.item-card{min-width:0;position:relative;overflow:hidden;background:linear-gradient(155deg,#1a202b,#141922);border:1px solid #2b3341;border-radius:17px;padding:13px;transition:transform .16s,border-color .16s,box-shadow .16s;cursor:pointer}.item-card:hover{transform:translateY(-3px);border-color:#627b48;box-shadow:0 13px 26px rgba(0,0,0,.22)}.item-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.thumb-wrap{height:112px;border-radius:12px;background:radial-gradient(ellipse at 50% 55%,#283140,#141922 72%);display:grid;place-items:center;margin-bottom:11px;position:relative;overflow:hidden}.sprite{width:64px;height:64px;image-rendering:pixelated;image-rendering:crisp-edges;filter:drop-shadow(0 5px 7px rgba(0,0,0,.4));background-repeat:no-repeat}.match-badge{position:absolute;top:8px;right:8px;background:#111821db;border:1px solid #414c5d;color:#d6e7c5;border-radius:8px;padding:4px 6px;font-size:10px;font-weight:800}.item-name{font-size:13px;font-weight:800;line-height:1.3;min-height:34px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:#f1f3f7}.item-meta{display:flex;justify-content:space-between;align-items:center;gap:6px;margin-top:9px}.category-tag{display:inline-block;background:#252d3a;color:#aeb9c8;padding:4px 7px;border-radius:7px;font-size:9px;font-weight:750;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:78%}.item-id{font-size:10px;color:#788596;font-variant-numeric:tabular-nums}.empty{grid-column:1/-1;border:1px dashed #3a4658;border-radius:18px;padding:44px 20px;text-align:center;color:#98a4b4;background:#141923}.empty strong{color:#ecf3e4;display:block;font-size:16px;margin-bottom:5px}.empty .empty-icon{font-size:30px;margin-bottom:10px}.more-row{text-align:center;margin:24px 0 0}.more-btn{border:1px solid #46543a;background:#1c2618;color:#d5f4b4;padding:11px 20px;border-radius:12px;font-weight:800}.more-btn:hover{background:#26351d}.footer{margin-top:42px;padding-top:20px;border-top:1px solid #252c37;color:#798494;font-size:11px;line-height:1.7;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer a{color:#b9d89b;text-decoration:none}.footer a:hover{text-decoration:underline}.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(3,5,8,.78);backdrop-filter:blur(8px);z-index:20}.modal.open{display:flex}.modal-card{width:min(520px,100%);background:#181e29;border:1px solid #414d60;border-radius:22px;padding:22px;box-shadow:0 24px 80px #000a;position:relative}.modal-close{position:absolute;right:14px;top:14px;border:1px solid #3c4657;background:#222a37;color:#d5dce6;width:34px;height:34px;border-radius:10px;font-size:18px}.modal-preview{height:190px;display:grid;place-items:center;background:radial-gradient(ellipse,#30394a,#141923 68%);border-radius:15px;margin-bottom:17px}.modal-preview .sprite{width:128px;height:128px;filter:drop-shadow(0 10px 14px #0009)}.modal-title{font-size:21px;font-weight:900;margin:0 40px 5px 0}.modal-sub{color:#9aa6b6;font-size:12px}.modal-details{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:17px 0}.detail{background:#111720;border:1px solid #2d3746;border-radius:11px;padding:10px}.detail span{display:block;font-size:10px;color:#8491a2;text-transform:uppercase;letter-spacing:.7px}.detail strong{display:block;font-size:13px;margin-top:3px}.wiki-link{display:inline-flex;text-decoration:none;color:#19210f;font-weight:850;font-size:12px;background:var(--accent);border-radius:10px;padding:10px 13px}.note{color:#7f8a9b;font-size:10px;margin-top:13px}.load-error{display:none;background:#2a1a1d;border:1px solid #6d363b;color:#ffc6c6;border-radius:13px;padding:14px;margin:12px 0;font-size:12px}.small-spinner{display:inline-block;width:12px;height:12px;border:2px solid #556247;border-top-color:#d7ffa5;border-radius:50%;animation:spin .75s linear infinite;vertical-align:-2px;margin-right:6px}@keyframes spin{to{transform:rotate(360deg)}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(900px 520px at 8% -10%,rgba(183,243,107,.12),transparent 60%),radial-gradient(700px 400px at 100% 0%,rgba(93,145,255,.09),transparent 55%),var(--bg);color:var(--text);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}button,input,select{font:inherit}button{cursor:pointer}.shell{max-width:1440px;margin:auto;padding:28px 28px 50px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:34px}.brand{display:flex;gap:12px;align-items:center}.brand-mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#d8ff9b,#74b83b);display:grid;place-items:center;box-shadow:0 7px 24px rgba(139,214,76,.2);color:#18210e;font-weight:1000;font-size:18px;letter-spacing:-2px}.brand-name{font-size:16px;font-weight:850;letter-spacing:.2px}.brand-sub{font-size:11px;color:var(--muted);letter-spacing:1.8px;text-transform:uppercase}.top-tag{border:1px solid #3c4b2a;background:rgba(183,243,107,.08);color:#cbf79e;border-radius:99px;padding:7px 12px;font-size:11px;font-weight:700;letter-spacing:.5px}.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:end;margin-bottom:24px}.eyebrow{font-size:11px;letter-spacing:2.3px;color:var(--accent);font-weight:800;text-transform:uppercase;margin-bottom:10px}.hero h1{margin:0;font-size:clamp(34px,5vw,58px);line-height:1.02;letter-spacing:-2.7px;max-width:760px}.hero h1 span{color:var(--accent)}.hero p{color:#aab2c0;max-width:640px;font-size:15px;margin:16px 0 0}.hero-note{background:linear-gradient(145deg,rgba(183,243,107,.09),rgba(183,243,107,.025));border:1px solid #35402b;border-radius:18px;padding:17px 18px;color:#c9d3c1;font-size:12px}.hero-note strong{color:#e4f6ce;display:block;font-size:13px;margin-bottom:4px}.search-panel{background:rgba(21,25,34,.94);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow);margin-bottom:18px}.search-row{display:grid;grid-template-columns:minmax(220px,1.1fr) minmax(180px,.8fr) auto;gap:12px;align-items:end}.field label{font-size:11px;color:#a3adbd;font-weight:750;display:block;margin:0 0 8px 2px;letter-spacing:.7px;text-transform:uppercase}.input-wrap{height:52px;display:flex;align-items:center;gap:10px;padding:0 14px;background:#0f131a;border:1px solid #333c4b;border-radius:13px;transition:.2s}.input-wrap:focus-within{border-color:#91cd54;box-shadow:0 0 0 3px rgba(183,243,107,.1)}.input-wrap input{background:transparent;color:#fff;border:0;outline:0;width:100%;min-width:0;font-size:15px}.input-wrap input::placeholder{color:#677183}.search-icon{color:var(--accent);font-size:18px}.color-picker{width:35px;height:35px;flex:0 0 auto;border:0;background:transparent;padding:0;cursor:pointer}.color-picker::-webkit-color-swatch-wrapper{padding:0}.color-picker::-webkit-color-swatch{border:2px solid #ffffff33;border-radius:9px}.go-btn{height:52px;padding:0 23px;border:0;border-radius:13px;background:var(--accent);color:#19220f;font-weight:900;letter-spacing:.2px;box-shadow:0 8px 20px rgba(183,243,107,.16);transition:.18s}.go-btn:hover{background:#cbff8d;transform:translateY(-1px)}.helper-row{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:13px;flex-wrap:wrap}.examples{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.examples span{font-size:11px;color:#7f8999}.example{border:1px solid #303847;background:#1a202a;color:#bdc6d3;border-radius:99px;padding:5px 10px;font-size:11px}.example:hover{border-color:#a0d96a;color:#e9f6dc}.tolerance{display:flex;align-items:center;gap:9px;color:#a0aabd;font-size:11px}.tolerance input{accent-color:var(--accent);width:100px}.tolerance strong{color:#e2edda;min-width:32px}.filter-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:18px 0 16px}.filter-label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#768294;margin-right:5px;font-weight:800}.filter-btn{padding:8px 13px;border-radius:99px;border:1px solid #303847;background:#151a23;color:#aab4c3;font-size:12px;font-weight:650}.filter-btn:hover{color:white;border-color:#67768b}.filter-btn.active{background:rgba(183,243,107,.13);border-color:#719c45;color:#d7f7b0}.filter-help{font-size:11px;color:#7f8999;margin:-6px 2px 13px}.filter-actions{display:flex;gap:7px;margin-left:auto}.filter-mini{border:1px solid #303847;background:#151a23;color:#9eabbc;padding:6px 10px;border-radius:9px;font-size:10px}.filter-mini:hover{border-color:#789d51;color:#e4f4d4}.category-tag{max-width:100%}.item-meta{align-items:center}.item-meta-left{display:flex;align-items:center;gap:5px;min-width:0;flex-wrap:wrap}.category-tag.block{color:#d5f4b4;background:#27351f}.category-tag.wallpaper{color:#c8d8ff;background:#202c47}.category-tag.clothes{color:#ffd4e7;background:#45263a}.category-tag.seed{color:#e2d1a8;background:#403821}.status-row{display:flex;justify-content:space-between;gap:14px;align-items:center;margin:18px 2px 12px;flex-wrap:wrap}.result-count{font-size:13px;color:#dce2eb;font-weight:750}.result-count span{color:var(--accent)}.status-message{font-size:11px;color:#8792a3}.progress-wrap{display:none;height:5px;border-radius:99px;background:#252c38;overflow:hidden;margin:10px 0 17px}.progress-bar{width:0;height:100%;background:linear-gradient(90deg,#79b93b,#c5fa83);transition:width .18s}.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:13px}.item-card{min-width:0;position:relative;overflow:hidden;background:linear-gradient(155deg,#1a202b,#141922);border:1px solid #2b3341;border-radius:17px;padding:13px;transition:transform .16s,border-color .16s,box-shadow .16s;cursor:pointer}.item-card:hover{transform:translateY(-3px);border-color:#627b48;box-shadow:0 13px 26px rgba(0,0,0,.22)}.item-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.thumb-wrap{height:112px;border-radius:12px;background:radial-gradient(ellipse at 50% 55%,#283140,#141922 72%);display:grid;place-items:center;margin-bottom:11px;position:relative;overflow:hidden}.sprite{width:64px;height:64px;image-rendering:pixelated;image-rendering:crisp-edges;filter:drop-shadow(0 5px 7px rgba(0,0,0,.4));background-repeat:no-repeat}.match-badge{position:absolute;top:8px;right:8px;background:#111821db;border:1px solid #414c5d;color:#d6e7c5;border-radius:8px;padding:4px 6px;font-size:10px;font-weight:800}.item-name{font-size:13px;font-weight:800;line-height:1.3;min-height:34px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:#f1f3f7}.item-meta{display:flex;justify-content:space-between;align-items:center;gap:6px;margin-top:9px}.category-tag{display:inline-block;background:#252d3a;color:#aeb9c8;padding:4px 7px;border-radius:7px;font-size:9px;font-weight:750;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}.item-id{font-size:10px;color:#788596;font-variant-numeric:tabular-nums}.empty{grid-column:1/-1;border:1px dashed #3a4658;border-radius:18px;padding:44px 20px;text-align:center;color:#98a4b4;background:#141923}.empty strong{color:#ecf3e4;display:block;font-size:16px;margin-bottom:5px}.empty .empty-icon{font-size:30px;margin-bottom:10px}.more-row{text-align:center;margin:24px 0 0}.more-btn{border:1px solid #46543a;background:#1c2618;color:#d5f4b4;padding:11px 20px;border-radius:12px;font-weight:800}.more-btn:hover{background:#26351d}.footer{margin-top:42px;padding-top:20px;border-top:1px solid #252c37;color:#798494;font-size:11px;line-height:1.7;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer a{color:#b9d89b;text-decoration:none}.footer a:hover{text-decoration:underline}.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(3,5,8,.78);backdrop-filter:blur(8px);z-index:20}.modal.open{display:flex}.modal-card{width:min(520px,100%);background:#181e29;border:1px solid #414d60;border-radius:22px;padding:22px;box-shadow:0 24px 80px #000a;position:relative}.modal-close{position:absolute;right:14px;top:14px;border:1px solid #3c4657;background:#222a37;color:#d5dce6;width:34px;height:34px;border-radius:10px;font-size:18px}.modal-preview{height:190px;display:grid;place-items:center;background:radial-gradient(ellipse,#30394a,#141923 68%);border-radius:15px;margin-bottom:17px}.modal-preview .sprite{width:128px;height:128px;filter:drop-shadow(0 10px 14px #0009)}.modal-title{font-size:21px;font-weight:900;margin:0 40px 5px 0}.modal-sub{color:#9aa6b6;font-size:12px}.modal-details{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:17px 0}.detail{background:#111720;border:1px solid #2d3746;border-radius:11px;padding:10px}.detail span{display:block;font-size:10px;color:#8491a2;text-transform:uppercase;letter-spacing:.7px}.detail strong{display:block;font-size:13px;margin-top:3px}.wiki-link{display:inline-flex;text-decoration:none;color:#19210f;font-weight:850;font-size:12px;background:var(--accent);border-radius:10px;padding:10px 13px}.note{color:#7f8a9b;font-size:10px;margin-top:13px}.load-error{display:none;background:#2a1a1d;border:1px solid #6d363b;color:#ffc6c6;border-radius:13px;padding:14px;margin:12px 0;font-size:12px}.small-spinner{display:inline-block;width:12px;height:12px;border:2px solid #556247;border-top-color:#d7ffa5;border-radius:50%;animation:spin .75s linear infinite;vertical-align:-2px;margin-right:6px}@keyframes spin{to{transform:rotate(360deg)}}
 @media(max-width:1100px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:760px){.shell{padding:18px 14px 36px}.topbar{margin-bottom:26px}.hero{grid-template-columns:1fr;gap:16px}.hero h1{font-size:43px}.search-row{grid-template-columns:1fr 1fr}.search-row .field:first-child{grid-column:1/-1}.go-btn{grid-column:1/-1}.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.item-card{padding:9px}.thumb-wrap{height:94px}.item-name{font-size:12px}.hero-note{font-size:11px}}@media(max-width:430px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero h1{font-size:38px}.top-tag{font-size:9px}.search-panel{padding:13px}.tolerance{width:100%;justify-content:flex-start}.footer{display:block}.footer>div+div{margin-top:8px}}
 </style>
 </head>
@@ -15,7 +15,7 @@
 <div class="shell">
   <header class="topbar">
     <div class="brand"><div class="brand-mark">GT</div><div><div class="brand-name">PALETTE LAB</div><div class="brand-sub">Growtopia visual item finder</div></div></div>
-    <div class="top-tag">COMMUNITY DATABASE · 2026</div>
+    <div class="top-tag">COMMUNITY ITEM INDEX · v26</div>
   </header>
 
   <section class="hero">
@@ -24,7 +24,7 @@
       <h1>Find the right item.<br><span>Match your palette.</span></h1>
       <p>Search Growtopia items by the colors in their actual sprites. Find the reds, dusty pinks, deep maroons, warm oranges and every shade in between.</p>
     </div>
-    <aside class="hero-note"><strong>How the color match works</strong>Each item's sprite is sampled from the texture atlas. Results are ranked by how closely the visible pixels match your chosen color — not by the item's name.</aside>
+    <aside class="hero-note"><strong>How the color match works</strong>Each item sprite is sampled pixel-by-pixel. The match score ranks visual similarity; it is a guide for palette discovery, not a guaranteed color measurement.</aside>
   </section>
 
   <section class="search-panel">
@@ -48,17 +48,21 @@
 
   <nav class="filter-bar" aria-label="Filter item category">
     <span class="filter-label">FILTER</span>
-    <button class="filter-btn active" data-filter="All">All items</button>
-    <button class="filter-btn" data-filter="Block">Blocks</button>
-    <button class="filter-btn" data-filter="Wallpaper">Wallpapers</button>
-    <button class="filter-btn" data-filter="Background">Backgrounds</button>
-    <button class="filter-btn" data-filter="Decoration">Decoration</button>
-    <button class="filter-btn" data-filter="Clothes">Clothes</button>
-    <button class="filter-btn" data-filter="Tools">Tools</button>
-    <button class="filter-btn" data-filter="Seeds">Seeds</button>
-    <button class="filter-btn" data-filter="Doors">Doors</button>
-    <button class="filter-btn" data-filter="Other">Other</button>
+    <button class="filter-btn active" data-filter="All" aria-pressed="true">All items</button>
+    <button class="filter-btn" data-filter="Block" aria-pressed="false">Blocks</button>
+    <button class="filter-btn" data-filter="Wallpaper" aria-pressed="false">Wallpapers</button>
+    <button class="filter-btn" data-filter="Background" aria-pressed="false">Backgrounds</button>
+    <button class="filter-btn" data-filter="Decoration" aria-pressed="false">Decoration</button>
+    <button class="filter-btn" data-filter="Clothes" aria-pressed="false">Clothes / Equipment</button>
+    <button class="filter-btn" data-filter="Tools" aria-pressed="false">Tools</button>
+    <button class="filter-btn" data-filter="Seeds" aria-pressed="false">Seeds</button>
+    <button class="filter-btn" data-filter="Doors" aria-pressed="false">Doors / Portals</button>
+    <button class="filter-btn" data-filter="Consumables" aria-pressed="false">Consumables</button>
+    <button class="filter-btn" data-filter="Components" aria-pressed="false">Components</button>
+    <button class="filter-btn" data-filter="Other" aria-pressed="false">Other</button>
+    <span class="filter-actions"><button type="button" class="filter-mini" id="clearFilters">Clear filters</button></span>
   </nav>
+  <div class="filter-help">You can select multiple categories. Results will include items matching <b>any</b> selected category.</div>
 
   <div class="status-row"><div id="resultCount" class="result-count">Loading item database…</div><div id="statusMessage" class="status-message"><span class="small-spinner"></span>Connecting to item database</div></div>
   <div id="progressWrap" class="progress-wrap"><div id="progressBar" class="progress-bar"></div></div>
@@ -67,7 +71,7 @@
 
   <footer class="footer">
     <div>Unofficial fan-made tool. Growtopia names and game art belong to Ubisoft / Robinson Technologies.<br>Item metadata & sprite coordinates: <a href="https://github.com/araeys/growtopia-explorer" target="_blank" rel="noopener">Growtopia Explorer — Raey (@araeys)</a>.</div>
-    <div>Asset index: community extraction of <b>items.dat v26</b> · Images are inventory sprites, not full equipped character renders.<br><a href="https://growpedia.cc/wiki" target="_blank" rel="noopener">Growpedia item reference</a> · <a href="https://growtopia-explorer.vercel.app" target="_blank" rel="noopener">Growtopia Explorer</a></div>
+    <div>Asset index: community extraction of <b>items.dat v26</b> (not a guaranteed live 2026 snapshot) · Images are inventory sprites, not full equipped character renders.<br><a href="https://growpedia.cc/wiki" target="_blank" rel="noopener">Growpedia item reference</a> · <a href="https://growtopia-explorer.vercel.app" target="_blank" rel="noopener">Growtopia Explorer</a></div>
   </footer>
 </div>
 
@@ -90,7 +94,7 @@
   const META_URL = BASE + 'tilesheets_info.json';
   const TILE_URL = BASE + 'tilesheets/';
   const TILE_SIZE = 32;
-  const PAGE_SIZE = 60;
+  const PAGE_SIZE = 96;
   const COLORS = {
     red:'#ef4444', crimson:'#b91c1c', scarlet:'#dc2626', maroon:'#800000', burgundy:'#80002a',
     orange:'#f97316', coral:'#fb7185', peach:'#ffb38a', yellow:'#facc15', gold:'#eab308', amber:'#f59e0b',
@@ -115,7 +119,7 @@
   let profiles = new Map();
   let filtered = [];
   let visibleCount = PAGE_SIZE;
-  let activeFilter = 'All';
+  const activeFilters = new Set();
   let currentColor = null;
   let analysisPromise = null;
   let lastQuery = '';
@@ -151,18 +155,54 @@
     return {...rgb,...rgbToHsl(rgb.r,rgb.g,rgb.b),hex:rgbToHex(rgb),modifier,raw:query};
   }
   function rgbToHex({r,g,b}){return '#'+[r,g,b].map(x=>Math.round(x).toString(16).padStart(2,'0')).join('');}
+  // items.dat category values: Seed=19, Clothes=20, Wallpaper variants=22/23.
+  // Prefer the original numeric itemCategory over fuzzy name matching.
   function classify(item){
-    const n=(item.name||'').toLowerCase(); const c=(item.category||'').toLowerCase();
-    if(/\bseed\b$/.test(n)||c.includes('seeds')) return 'Seeds';
-    if(n.includes('wallpaper')) return 'Wallpaper';
-    if(n.includes('background')||c.includes('weather & backgrounds')) return 'Background';
-    if(c.includes('clothes')||c.includes('wearable')||/\b(hat|hair|shirt|pants|shoes|boots|wings|mask|glasses|face|necklace|bracelet|cape|dress|skirt|suit)\b/.test(n)) return 'Clothes';
-    if(c.includes('tool')||c.includes('weapon')||/\b(wrench|fist|pickaxe|sword|hammer|staff|scythe)\b/.test(n)) return 'Tools';
-    if(c.includes('doors & portals')||/\b(door|portal|gateway|gate)\b/.test(n)) return 'Doors';
-    if(c.includes('blocks & building')||/\b(block|brick|stone|dirt|lava|bedrock|rock|grass|sand|wood|glass|platform|fence|pipe|spike)\b/.test(n)) return 'Block';
-    if(c.includes('furniture & items')||/\b(lamp|chair|table|sofa|couch|bed|shelf|chest|vase|plant|flower|deco|decoration|statue)\b/.test(n)) return 'Decoration';
-    if(/weather|background|music|audio/.test(c)) return 'Background';
-    if(/consumable|currency|component/.test(c)) return 'Other';
+    const numericCandidates = [item.itemCategory, item.item_category, item.categoryId, item.category_id, item.itemTypeId, item.category, item.itemType, item.type];
+    let typeId = null;
+    for (const value of numericCandidates) {
+      if (value !== undefined && value !== null && value !== '' && Number.isFinite(Number(value))) {
+        typeId = Number(value); break;
+      }
+    }
+    if (typeId !== null) {
+      if (typeId === 19) return 'Seeds';
+      if (typeId === 20) return 'Clothes';
+      if (typeId === 22 || typeId === 23) return 'Wallpaper';
+      if (typeId === 18 || typeId === 28) return 'Background';
+      if (typeId === 0 || typeId === 1) return 'Tools';
+      if (typeId === 8) return 'Consumables';
+      if (typeId === 37) return 'Components';
+      if ([2,9,13,26,84].includes(typeId)) return 'Doors';
+      // Structural / hazard / animated foreground item categories.
+      if ([5,6,7,10,11,12,14,15,16,17,21,24,25,27,29,31,35,36,43,45,52,60,69,70,71].includes(typeId)) return 'Block';
+      // Placeable functional props and furnishings used as world decoration.
+      if ([3,4,32,33,34,38,39,40,41,42,46,47,49,50,53,54,55,56,57,58,59,61,62,63,65,66,67,68,72,73,74,75,76,77,78,79,80,81,82,83,85].includes(typeId)) return 'Decoration';
+    }
+
+    const raw = String(item.category ?? item.itemCategory ?? item.itemType ?? item.type ?? item.categoryName ?? '').trim().toLowerCase();
+    const normalized = raw.replace(/[_-]+/g, ' ').replace(/\s+/g, ' ');
+    if (/wallpaper|background wallpaper/.test(normalized)) return 'Wallpaper';
+    if (/\b(seed|seeds)\b/.test(normalized)) return 'Seeds';
+    if (/\b(clothes|clothing|wearable|equipment)\b/.test(normalized)) return 'Clothes';
+    if (/\b(tool|tools|weapon)\b/.test(normalized)) return 'Tools';
+    if (/\b(door|doors|portal|portals|entrance)\b/.test(normalized)) return 'Doors';
+    if (/\b(background|backdrop)\b/.test(normalized)) return 'Background';
+    if (/\b(component|components|ingredient)\b/.test(normalized)) return 'Components';
+    if (/\b(consumable|consumables|currency|food)\b/.test(normalized)) return 'Consumables';
+    if (/\b(decoration|decor|furniture|furnishing|prop)\b/.test(normalized)) return 'Decoration';
+    if (/\b(block|blocks|foreground block)\b/.test(normalized)) return 'Block';
+
+    // Safe name-based fallback only after structured fields are exhausted.
+    const n = String(item.name || '').toLowerCase();
+    if (/\bseed$/.test(n)) return 'Seeds';
+    if (/wallpaper/.test(n)) return 'Wallpaper';
+    if (/\b(hat|hair|shirt|pants|shoes|boots|wings|mask|glasses|face|necklace|bracelet|cape|dress|skirt|suit|helmet|gloves|robe|coat)\b/.test(n)) return 'Clothes';
+    if (/\b(wrench|fist|pickaxe|sword|hammer|staff|scythe|tool)\b/.test(n)) return 'Tools';
+    if (/\b(door|portal|gateway|gate|entrance)\b/.test(n)) return 'Doors';
+    if (/\b(seed|consumable|food|potion)\b/.test(n)) return 'Consumables';
+    if (/\b(block|brick|stone|dirt|lava|bedrock|rock|grass|sand|wood|glass|platform|fence|pipe|spike|wall)\b/.test(n)) return 'Block';
+    if (/\b(lamp|chair|table|sofa|couch|bed|shelf|chest|vase|plant|flower|deco|decoration|statue|furniture|machine|display|painting|tree)\b/.test(n)) return 'Decoration';
     return 'Other';
   }
   function tileUrl(item){return TILE_URL+encodeURIComponent(item.texture||'');}
@@ -177,20 +217,27 @@
   }
   function loadImage(url){return new Promise((resolve,reject)=>{const img=new Image();img.crossOrigin='anonymous';img.decoding='async';img.onload=()=>resolve(img);img.onerror=()=>reject(new Error('Could not load '+url));img.src=url;});}
   function profileSprite(ctx,img,item){
-    const sx=Number(item.tx)*TILE_SIZE,sy=Number(item.ty)*TILE_SIZE;
-    if(!Number.isFinite(sx)||!Number.isFinite(sy)||sx<0||sy<0||sx+TILE_SIZE>img.naturalWidth||sy+TILE_SIZE>img.naturalHeight) return null;
+    const sx=Number(item.tx),sy=Number(item.ty);
+    if(!Number.isFinite(sx)||!Number.isFinite(sy)||sx<0||sy<0||sx*TILE_SIZE+TILE_SIZE>img.naturalWidth||sy*TILE_SIZE+TILE_SIZE>img.naturalHeight) return null;
     ctx.clearRect(0,0,TILE_SIZE,TILE_SIZE);
-    ctx.drawImage(img,sx,sy,TILE_SIZE,TILE_SIZE,0,0,TILE_SIZE,TILE_SIZE);
+    ctx.drawImage(img,sx*TILE_SIZE,sy*TILE_SIZE,TILE_SIZE,TILE_SIZE,0,0,TILE_SIZE,TILE_SIZE);
     const data=ctx.getImageData(0,0,TILE_SIZE,TILE_SIZE).data;
-    const hue=new Float32Array(36),neutral=new Float32Array(12);let vivid=0,gray=0,total=0,lightSum=0,lightWeight=0;
+    const hue=new Float32Array(36), neutral=new Float32Array(12);
+    let vivid=0,gray=0,total=0,lightSum=0,lightWeight=0,satSum=0;
     for(let i=0;i<data.length;i+=4){
-      const a=data[i+3]/255;if(a<.18)continue;
+      const a=data[i+3]/255;if(a<.2)continue;
       const {h,s,l}=rgbToHsl(data[i],data[i+1],data[i+2]);total+=a;
-      if(s>.17){const bin=Math.min(35,Math.floor(h/10));const weight=a*Math.min(1,s*1.25);hue[bin]+=weight;vivid+=weight;lightSum+=l*weight;lightWeight+=weight;}
-      else{const bin=Math.min(11,Math.floor(l*12));neutral[bin]+=a;gray+=a;}
+      if(s>.13){
+        const bin=Math.min(35,Math.floor(h/10));
+        // Weight saturated pixels more, but keep pastel tints in the profile.
+        const weight=a*Math.min(1,Math.max(.18,s*1.35));
+        hue[bin]+=weight;vivid+=weight;lightSum+=l*weight;satSum+=s*weight;lightWeight+=weight;
+      } else {
+        const bin=Math.min(11,Math.floor(l*12));neutral[bin]+=a;gray+=a;
+      }
     }
     if(total<1)return null;
-    return {hue,neutral,vivid,gray,total,meanL:lightWeight?lightSum/lightWeight:.5};
+    return {hue,neutral,vivid,gray,total,meanL:lightWeight?lightSum/lightWeight:.5,meanS:lightWeight?satSum/lightWeight:0,coverage:vivid/Math.max(.001,total)};
   }
   async function analyzeDatabase(){
     if(analysisPromise)return analysisPromise;
@@ -223,32 +270,57 @@
   function scoreProfile(p,target,tolerance){
     if(!p)return 0;
     if(target.s<.17){
-      if(!p.gray)return 0;const targetBin=Math.max(0,Math.min(11,Math.floor(target.l*12)));let weighted=0,total=0;
-      for(let i=0;i<12;i++){const d=Math.abs(i-targetBin);const closeness=Math.max(0,1-d/5.5);weighted+=p.neutral[i]*closeness;total+=p.neutral[i];}
+      if(!p.gray)return 0;
+      const targetBin=Math.max(0,Math.min(11,Math.floor(target.l*12)));
+      let weighted=0,total=0;
+      for(let i=0;i<12;i++){
+        const d=Math.abs(i-targetBin);
+        const similarity=Math.exp(-0.5*Math.pow(d/2.25,2));
+        weighted+=p.neutral[i]*similarity;total+=p.neutral[i];
+      }
       return total?weighted/total:0;
     }
-    if(!p.vivid)return 0;let weighted=0,total=0,best=0;
-    for(let i=0;i<36;i++){const count=p.hue[i];if(!count)continue;const center=i*10+5;const d=hueDistance(center,target.h);const closeness=Math.max(0,1-d/(tolerance+15));weighted+=count*closeness;total+=count;if(count>0)best=Math.max(best,closeness);}
-    let score=total?weighted/total:0;
-    if(target.modifier){
-      const dark=/dark|deep|tua|gelap/.test(target.modifier),light=/light|pale|pastel|muda|terang/.test(target.modifier);
-      // Shade modifiers are a gentle preference, not a hard exclusion.
-      if(dark)score*=p.meanL<.46?1:Math.max(.55,1-(p.meanL-.46)*.8);
-      if(light)score*=p.meanL>.56?1:Math.max(.55,1-(.56-p.meanL)*.8);
+    if(!p.vivid)return 0;
+    let weighted=0,total=0;
+    // Tolerance is a hue radius control. A Gaussian curve avoids inflating a
+    // sprite's score just because one tiny pixel happens to match the query.
+    const sigma=Math.max(13,(tolerance+8)/1.55);
+    for(let i=0;i<36;i++){
+      const count=p.hue[i];if(!count)continue;
+      const center=i*10+5;
+      const d=hueDistance(center,target.h);
+      const hueSimilarity=Math.exp(-0.5*Math.pow(d/sigma,2));
+      weighted+=count*hueSimilarity;total+=count;
     }
-    return score*.88+best*.12;
+    if(!total)return 0;
+    let score=weighted/total;
+    // Keep dark and light variants discoverable for a base-color search;
+    // shade only gently influences ranking unless the query says dark/light.
+    const lightnessDistance=Math.abs(p.meanL-target.l);
+    score*=.88+.12*Math.exp(-0.5*Math.pow(lightnessDistance/.42,2));
+    if(target.modifier){
+      const dark=/dark|deep|tua|gelap/.test(target.modifier);
+      const light=/light|pale|pastel|muda|terang/.test(target.modifier);
+      if(dark)score*=.72+.28*Math.max(0,Math.min(1,(.78-p.meanL)/.48));
+      if(light)score*=.72+.28*Math.max(0,Math.min(1,(p.meanL-.18)/.48));
+    }
+    // Avoid giving very low-saturation grey sprites a strong chromatic score.
+    score*=.82+.18*Math.min(1,p.meanS/.45);
+    return Math.max(0,Math.min(1,score));
   }
   function getTolerance(){return Number($('tolerance').value)||68;}
   function applyFilters(){
     const nameTerm=nameInput.value.trim().toLowerCase();
+    const hasCategoryFilter=activeFilters.size>0;
     let list=items.filter(item=>{
-      if(activeFilter!=='All'&&classify(item)!==activeFilter)return false;
+      if(hasCategoryFilter&&!activeFilters.has(classify(item)))return false;
       if(nameTerm&&!(item.name||'').toLowerCase().includes(nameTerm))return false;
       return true;
     });
     if(currentColor){
       const tolerance=getTolerance();
-      list=list.map(item=>({item,score:scoreProfile(profiles.get(item.id),currentColor,tolerance)})).filter(x=>x.score>=.31);
+      // Lower floor deliberately keeps secondary palette matches discoverable.
+      list=list.map(item=>({item,score:scoreProfile(profiles.get(item.id),currentColor,tolerance)})).filter(x=>x.score>=.19);
       list.sort((a,b)=>b.score-a.score||a.item.id-b.item.id);
       filtered=list;
     }else{
@@ -258,9 +330,11 @@
   }
   function renderResults(){
     const visible=filtered.slice(0,visibleCount);
-    const matchText=currentColor?` close color matches`:' items';
-    countEl.innerHTML=`<span>${filtered.length.toLocaleString()}</span>${matchText} <span style="color:#7d899b;font-weight:500">· showing ${visible.length.toLocaleString()}</span>`;
+    const matchText=currentColor?` visual color matches`:' items';
+    const filterText=activeFilters.size?` · ${[...activeFilters].join(' + ')}`:'';
+    countEl.innerHTML=`<span>${filtered.length.toLocaleString()}</span>${matchText}<span style="color:#7d899b;font-weight:500"> · showing ${visible.length.toLocaleString()}${filterText}</span>`;
     $('moreRow').hidden=filtered.length<=visibleCount;
+    $('moreBtn').textContent=`Load ${Math.min(PAGE_SIZE,filtered.length-visibleCount).toLocaleString()} more · ${ (filtered.length-visibleCount).toLocaleString()} remaining`;
     resultEl.innerHTML='';
     if(!visible.length){resultEl.innerHTML=`<div class="empty"><div class="empty-icon">⌕</div><strong>No matching items</strong>Try a wider color range, another category, or a different shade name.</div>`;return;}
     const frag=document.createDocumentFragment();
@@ -269,7 +343,7 @@
       const thumb=document.createElement('div');thumb.className='thumb-wrap';const sprite=document.createElement('div');sprite.className='sprite';setSprite(sprite,item,2);thumb.appendChild(sprite);
       if(currentColor){const badge=document.createElement('div');badge.className='match-badge';badge.textContent=Math.round(entry.score*100)+'% match';thumb.appendChild(badge);}
       const title=document.createElement('div');title.className='item-name';title.textContent=item.name||'Unknown item';
-      const meta=document.createElement('div');meta.className='item-meta';const cat=document.createElement('span');cat.className='category-tag';cat.textContent=classify(item);const id=document.createElement('span');id.className='item-id';id.textContent='#'+item.id;meta.append(cat,id);
+      const meta=document.createElement('div');meta.className='item-meta';const left=document.createElement('div');left.className='item-meta-left';const cat=document.createElement('span');const itemCategory=classify(item);cat.className='category-tag '+itemCategory.toLowerCase();cat.textContent=itemCategory;left.append(cat);const id=document.createElement('span');id.className='item-id';id.textContent='#'+item.id;meta.append(left,id);
       card.append(thumb,title,meta);card.addEventListener('click',()=>openItem(entry));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openItem(entry);}});frag.appendChild(card);
     }
     resultEl.appendChild(frag);
@@ -294,11 +368,12 @@
       statusEl.innerHTML='<span class="small-spinner"></span>Loading 2026 item index…';
       const [dbRes,metaRes]=await Promise.all([fetch(DB_URL,{cache:'no-cache'}),fetch(META_URL,{cache:'no-cache'})]);
       if(!dbRes.ok)throw new Error('Could not download item database ('+dbRes.status+').');
-      const raw=await dbRes.json();const meta=metaRes.ok?await metaRes.json():[];
-      if(!Array.isArray(raw))throw new Error('Unexpected item database format.');
+      const payload=await dbRes.json();const meta=metaRes.ok?await metaRes.json():[];
+      const raw=Array.isArray(payload)?payload:(Array.isArray(payload.items)?payload.items:(Array.isArray(payload.data)?payload.data:null));
+      if(!raw)throw new Error('Unexpected item database format.');
       metadata=new Map((meta||[]).map(x=>[x.filename,x]));
-      items=raw.filter(x=>x&&x.name&&x.name!=='Blank');
-      countEl.innerHTML=`<span>${items.length.toLocaleString()}</span> items loaded`;
+      items=raw.filter(x=>x&&x.name&&x.name!=='Blank').map(x=>({...x, id:x.id??x.itemId??x.itemID, tx:x.tx??x.textureX??x.texture_x, ty:x.ty??x.textureY??x.texture_y, texture:x.texture??x.textureFile??x.texture_name}));
+      countEl.innerHTML=`<span>${items.length.toLocaleString()}</span> items loaded · 96 per page`;
       statusEl.textContent='Item database ready · choose a color to scan sprites';
       $('loadError').style.display='none';
       runSearch();
@@ -313,7 +388,26 @@
   nameInput.addEventListener('input',()=>{if(profiles.size||!currentColor)applyFilters();});
   $('tolerance').addEventListener('input',()=>{$('toleranceValue').textContent=getTolerance()+'°';if(profiles.size&&currentColor)applyFilters();});
   $('moreBtn').addEventListener('click',()=>{visibleCount+=PAGE_SIZE;renderResults();});
-  document.querySelectorAll('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeFilter=btn.dataset.filter;applyFilters();}));
+  document.querySelectorAll('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{
+    const value=btn.dataset.filter;
+    if(value==='All'){
+      activeFilters.clear();
+    } else {
+      if(activeFilters.has(value))activeFilters.delete(value);else activeFilters.add(value);
+    }
+    document.querySelectorAll('.filter-btn').forEach(b=>{
+      const active=b.dataset.filter==='All'?activeFilters.size===0:activeFilters.has(b.dataset.filter);
+      b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));
+    });
+    applyFilters();
+  }));
+  $('clearFilters').addEventListener('click',()=>{
+    activeFilters.clear();
+    document.querySelectorAll('.filter-btn').forEach(b=>{
+      const active=b.dataset.filter==='All';b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));
+    });
+    applyFilters();
+  });
   document.querySelectorAll('.example').forEach(btn=>btn.addEventListener('click',()=>{colorInput.value=btn.dataset.color;runSearch();}));
   colorPicker.addEventListener('input',()=>{colorInput.value=colorPicker.value;});
   colorPicker.addEventListener('change',()=>runSearch());
