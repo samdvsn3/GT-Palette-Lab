@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#101218">
-<title>GT Palette Lab — Growtopia Color Finder</title>
+<title>GT Palette Lab v6 — Growtopia Color Finder</title>
 <style>
 :root{color-scheme:dark;--bg:#0d0f14;--panel:#151922;--panel2:#1b202b;--line:#2b3341;--muted:#929cad;--text:#f3f5f8;--accent:#b7f36b;--accent2:#82c83b;--danger:#ff7777;--shadow:0 16px 45px rgba(0,0,0,.28)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(900px 520px at 8% -10%,rgba(183,243,107,.12),transparent 60%),radial-gradient(700px 400px at 100% 0%,rgba(93,145,255,.09),transparent 55%),var(--bg);color:var(--text);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}button,input,select{font:inherit}button{cursor:pointer}.shell{max-width:1440px;margin:auto;padding:28px 28px 50px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:34px}.brand{display:flex;gap:12px;align-items:center}.brand-mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#d8ff9b,#74b83b);display:grid;place-items:center;box-shadow:0 7px 24px rgba(139,214,76,.2);color:#18210e;font-weight:1000;font-size:18px;letter-spacing:-2px}.brand-name{font-size:16px;font-weight:850;letter-spacing:.2px}.brand-sub{font-size:11px;color:var(--muted);letter-spacing:1.8px;text-transform:uppercase}.top-tag{border:1px solid #3c4b2a;background:rgba(183,243,107,.08);color:#cbf79e;border-radius:99px;padding:7px 12px;font-size:11px;font-weight:700;letter-spacing:.5px}.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:end;margin-bottom:24px}.eyebrow{font-size:11px;letter-spacing:2.3px;color:var(--accent);font-weight:800;text-transform:uppercase;margin-bottom:10px}.hero h1{margin:0;font-size:clamp(34px,5vw,58px);line-height:1.02;letter-spacing:-2.7px;max-width:760px}.hero h1 span{color:var(--accent)}.hero p{color:#aab2c0;max-width:640px;font-size:15px;margin:16px 0 0}.hero-note{background:linear-gradient(145deg,rgba(183,243,107,.09),rgba(183,243,107,.025));border:1px solid #35402b;border-radius:18px;padding:17px 18px;color:#c9d3c1;font-size:12px}.hero-note strong{color:#e4f6ce;display:block;font-size:13px;margin-bottom:4px}.search-panel{background:rgba(21,25,34,.94);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow);margin-bottom:18px}.search-row{display:grid;grid-template-columns:minmax(220px,1.1fr) minmax(180px,.8fr) auto;gap:12px;align-items:end}.field label{font-size:11px;color:#a3adbd;font-weight:750;display:block;margin:0 0 8px 2px;letter-spacing:.7px;text-transform:uppercase}.input-wrap{height:52px;display:flex;align-items:center;gap:10px;padding:0 14px;background:#0f131a;border:1px solid #333c4b;border-radius:13px;transition:.2s}.input-wrap:focus-within{border-color:#91cd54;box-shadow:0 0 0 3px rgba(183,243,107,.1)}.input-wrap input{background:transparent;color:#fff;border:0;outline:0;width:100%;min-width:0;font-size:15px}.input-wrap input::placeholder{color:#677183}.search-icon{color:var(--accent);font-size:18px}.color-picker{width:35px;height:35px;flex:0 0 auto;border:0;background:transparent;padding:0;cursor:pointer}.color-picker::-webkit-color-swatch-wrapper{padding:0}.color-picker::-webkit-color-swatch{border:2px solid #ffffff33;border-radius:9px}.go-btn{height:52px;padding:0 23px;border:0;border-radius:13px;background:var(--accent);color:#19220f;font-weight:900;letter-spacing:.2px;box-shadow:0 8px 20px rgba(183,243,107,.16);transition:.18s}.go-btn:hover{background:#cbff8d;transform:translateY(-1px)}.helper-row{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:13px;flex-wrap:wrap}.examples{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.examples span{font-size:11px;color:#7f8999}.example{border:1px solid #303847;background:#1a202a;color:#bdc6d3;border-radius:99px;padding:5px 10px;font-size:11px}.example:hover{border-color:#a0d96a;color:#e9f6dc}.tolerance{display:flex;align-items:center;gap:9px;color:#a0aabd;font-size:11px;flex-wrap:wrap}.tolerance input{accent-color:var(--accent);width:100px}.tolerance strong{color:#e2edda;min-width:38px}.coverage-control{display:flex;align-items:center;gap:9px;color:#a0aabd;font-size:11px;flex-wrap:wrap}.coverage-control input{accent-color:var(--accent);width:110px}.coverage-control strong{color:#e2edda;min-width:38px}.helper-row{align-items:flex-start}.filter-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:18px 0 16px}.filter-label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#768294;margin-right:5px;font-weight:800}.filter-btn{padding:8px 13px;border-radius:99px;border:1px solid #303847;background:#151a23;color:#aab4c3;font-size:12px;font-weight:650}.filter-btn:hover{color:white;border-color:#67768b}.filter-btn.active{background:rgba(183,243,107,.13);border-color:#719c45;color:#d7f7b0}.filter-help{font-size:11px;color:#7f8999;margin:-6px 2px 13px}.filter-actions{display:flex;gap:7px;margin-left:auto}.filter-mini{border:1px solid #303847;background:#151a23;color:#9eabbc;padding:6px 10px;border-radius:9px;font-size:10px}.filter-mini:hover{border-color:#789d51;color:#e4f4d4}.category-tag{max-width:100%}.item-meta{align-items:center}.item-meta-left{display:flex;align-items:center;gap:5px;min-width:0;flex-wrap:wrap}.category-tag.block{color:#d5f4b4;background:#27351f}.category-tag.wallpaper{color:#c8d8ff;background:#202c47}.category-tag.clothes{color:#ffd4e7;background:#45263a}.category-tag.seed{color:#e2d1a8;background:#403821}.status-row{display:flex;justify-content:space-between;gap:14px;align-items:center;margin:18px 2px 12px;flex-wrap:wrap}.result-count{font-size:13px;color:#dce2eb;font-weight:750}.result-count span{color:var(--accent)}.status-message{font-size:11px;color:#8792a3}.progress-wrap{display:none;height:5px;border-radius:99px;background:#252c38;overflow:hidden;margin:10px 0 17px}.progress-bar{width:0;height:100%;background:linear-gradient(90deg,#79b93b,#c5fa83);transition:width .18s}.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:13px}.item-card{min-width:0;position:relative;overflow:hidden;background:linear-gradient(155deg,#1a202b,#141922);border:1px solid #2b3341;border-radius:17px;padding:13px;transition:transform .16s,border-color .16s,box-shadow .16s;cursor:pointer}.item-card:hover{transform:translateY(-3px);border-color:#627b48;box-shadow:0 13px 26px rgba(0,0,0,.22)}.item-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.thumb-wrap{height:112px;border-radius:12px;background:radial-gradient(ellipse at 50% 55%,#283140,#141922 72%);display:grid;place-items:center;margin-bottom:11px;position:relative;overflow:hidden}.sprite{width:64px;height:64px;image-rendering:pixelated;image-rendering:crisp-edges;filter:drop-shadow(0 5px 7px rgba(0,0,0,.4));background-repeat:no-repeat}.match-badge{position:absolute;top:8px;right:8px;background:#111821db;border:1px solid #414c5d;color:#d6e7c5;border-radius:8px;padding:4px 6px;font-size:10px;font-weight:800}.item-name{font-size:13px;font-weight:800;line-height:1.3;min-height:34px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:#f1f3f7}.item-meta{display:flex;justify-content:space-between;align-items:center;gap:6px;margin-top:9px}.category-tag{display:inline-block;background:#252d3a;color:#aeb9c8;padding:4px 7px;border-radius:7px;font-size:9px;font-weight:750;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}.item-id{font-size:10px;color:#788596;font-variant-numeric:tabular-nums}.empty{grid-column:1/-1;border:1px dashed #3a4658;border-radius:18px;padding:44px 20px;text-align:center;color:#98a4b4;background:#141923}.empty strong{color:#ecf3e4;display:block;font-size:16px;margin-bottom:5px}.empty .empty-icon{font-size:30px;margin-bottom:10px}.more-row{text-align:center;margin:24px 0 0}.more-btn{border:1px solid #46543a;background:#1c2618;color:#d5f4b4;padding:11px 20px;border-radius:12px;font-weight:800}.more-btn:hover{background:#26351d}.footer{margin-top:42px;padding-top:20px;border-top:1px solid #252c37;color:#798494;font-size:11px;line-height:1.7;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer a{color:#b9d89b;text-decoration:none}.footer a:hover{text-decoration:underline}.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(3,5,8,.78);backdrop-filter:blur(8px);z-index:20}.modal.open{display:flex}.modal-card{width:min(520px,100%);background:#181e29;border:1px solid #414d60;border-radius:22px;padding:22px;box-shadow:0 24px 80px #000a;position:relative}.modal-close{position:absolute;right:14px;top:14px;border:1px solid #3c4657;background:#222a37;color:#d5dce6;width:34px;height:34px;border-radius:10px;font-size:18px}.modal-preview{height:190px;display:grid;place-items:center;background:radial-gradient(ellipse,#30394a,#141923 68%);border-radius:15px;margin-bottom:17px}.modal-preview .sprite{width:128px;height:128px;filter:drop-shadow(0 10px 14px #0009)}.modal-title{font-size:21px;font-weight:900;margin:0 40px 5px 0}.modal-sub{color:#9aa6b6;font-size:12px}.modal-details{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:17px 0}.detail{background:#111720;border:1px solid #2d3746;border-radius:11px;padding:10px}.detail span{display:block;font-size:10px;color:#8491a2;text-transform:uppercase;letter-spacing:.7px}.detail strong{display:block;font-size:13px;margin-top:3px}.wiki-link{display:inline-flex;text-decoration:none;color:#19210f;font-weight:850;font-size:12px;background:var(--accent);border-radius:10px;padding:10px 13px}.note{color:#7f8a9b;font-size:10px;margin-top:13px}.load-error{display:none;background:#2a1a1d;border:1px solid #6d363b;color:#ffc6c6;border-radius:13px;padding:14px;margin:12px 0;font-size:12px}.small-spinner{display:inline-block;width:12px;height:12px;border:2px solid #556247;border-top-color:#d7ffa5;border-radius:50%;animation:spin .75s linear infinite;vertical-align:-2px;margin-right:6px}@keyframes spin{to{transform:rotate(360deg)}}
@@ -41,7 +41,7 @@
     </div>
     <div class="helper-row">
       <div class="examples"><span>TRY:</span><button class="example" data-color="red">Red</button><button class="example" data-color="blue">Blue</button><button class="example" data-color="pink">Pink</button><button class="example" data-color="brown">Brown</button><button class="example" data-color="purple">Purple</button><button class="example" data-color="gold">Gold</button></div>
-      <div class="tolerance"><label for="tolerance">Hue range</label><input id="tolerance" type="range" min="12" max="72" step="2" value="26"><strong id="toleranceValue">26°</strong><span>smaller = more precise</span></div>
+      <div class="tolerance"><label for="tolerance">Hue range</label><input id="tolerance" type="range" min="10" max="40" step="2" value="18"><strong id="toleranceValue">18°</strong><span>smaller = stricter hue window</span></div>
       <div class="coverage-control"><label for="minCoverage">Minimum color area</label><input id="minCoverage" type="range" min="20" max="100" step="5" value="50"><strong id="minCoverageValue">50%</strong><span>minimum percentage of the whole visible sprite</span></div>
     </div>
     <div id="loadError" class="load-error"></div>
@@ -72,7 +72,7 @@
 
   <footer class="footer">
     <div>Unofficial fan-made tool. Growtopia names and game art belong to Ubisoft / Robinson Technologies.<br>Item metadata & sprite coordinates: <a href="https://github.com/araeys/growtopia-explorer" target="_blank" rel="noopener">Growtopia Explorer — Raey (@araeys)</a>.</div>
-    <div>Asset index: community extraction of <b>items.dat v26</b> (not a guaranteed live 2026 snapshot) · Images are inventory sprites, not full equipped character renders.<br><a href="https://growpedia.cc/wiki" target="_blank" rel="noopener">Growpedia item reference</a> · <a href="https://growtopia-explorer.vercel.app" target="_blank" rel="noopener">Growtopia Explorer</a></div>
+    <div>GT Palette Lab v6 · Asset index: community extraction of <b>items.dat v26</b> (not a guaranteed live 2026 snapshot) · Images are inventory sprites, not full equipped character renders.<br><a href="https://growpedia.cc/wiki" target="_blank" rel="noopener">Growpedia item reference</a> · <a href="https://growtopia-explorer.vercel.app" target="_blank" rel="noopener">Growtopia Explorer</a></div>
   </footer>
 </div>
 
@@ -107,7 +107,7 @@
   };
   const ALIASES = {merah:'red',biru:'blue',kuning:'yellow',hijau:'green',ungu:'purple',jingga:'orange',oranye:'orange',
     'pink muda':'pink',hitam:'black',putih:'white',abu:'gray',abuabu:'gray',coklat:'brown',cokelat:'brown',emas:'gold',
-    cyan:'cyan',tosca:'teal',toska:'teal',nila:'indigo',marun:'maroon','ungu muda':'lavender','merah tua':'maroon'};
+    cyan:'cyan',tosca:'teal',toska:'teal',nila:'indigo',marun:'maroon','ungu muda':'lavender','merah tua':'dark red'};
   const $ = id => document.getElementById(id);
   const colorInput = $('colorQuery');
   const nameInput = $('nameQuery');
@@ -156,87 +156,101 @@
     return {...rgb,...rgbToHsl(rgb.r,rgb.g,rgb.b),hex:rgbToHex(rgb),modifier,key:aliased,raw:query};
   }
   function rgbToHex({r,g,b}){return '#'+[r,g,b].map(x=>Math.round(x).toString(16).padStart(2,'0')).join('');}
-  // Growtopia items.dat item type IDs (the category field, not arbitrary type fields).
-  // Only read explicit category identifiers. Generic `type` values can describe
-  // unrelated metadata in community exports and previously caused false categories.
+  // Canonical Growtopia items.dat itemCategory IDs. Do NOT use clothingType,
+  // actionType, generic typeId, or other unrelated numeric fields as category IDs.
+  // The group is the user-facing filter; subtype preserves the actual items.dat category.
   const ITEM_CATEGORY = new Map([
-    [0,'Tools'],[1,'Tools'],
-    [2,'Doors'],[3,'Decoration'],[4,'Decoration'],
-    [5,'Block'],[6,'Block'],[7,'Block'],[8,'Consumables'],[9,'Doors'],
-    [10,'Block'],[11,'Block'],[12,'Block'],[13,'Doors'],[14,'Block'],
-    [15,'Block'],[16,'Block'],[17,'Block'],[18,'Background'],[19,'Seeds'],
-    [20,'Clothes'],[21,'Block'],[22,'Wallpaper'],[23,'Wallpaper'],
-    [24,'Block'],[25,'Block'],[26,'Doors'],[27,'Block'],[28,'Background'],
-    [29,'Block'],[31,'Block'],[32,'Decoration'],[33,'Decoration'],[34,'Decoration'],
-    [35,'Block'],[36,'Block'],[37,'Components'],[38,'Decoration'],[39,'Decoration'],
-    [40,'Decoration'],[41,'Decoration'],[42,'Decoration'],[43,'Block'],
-    [45,'Block'],[46,'Decoration'],[47,'Decoration'],[49,'Decoration'],
-    [50,'Decoration'],[51,'Decoration'],[52,'Block'],[53,'Decoration'],
-    [54,'Decoration'],[55,'Decoration'],[56,'Decoration'],[57,'Decoration'],
-    [58,'Decoration'],[59,'Decoration'],[60,'Block'],[61,'Decoration'],
-    [62,'Decoration'],[63,'Decoration'],[65,'Decoration'],[66,'Decoration'],
-    [67,'Decoration'],[68,'Decoration'],[69,'Block'],[70,'Block'],[71,'Block'],
-    [72,'Decoration'],[73,'Decoration'],[74,'Decoration'],[75,'Decoration'],
-    [76,'Decoration'],[77,'Decoration'],[78,'Decoration'],[79,'Decoration'],
-    [80,'Decoration'],[81,'Decoration'],[82,'Decoration'],[83,'Decoration'],
-    [84,'Doors'],[85,'Decoration'],[86,'Decoration'],[87,'Decoration'],
-    [88,'Decoration'],[89,'Decoration'],[90,'Decoration'],[91,'Decoration'],
-    [92,'Decoration'],[93,'Decoration'],[94,'Decoration'],[95,'Decoration'],
-    [96,'Decoration'],[97,'Decoration'],[98,'Decoration'],[99,'Decoration'],
-    [100,'Decoration'],[101,'Decoration'],[102,'Decoration'],[103,'Decoration'],
-    [104,'Doors'],[105,'Doors'],[106,'Doors'],[108,'Block'],[109,'Decoration'],
-    [110,'Block'],[111,'Decoration'],[112,'Other'],[113,'Decoration'],
-    [114,'Decoration'],[115,'Decoration'],[116,'Decoration'],[117,'Decoration'],
-    [118,'Decoration'],[119,'Decoration'],[120,'Block'],[122,'Block'],
-    [123,'Block'],[124,'Decoration'],[125,'Decoration'],[126,'Decoration'],
-    [127,'Block'],[128,'Block'],[129,'Components'],[130,'Decoration'],
-    [131,'Decoration'],[132,'Decoration'],[134,'Decoration'],[135,'Block'],
-    [136,'Block'],[138,'Block'],[140,'Decoration'],[141,'Block'],
-    [142,'Doors'],[144,'Block'],[145,'Block']
+    [0,{name:'Fist',group:'Tools'}],[1,{name:'Wrench',group:'Tools'}],
+    [2,{name:'Door',group:'Doors'}],[3,{name:'Lock',group:'Block'}],[4,{name:'Gems',group:'Block'}],
+    [5,{name:'Treasure',group:'Block'}],[6,{name:'Deadly Block',group:'Block'}],[7,{name:'Trampoline Block',group:'Block'}],
+    [8,{name:'Consumable',group:'Consumables'}],[9,{name:'Entrance',group:'Doors'}],[10,{name:'Sign',group:'Block'}],
+    [11,{name:'SFX Block',group:'Block'}],[12,{name:'Toggleable Animated Block',group:'Block'}],[13,{name:'Main Door',group:'Doors'}],
+    [14,{name:'Platform',group:'Block'}],[15,{name:'Bedrock',group:'Block'}],[16,{name:'Pain Block (Lava)',group:'Block'}],
+    [17,{name:'Foreground Block',group:'Block'}],[18,{name:'Background Block',group:'Background'}],[19,{name:'Seed',group:'Seeds'}],
+    [20,{name:'Clothes',group:'Clothes'}],[21,{name:'Animated Block',group:'Block'}],[22,{name:'SFX Wallpaper',group:'Wallpaper'}],
+    [23,{name:'Toggleable Wallpaper',group:'Wallpaper'}],[24,{name:'Bouncy Block',group:'Block'}],[25,{name:'Pain Block (Spike)',group:'Block'}],
+    [26,{name:'Portal',group:'Doors'}],[27,{name:'Checkpoint',group:'Block'}],[28,{name:'Sheet Music',group:'Background'}],
+    [29,{name:'Slippery Block',group:'Block'}],[31,{name:'Toggleable Block',group:'Block'}],
+    [32,{name:'Chest',group:'Decoration'}],[33,{name:'Mailbox',group:'Decoration'}],[34,{name:'Bulletin Board',group:'Decoration'}],
+    [35,{name:'Event Mystery Block',group:'Block'}],[36,{name:'Random Block',group:'Block'}],[37,{name:'Component',group:'Components'}],
+    [38,{name:'Provider',group:'Decoration'}],[39,{name:'Chemical Combiner',group:'Decoration'}],[40,{name:'Achievement Block',group:'Block'}],
+    [41,{name:'Weather Machine',group:'Decoration'}],[42,{name:'Scoreboard',group:'Decoration'}],[43,{name:'Sungate',group:'Block'}],
+    [44,{name:'Internal',group:'Other'}],[45,{name:'Toggleable Deadly Block',group:'Block'}],[46,{name:'Heart Monitor',group:'Decoration'}],
+    [47,{name:'Donation Box',group:'Decoration'}],[49,{name:'Mannequin',group:'Decoration'}],[50,{name:'Security Camera',group:'Decoration'}],
+    [51,{name:'Magic Egg',group:'Block'}],[52,{name:'Game Block',group:'Block'}],[53,{name:'Game Generator',group:'Decoration'}],
+    [54,{name:'Xenonite Crystal',group:'Decoration'}],[55,{name:'Phone Booth',group:'Decoration'}],[56,{name:'Crystal',group:'Decoration'}],
+    [57,{name:'Crime Villain',group:'Decoration'}],[58,{name:'Clothing Compactor',group:'Decoration'}],[59,{name:'Spotlight',group:'Decoration'}],
+    [60,{name:'Pushing Block',group:'Block'}],[61,{name:'Display Block',group:'Decoration'}],[62,{name:'Vending Machine',group:'Decoration'}],
+    [63,{name:'Fish Tank Port',group:'Decoration'}],[64,{name:'Fish',group:'Other'}],[65,{name:'Solar Collector',group:'Decoration'}],
+    [66,{name:'Forge',group:'Decoration'}],[67,{name:'Giving Tree',group:'Decoration'}],[68,{name:'Giving Tree Stump',group:'Decoration'}],
+    [69,{name:'Steam Block',group:'Block'}],[70,{name:'Pain Block (Steam)',group:'Block'}],[71,{name:'Music Block (Steam)',group:'Block'}],
+    [72,{name:'Silkworm',group:'Decoration'}],[73,{name:'Sewing Machine',group:'Decoration'}],[74,{name:'Country Flag',group:'Decoration'}],
+    [75,{name:'Lobster Trap',group:'Decoration'}],[76,{name:'Painting Easel',group:'Decoration'}],[77,{name:'Battle Pet Cage',group:'Decoration'}],
+    [78,{name:'Pet Trainer',group:'Decoration'}],[79,{name:'Steam Engine',group:'Decoration'}],[80,{name:'Lock-Bot',group:'Decoration'}],
+    [81,{name:'Weather Machine',group:'Decoration'}],[82,{name:'Spirit Storage',group:'Decoration'}],[83,{name:'Display Shelf',group:'Decoration'}],
+    [84,{name:'VIP Entrance',group:'Doors'}],[85,{name:'Challenge Timer',group:'Decoration'}],[86,{name:'Challenge Flag',group:'Decoration'}],
+    [87,{name:'Fish Mount',group:'Decoration'}],[88,{name:'Portrait',group:'Decoration'}],[89,{name:'Weather Machine',group:'Decoration'}],
+    [90,{name:'Fossil',group:'Decoration'}],[91,{name:'Fossil Prep Station',group:'Decoration'}],[92,{name:'DNA Processor',group:'Decoration'}],
+    [93,{name:'Howler',group:'Decoration'}],[94,{name:'Valhowla Treasure',group:'Decoration'}],[95,{name:'Chemsynth Processor',group:'Decoration'}],
+    [96,{name:'Chemsynth Tank',group:'Decoration'}],[97,{name:'Storage Box',group:'Decoration'}],[98,{name:'Cooking Oven',group:'Decoration'}],
+    [99,{name:'Audio Block',group:'Block'}],[100,{name:'Geiger Charger',group:'Decoration'}],[101,{name:'Adventure Begin',group:'Decoration'}],
+    [102,{name:'Tomb Robber',group:'Decoration'}],[103,{name:'Balloon-O-Matic',group:'Decoration'}],[104,{name:'Entrance (Punch)',group:'Doors'}],
+    [105,{name:'Entrance (Grow)',group:'Doors'}],[106,{name:'Entrance (Build)',group:'Doors'}],[107,{name:'Artifact',group:'Other'}],
+    [108,{name:'Jelly Block',group:'Block'}],[109,{name:'Training Port',group:'Decoration'}],[110,{name:'Fishing Block',group:'Block'}],
+    [111,{name:'Magplant',group:'Decoration'}],[112,{name:'Magplant Remote',group:'Other'}],[113,{name:'CyBlock Bot',group:'Decoration'}],
+    [114,{name:'CyBlock Command',group:'Decoration'}],[115,{name:'Lucky Token',group:'Other'}],[116,{name:'GrowScan 9000',group:'Decoration'}],
+    [117,{name:'Containment Field Power Node',group:'Decoration'}],[118,{name:'Spirit Board',group:'Decoration'}],[119,{name:'World Architect',group:'Decoration'}],
+    [120,{name:'Startopia Block',group:'Block'}],[122,{name:'Toggleable Multi-Framed Animated Block',group:'Block'}],
+    [123,{name:'Autobreak (Block)',group:'Block'}],[124,{name:'Autobreak (Trees)',group:'Decoration'}],[125,{name:'Autobreak',group:'Decoration'}],
+    [126,{name:'Storm Cloud',group:'Decoration'}],[127,{name:'Disappear when stepped on',group:'Block'}],[128,{name:'Puddle Block',group:'Block'}],
+    [129,{name:'Root Cutting',group:'Components'}],[130,{name:'Safe Vault',group:'Decoration'}],[131,{name:'Angelic Counting Cloud',group:'Decoration'}],
+    [132,{name:'Mining Explosives',group:'Block'}],[134,{name:'Infinity Weather Machine',group:'Decoration'}],[135,{name:'Sliming Block',group:'Block'}],
+    [136,{name:'Pain Block (Acid)',group:'Block'}],[138,{name:'Waving Inflatable Arm Guy',group:'Decoration'}],
+    [140,{name:'Pineapple Guzzler',group:'Decoration'}],[141,{name:"Kranken's Galactic Block",group:'Block'}],
+    [142,{name:'Friends Entrance',group:'Doors'}],[144,{name:'Conveyor Belt',group:'Block'}],[145,{name:'Climbing Rocks',group:'Block'}]
   ]);
-  function classify(item){
-    // These are explicit item category keys used by community item exports.
-    const idKeys = ['itemCategory','item_category','itemCategoryId','item_category_id',
-      'categoryId','category_id','categoryID','itemTypeId','item_type_id','typeId','type_id'];
-    for (const key of idKeys) {
-      const value = item[key];
-      if (value !== undefined && value !== null && value !== '' && /^\d+$/.test(String(value).trim())) {
-        const label = ITEM_CATEGORY.get(Number(value));
-        if (label) return label;
-      }
+
+  function categoryInfo(item){
+    // `itemCategory` is the items.dat category byte. Other numeric properties
+    // such as clothingType, actionType, typeId or collisionType are NOT categories.
+    const rawCategory = item.itemCategory ?? item.item_category;
+    if(rawCategory !== undefined && rawCategory !== null && rawCategory !== ''){
+      const id = Number(rawCategory);
+      if(Number.isInteger(id) && ITEM_CATEGORY.has(id)) return ITEM_CATEGORY.get(id);
     }
 
-    // String labels are safe to use; numeric generic fields are intentionally ignored.
+    // Accept explicit string category labels, not ambiguous numeric fields.
     const labelFields = [item.categoryName,item.category_name,item.itemCategoryName,
-      item.item_category_name,item.category,item.itemCategory,item.itemType,item.type];
-    for (const value of labelFields) {
-      if (typeof value !== 'string' || /^\d+$/.test(value.trim())) continue;
-      const normalized = value.trim().toLowerCase().replace(/[_-]+/g,' ').replace(/\s+/g,' ');
-      if (/wallpaper/.test(normalized)) return 'Wallpaper';
-      if (/\b(seed|seeds)\b/.test(normalized)) return 'Seeds';
-      if (/\b(clothes|clothing|wearable|equipment)\b/.test(normalized)) return 'Clothes';
-      if (/\b(tool|tools|weapon|fist|wrench)\b/.test(normalized)) return 'Tools';
-      if (/\b(door|doors|portal|portals|entrance)\b/.test(normalized)) return 'Doors';
-      if (/\b(background|backdrop)\b/.test(normalized)) return 'Background';
-      if (/\b(component|components|ingredient)\b/.test(normalized)) return 'Components';
-      if (/\b(consumable|consumables|currency|food)\b/.test(normalized)) return 'Consumables';
-      if (/\b(decoration|decor|furniture|furnishing|prop)\b/.test(normalized)) return 'Decoration';
-      if (/\b(foreground|block|blocks)\b/.test(normalized)) return 'Block';
+      item.item_category_name,item.category,item.itemType,item.type];
+    for(const value of labelFields){
+      if(typeof value !== 'string' || /^\d+$/.test(value.trim())) continue;
+      const n=value.trim().toLowerCase().replace(/[_-]+/g,' ').replace(/\s+/g,' ');
+      if(/wallpaper/.test(n)) return {name:'Wallpaper',group:'Wallpaper'};
+      if(/background/.test(n)) return {name:'Background',group:'Background'};
+      if(/\b(seed|seeds)\b/.test(n)) return {name:'Seed',group:'Seeds'};
+      if(/\b(clothes|clothing|wearable|equipment|back|hat|shirt|pants)\b/.test(n)) return {name:'Clothes',group:'Clothes'};
+      if(/\b(consumable|consumables|food|currency)\b/.test(n)) return {name:'Consumable',group:'Consumables'};
+      if(/\b(component|components|ingredient)\b/.test(n)) return {name:'Component',group:'Components'};
+      if(/\b(tool|tools|weapon|fist|wrench)\b/.test(n)) return {name:'Tool',group:'Tools'};
+      if(/\b(door|doors|portal|portals|entrance)\b/.test(n)) return {name:'Door / Entrance',group:'Doors'};
+      if(/\b(foreground|block|blocks|sign)\b/.test(n)) return {name:'Foreground Block',group:'Block'};
+      if(/\b(decoration|decor|furniture|furnishing|prop)\b/.test(n)) return {name:'Decoration',group:'Decoration'};
     }
 
-    // Conservative fallback for older/incomplete records. Unclear items become
-    // Other instead of being guessed into Blocks or Wallpapers.
-    const n = String(item.name || '').toLowerCase();
-    if (/\bseed$/.test(n)) return 'Seeds';
-    if (/wallpaper/.test(n)) return 'Wallpaper';
-    if (/\b(hat|hair|shirt|pants|shoes|boots|wings|mask|glasses|face|necklace|bracelet|cape|dress|skirt|suit|helmet|gloves|robe|coat)\b/.test(n)) return 'Clothes';
-    if (/\b(wrench|fist|pickaxe|sword|hammer|staff|scythe|tool)\b/.test(n)) return 'Tools';
-    if (/\b(door|portal|gateway|gate|entrance)\b/.test(n)) return 'Doors';
-    if (/\b(seed|consumable|food|potion)\b/.test(n)) return 'Consumables';
-    if (/\b(block|brick|stone|dirt|lava|bedrock|rock|grass|sand|wood|glass|platform|fence|pipe|spike|wall)\b/.test(n)) return 'Block';
-    if (/\b(lamp|chair|table|sofa|couch|bed|shelf|chest|vase|plant|flower|deco|decoration|statue|furniture|machine|display|painting|tree)\b/.test(n)) return 'Decoration';
-    return 'Other';
+    // Conservative name fallback is only used when the canonical category is absent.
+    const n=String(item.name||'').toLowerCase();
+    if(/\bseed$/.test(n)) return {name:'Seed',group:'Seeds'};
+    if(/wallpaper/.test(n)) return {name:'Wallpaper',group:'Wallpaper'};
+    if(/background/.test(n)) return {name:'Background',group:'Background'};
+    if(/\b(hat|hair|shirt|pants|shoes|boots|wings|mask|glasses|face|necklace|bracelet|cape|dress|skirt|suit|helmet|gloves|robe|coat)\b/.test(n)) return {name:'Clothes',group:'Clothes'};
+    if(/\b(wrench|fist|pickaxe|sword|hammer|staff|scythe|tool)\b/.test(n)) return {name:'Tool',group:'Tools'};
+    if(/\b(door|portal|gateway|gate|entrance)\b/.test(n)) return {name:'Door / Entrance',group:'Doors'};
+    if(/\b(consumable|food|potion|fragment|token)\b/.test(n)) return {name:'Consumable',group:'Consumables'};
+    if(/\b(sign|block|brick|stone|dirt|lava|bedrock|rock|grass|sand|wood|glass|platform|fence|pipe|spike|wall)\b/.test(n)) return {name:'Foreground Block',group:'Block'};
+    if(/\b(lamp|chair|table|sofa|couch|bed|shelf|chest|vase|plant|flower|deco|decoration|statue|furniture|machine|display|painting|tree)\b/.test(n)) return {name:'Decoration',group:'Decoration'};
+    return {name:'Unclassified',group:'Other'};
   }
+  function classify(item){return categoryInfo(item).group;}
   function tileUrl(item){return TILE_URL+encodeURIComponent(item.texture||'');}
   function setSprite(el,item,scale=2){
     if(!el||!item||!item.texture||!Number.isFinite(Number(item.tx))||!Number.isFinite(Number(item.ty))){el.style.backgroundImage='none';return;}
@@ -254,29 +268,34 @@
     ctx.clearRect(0,0,TILE_SIZE,TILE_SIZE);
     ctx.drawImage(img,sx*TILE_SIZE,sy*TILE_SIZE,TILE_SIZE,TILE_SIZE,0,0,TILE_SIZE,TILE_SIZE);
     const data=ctx.getImageData(0,0,TILE_SIZE,TILE_SIZE).data;
-
-    // Histograms store REAL visible pixel area (alpha-weighted), without the
-    // old saturation weighting that could turn small accents into high scores.
-    const hue=new Float32Array(72);       // 5-degree hue bins for tighter color-family matching
-    const hueSat=new Float32Array(72);   // saturation sum for each hue bin
-    const neutral=new Float32Array(32);   // 1/32 lightness bins, neutral pixels only
-    let total=0, chromaticTotal=0, neutralTotal=0;
+    const HUE_BINS=72,LIGHT_BINS=16,CELLS=HUE_BINS*LIGHT_BINS;
+    const hueLightnessCount=new Uint16Array(CELLS);
+    const satSum=new Float32Array(CELLS);
+    const hueLightnessAvgSat=new Uint8Array(CELLS);
+    const neutral=new Uint16Array(32);
+    let total=0,chromaticTotal=0,neutralTotal=0;
     for(let i=0;i<data.length;i+=4){
       const alpha=data[i+3]/255;
-      if(alpha<0.20)continue;
-      const weight=alpha;
+      if(alpha<0.5)continue;
       const {h,s,l}=rgbToHsl(data[i],data[i+1],data[i+2]);
-      total+=weight;
+      total++;
       if(s<0.18){
         const bin=Math.max(0,Math.min(31,Math.floor(l*32)));
-        neutral[bin]+=weight;neutralTotal+=weight;
+        neutral[bin]++;neutralTotal++;
       }else{
-        const bin=Math.max(0,Math.min(71,Math.floor(h/5)));
-        hue[bin]+=weight;hueSat[bin]+=s*weight;chromaticTotal+=weight;
+        const hueBin=Math.max(0,Math.min(HUE_BINS-1,Math.floor(h/5)));
+        const lightBin=Math.max(0,Math.min(LIGHT_BINS-1,Math.floor(l*LIGHT_BINS)));
+        const index=hueBin*LIGHT_BINS+lightBin;
+        hueLightnessCount[index]++;
+        satSum[index]+=s;
+        chromaticTotal++;
       }
     }
+    for(let i=0;i<CELLS;i++){
+      if(hueLightnessCount[i]) hueLightnessAvgSat[i]=Math.round((satSum[i]/hueLightnessCount[i])*255);
+    }
     if(total<1)return null;
-    return {hue,hueSat,neutral,total,chromaticTotal,neutralTotal};
+    return {hueLightnessCount,hueLightnessAvgSat,neutral,total,chromaticTotal,neutralTotal};
   }
 
   function neutralLightnessRange(target){
@@ -326,17 +345,26 @@
     return analysisPromise;
   }
   function hueDistance(a,b){const d=Math.abs(a-b)%360;return Math.min(d,360-d);}
+  function chromaticLightnessRange(target){
+    const modifier=String(target.modifier||'').toLowerCase();
+    const key=String(target.key||'').toLowerCase();
+    // Shade words now alter the measured pixel lightness instead of being ignored.
+    if(/deep|very dark|sangat tua/.test(modifier)) return [0.04,0.32];
+    if(/dark|tua|gelap/.test(modifier)) return [0.07,0.43];
+    if(/light|pale|pastel|muda|terang/.test(modifier)) return [0.48,0.94];
+    if(key==='brown'||key==='maroon'||key==='burgundy') return [0.07,0.53];
+    if(key==='tan'||key==='khaki') return [0.30,0.78];
+    if(key==='cream'||key==='beige') return [0.62,0.98];
+    return [0.06,0.94];
+  }
   function scoreProfile(p,target,tolerance){
-    if(!p || !p.total)return {coverage:0};
+    if(!p||!p.total)return {coverage:0};
     let matchedArea=0;
     const key=String(target.key||'').toLowerCase();
     const neutralNames=['white','black','gray','grey','silver','charcoal'];
-    const neutralQuery=neutralNames.includes(key) || target.s<0.17;
+    const neutralQuery=neutralNames.includes(key)||target.s<0.17;
 
     if(neutralQuery){
-      // Generic gray deliberately excludes near-white highlights and deep-black
-      // outlines. A white object with a few gray bevel pixels therefore has a
-      // low gray coverage percentage instead of being treated as a gray item.
       const [minL,maxL]=neutralLightnessRange(target);
       for(let i=0;i<32;i++){
         const binMin=i/32,binMax=(i+1)/32;
@@ -344,34 +372,36 @@
         if(overlap>0)matchedArea+=p.neutral[i]*Math.min(1,overlap*32);
       }
     }else{
-      // Chromatic searches use a narrow hue window. The old 10-degree bins
-      // plus a 28-degree half-window let red bleed into orange, pink and brown.
-      // 5-degree bins and a smaller default window preserve shade variation
-      // (light/dark reds) without treating neighboring color families as red.
-      const halfWidth=Math.max(6,Math.min(36,tolerance/2));
-      const minSaturation=Math.max(0.18,Math.min(0.30,target.s*0.34));
-      for(let i=0;i<72;i++){
-        const count=p.hue[i];if(!count)continue;
-        const center=i*5+2.5;
-        const d=hueDistance(center,target.h);
-        const binInner=Math.max(0,d-2.5),binOuter=d+2.5;
-        let weight=0;
-        if(binOuter<=halfWidth)weight=1;
-        else if(binInner<halfWidth)weight=(halfWidth-binInner)/5;
-        // Exclude weakly tinted near-neutrals from chromatic color searches.
-        // Their gray/white/black coverage is handled by the neutral histogram.
-        if(weight>0 && p.hueSat && p.hueSat[i] < minSaturation*count) {
-          weight *= Math.max(0, Math.min(1, p.hueSat[i] / Math.max(0.001, minSaturation*count)));
+      const [minL,maxL]=chromaticLightnessRange(target);
+      const halfWidth=Math.max(4,Math.min(22,tolerance/2));
+      // Reject weakly tinted beige/cream/grey pixels from saturated color families.
+      // Dark red uses a stronger saturation floor so brown/cream shading cannot pass.
+      let minSaturation=Math.max(0.26,Math.min(0.48,target.s*0.50));
+      if(/dark|deep|tua|gelap/.test(target.modifier||'')) minSaturation=Math.max(minSaturation,0.40);
+      const LIGHT_BINS=16;
+      for(let hBin=0;hBin<72;hBin++){
+        const hueCenter=hBin*5+2.5;
+        const d=hueDistance(hueCenter,target.h);
+        const hueWeight=d<=halfWidth-2.5?1:(d<halfWidth+2.5?Math.max(0,(halfWidth+2.5-d)/5):0);
+        if(hueWeight<=0)continue;
+        for(let lBin=0;lBin<LIGHT_BINS;lBin++){
+          const index=hBin*LIGHT_BINS+lBin;
+          const count=p.hueLightnessCount[index];
+          if(!count)continue;
+          const binMin=lBin/LIGHT_BINS,binMax=(lBin+1)/LIGHT_BINS;
+          const overlap=Math.max(0,Math.min(binMax,maxL)-Math.max(binMin,minL));
+          if(overlap<=0)continue;
+          const lightWeight=Math.min(1,overlap*LIGHT_BINS);
+          const avgSat=(p.hueLightnessAvgSat[index]||0)/255;
+          const satWeight=avgSat>=minSaturation?1:0;
+          if(satWeight)matchedArea+=count*hueWeight*lightWeight;
         }
-        matchedArea+=count*weight;
       }
     }
-
-    // Coverage is a percentage of ALL visible pixels in the sprite, not a
-    // similarity score among only the pixels that happened to match.
     const coverage=Math.max(0,Math.min(1,matchedArea/p.total));
     return {coverage};
   }
+
   function getMinCoverage(){return (Number($('minCoverage').value)||50)/100;}
   function getTolerance(){return Number($('tolerance').value)||26;}
   function applyFilters(){
@@ -411,13 +441,13 @@
       const thumb=document.createElement('div');thumb.className='thumb-wrap';const sprite=document.createElement('div');sprite.className='sprite';setSprite(sprite,item,2);thumb.appendChild(sprite);
       if(currentColor){const badge=document.createElement('div');badge.className='match-badge';badge.textContent=Math.round(entry.coverage*100)+'% area match';thumb.appendChild(badge);}
       const title=document.createElement('div');title.className='item-name';title.textContent=item.name||'Unknown item';
-      const meta=document.createElement('div');meta.className='item-meta';const left=document.createElement('div');left.className='item-meta-left';const cat=document.createElement('span');const itemCategory=classify(item);cat.className='category-tag '+itemCategory.toLowerCase();cat.textContent=itemCategory;left.append(cat);const id=document.createElement('span');id.className='item-id';id.textContent='#'+item.id;meta.append(left,id);
+      const meta=document.createElement('div');meta.className='item-meta';const left=document.createElement('div');left.className='item-meta-left';const cat=document.createElement('span');const itemCategory=classify(item);cat.className='category-tag '+itemCategory.toLowerCase();const info=categoryInfo(item);cat.textContent=info.group==='Block'&&info.name!=='Foreground Block'?`Block · ${info.name}`:info.group;left.append(cat);const id=document.createElement('span');id.className='item-id';id.textContent='#'+item.id;meta.append(left,id);
       card.append(thumb,title,meta);card.addEventListener('click',()=>openItem(entry));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openItem(entry);}});frag.appendChild(card);
     }
     resultEl.appendChild(frag);
   }
   function openItem(entry){
-    const item=entry.item;setSprite($('modalSprite'),item,4);$('modalTitle').textContent=item.name||'Unknown item';$('modalSub').textContent='Growtopia inventory sprite preview';$('modalId').textContent=item.id;$('modalCategory').textContent=classify(item);$('modalTexture').textContent=item.texture||'—';$('modalMatch').textContent=currentColor?Math.round(entry.coverage*100)+'% of visible pixels':'Not searched';
+    const item=entry.item;setSprite($('modalSprite'),item,4);$('modalTitle').textContent=item.name||'Unknown item';$('modalSub').textContent='Growtopia inventory sprite preview';$('modalId').textContent=item.id;const info=categoryInfo(item);$('modalCategory').textContent=info.group==='Block'&&info.name!=='Foreground Block'?`Block · ${info.name}`:info.group;$('modalTexture').textContent=item.texture||'—';$('modalMatch').textContent=currentColor?Math.round(entry.coverage*100)+'% of visible pixels':'Not searched';
     $('wikiLink').href='https://growtopia.fandom.com/wiki/'+encodeURIComponent((item.name||'').replace(/ /g,'_'));$('itemModal').classList.add('open');
   }
   function closeModal(){$('itemModal').classList.remove('open');}
@@ -440,7 +470,7 @@
       const raw=Array.isArray(payload)?payload:(Array.isArray(payload.items)?payload.items:(Array.isArray(payload.data)?payload.data:null));
       if(!raw)throw new Error('Unexpected item database format.');
       metadata=new Map((meta||[]).map(x=>[x.filename,x]));
-      items=raw.filter(x=>x&&x.name&&x.name!=='Blank').map(x=>({...x, id:x.id??x.itemId??x.itemID, tx:x.tx??x.textureX??x.texture_x, ty:x.ty??x.textureY??x.texture_y, texture:x.texture??x.textureFile??x.texture_name}));
+      items=raw.filter(x=>x&&x.name&&x.name!=='Blank').map(x=>({...x, id:x.id??x.itemId??x.itemID, itemCategory:x.itemCategory??x.item_category, tx:x.tx??x.textureX??x.texture_x, ty:x.ty??x.textureY??x.texture_y, texture:x.texture??x.textureFile??x.texture_name}));
       countEl.innerHTML=`<span>${items.length.toLocaleString()}</span> items loaded · 96 per page`;
       statusEl.textContent='Item database ready · choose a color to scan sprites';
       $('loadError').style.display='none';
