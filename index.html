@@ -309,6 +309,68 @@
     return {hueLightnessCount,hueLightnessAvgSat,neutral,total,chromaticTotal,neutralTotal};
   }
 
+  async function analyzeDatabase(){
+    // Build the sprite color index once per page load. This routine was
+    // accidentally omitted in v7, which caused every color search to fail.
+    if(analysisPromise) return analysisPromise;
+    analysisPromise=(async()=>{
+      const groups=new Map();
+      for(const item of items){
+        if(!item.texture || !Number.isFinite(Number(item.tx)) || !Number.isFinite(Number(item.ty))) continue;
+        if(!groups.has(item.texture)) groups.set(item.texture,[]);
+        groups.get(item.texture).push(item);
+      }
+      const groupList=[...groups.entries()];
+      let processed=0,failed=0,cursor=0;
+      const total=items.length;
+      $('progressWrap').style.display='block';
+      $('progressBar').style.width='0%';
+      statusEl.innerHTML='<span class="small-spinner"></span>Reading sprite pixels…';
+      const canvas=document.createElement('canvas');
+      canvas.width=TILE_SIZE; canvas.height=TILE_SIZE;
+      const ctx=canvas.getContext('2d',{willReadFrequently:true});
+      if(!ctx) throw new Error('Canvas is unavailable in this browser.');
+
+      async function worker(){
+        while(true){
+          const index=cursor++;
+          if(index>=groupList.length) break;
+          const [texture,list]=groupList[index];
+          try{
+            const img=await loadImage(TILE_URL+encodeURIComponent(texture));
+            for(const item of list){
+              try{
+                const profile=profileSprite(ctx,img,item);
+                if(profile) profiles.set(item.id,profile); else failed++;
+              }catch(error){ failed++; }
+            }
+          }catch(error){ failed+=list.length; }
+          processed+=list.length;
+          const pct=Math.min(100,Math.round(processed/Math.max(1,total)*100));
+          $('progressBar').style.width=pct+'%';
+          statusEl.textContent=`Analyzing sprites · ${processed.toLocaleString()} / ${total.toLocaleString()} items`;
+        }
+      }
+      await Promise.all(Array.from({length:Math.min(4,Math.max(1,groupList.length))},()=>worker()));
+      $('progressBar').style.width='100%';
+      $('progressWrap').style.display='none';
+      if(!profiles.size){
+        throw new Error('No sprites could be analyzed. The texture sheet host may be unavailable or blocked by CORS.');
+      }
+      statusEl.textContent=`Color index ready · ${profiles.size.toLocaleString()} sprites sampled${failed?` · ${failed.toLocaleString()} unavailable`:''}`;
+      return profiles.size;
+    })().catch(error=>{
+      analysisPromise=null;
+      throw error;
+    });
+    return analysisPromise;
+  }
+
+  function hueDistance(a,b){
+    const d=Math.abs(a-b)%360;
+    return Math.min(d,360-d);
+  }
+
   function chromaticLightnessRange(target){
     const modifier=String(target.modifier||'').toLowerCase();
     const key=String(target.key||'').toLowerCase();
@@ -460,7 +522,16 @@
     if(!target){$('loadError').style.display='block';$('loadError').textContent='Color not recognized. Try a common color name or a HEX value such as #D94343.';return;}
     $('loadError').style.display='none';currentColor=target;lastQuery=q;
     colorPicker.value=target.hex;
-    await analyzeDatabase();applyFilters();
+    try{
+      await analyzeDatabase();
+      applyFilters();
+    }catch(error){
+      console.error(error);
+      $('loadError').style.display='block';
+      $('loadError').textContent='Color scan failed: '+(error&&error.message?error.message:'unknown error')+' Reload the page and try again.';
+      statusEl.textContent='Color scan unavailable';
+      resultEl.innerHTML='<div class="empty"><div class="empty-icon">⚠</div><strong>Could not analyze item sprites</strong>The item catalog loaded, but the sprite color index could not be built.</div>';
+    }
   }
   async function init(){
     try{
