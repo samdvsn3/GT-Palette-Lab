@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#101218">
-<title>GT Palette Lab v7 — Growtopia Color Finder</title>
+<title>GT Palette Lab v8 — Growtopia Color Finder</title>
 <style>
 :root{color-scheme:dark;--bg:#0d0f14;--panel:#151922;--panel2:#1b202b;--line:#2b3341;--muted:#929cad;--text:#f3f5f8;--accent:#b7f36b;--accent2:#82c83b;--danger:#ff7777;--shadow:0 16px 45px rgba(0,0,0,.28)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(900px 520px at 8% -10%,rgba(183,243,107,.12),transparent 60%),radial-gradient(700px 400px at 100% 0%,rgba(93,145,255,.09),transparent 55%),var(--bg);color:var(--text);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}button,input,select{font:inherit}button{cursor:pointer}.shell{max-width:1440px;margin:auto;padding:28px 28px 50px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:34px}.brand{display:flex;gap:12px;align-items:center}.brand-mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#d8ff9b,#74b83b);display:grid;place-items:center;box-shadow:0 7px 24px rgba(139,214,76,.2);color:#18210e;font-weight:1000;font-size:18px;letter-spacing:-2px}.brand-name{font-size:16px;font-weight:850;letter-spacing:.2px}.brand-sub{font-size:11px;color:var(--muted);letter-spacing:1.8px;text-transform:uppercase}.top-tag{border:1px solid #3c4b2a;background:rgba(183,243,107,.08);color:#cbf79e;border-radius:99px;padding:7px 12px;font-size:11px;font-weight:700;letter-spacing:.5px}.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:end;margin-bottom:24px}.eyebrow{font-size:11px;letter-spacing:2.3px;color:var(--accent);font-weight:800;text-transform:uppercase;margin-bottom:10px}.hero h1{margin:0;font-size:clamp(34px,5vw,58px);line-height:1.02;letter-spacing:-2.7px;max-width:760px}.hero h1 span{color:var(--accent)}.hero p{color:#aab2c0;max-width:640px;font-size:15px;margin:16px 0 0}.hero-note{background:linear-gradient(145deg,rgba(183,243,107,.09),rgba(183,243,107,.025));border:1px solid #35402b;border-radius:18px;padding:17px 18px;color:#c9d3c1;font-size:12px}.hero-note strong{color:#e4f6ce;display:block;font-size:13px;margin-bottom:4px}.search-panel{background:rgba(21,25,34,.94);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow);margin-bottom:18px}.search-row{display:grid;grid-template-columns:minmax(220px,1.1fr) minmax(180px,.8fr) auto;gap:12px;align-items:end}.field label{font-size:11px;color:#a3adbd;font-weight:750;display:block;margin:0 0 8px 2px;letter-spacing:.7px;text-transform:uppercase}.input-wrap{height:52px;display:flex;align-items:center;gap:10px;padding:0 14px;background:#0f131a;border:1px solid #333c4b;border-radius:13px;transition:.2s}.input-wrap:focus-within{border-color:#91cd54;box-shadow:0 0 0 3px rgba(183,243,107,.1)}.input-wrap input{background:transparent;color:#fff;border:0;outline:0;width:100%;min-width:0;font-size:15px}.input-wrap input::placeholder{color:#677183}.search-icon{color:var(--accent);font-size:18px}.color-picker{width:35px;height:35px;flex:0 0 auto;border:0;background:transparent;padding:0;cursor:pointer}.color-picker::-webkit-color-swatch-wrapper{padding:0}.color-picker::-webkit-color-swatch{border:2px solid #ffffff33;border-radius:9px}.go-btn{height:52px;padding:0 23px;border:0;border-radius:13px;background:var(--accent);color:#19220f;font-weight:900;letter-spacing:.2px;box-shadow:0 8px 20px rgba(183,243,107,.16);transition:.18s}.go-btn:hover{background:#cbff8d;transform:translateY(-1px)}.helper-row{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:13px;flex-wrap:wrap}.examples{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.examples span{font-size:11px;color:#7f8999}.example{border:1px solid #303847;background:#1a202a;color:#bdc6d3;border-radius:99px;padding:5px 10px;font-size:11px}.example:hover{border-color:#a0d96a;color:#e9f6dc}.tolerance{display:flex;align-items:center;gap:9px;color:#a0aabd;font-size:11px;flex-wrap:wrap}.tolerance input{accent-color:var(--accent);width:100px}.tolerance strong{color:#e2edda;min-width:38px}.coverage-control{display:flex;align-items:center;gap:9px;color:#a0aabd;font-size:11px;flex-wrap:wrap}.coverage-control input{accent-color:var(--accent);width:110px}.coverage-control strong{color:#e2edda;min-width:38px}.helper-row{align-items:flex-start}.filter-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:18px 0 16px}.filter-label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#768294;margin-right:5px;font-weight:800}.filter-btn{padding:8px 13px;border-radius:99px;border:1px solid #303847;background:#151a23;color:#aab4c3;font-size:12px;font-weight:650}.filter-btn:hover{color:white;border-color:#67768b}.filter-btn.active{background:rgba(183,243,107,.13);border-color:#719c45;color:#d7f7b0}.filter-help{font-size:11px;color:#7f8999;margin:-6px 2px 13px}.filter-actions{display:flex;gap:7px;margin-left:auto}.filter-mini{border:1px solid #303847;background:#151a23;color:#9eabbc;padding:6px 10px;border-radius:9px;font-size:10px}.filter-mini:hover{border-color:#789d51;color:#e4f4d4}.category-tag{max-width:100%}.item-meta{align-items:center}.item-meta-left{display:flex;align-items:center;gap:5px;min-width:0;flex-wrap:wrap}.category-tag.block{color:#d5f4b4;background:#27351f}.category-tag.wallpaper{color:#c8d8ff;background:#202c47}.category-tag.clothes{color:#ffd4e7;background:#45263a}.category-tag.seed{color:#e2d1a8;background:#403821}.status-row{display:flex;justify-content:space-between;gap:14px;align-items:center;margin:18px 2px 12px;flex-wrap:wrap}.result-count{font-size:13px;color:#dce2eb;font-weight:750}.result-count span{color:var(--accent)}.status-message{font-size:11px;color:#8792a3}.progress-wrap{display:none;height:5px;border-radius:99px;background:#252c38;overflow:hidden;margin:10px 0 17px}.progress-bar{width:0;height:100%;background:linear-gradient(90deg,#79b93b,#c5fa83);transition:width .18s}.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:13px}.item-card{min-width:0;position:relative;overflow:hidden;background:linear-gradient(155deg,#1a202b,#141922);border:1px solid #2b3341;border-radius:17px;padding:13px;transition:transform .16s,border-color .16s,box-shadow .16s;cursor:pointer}.item-card:hover{transform:translateY(-3px);border-color:#627b48;box-shadow:0 13px 26px rgba(0,0,0,.22)}.item-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.thumb-wrap{height:112px;border-radius:12px;background:radial-gradient(ellipse at 50% 55%,#283140,#141922 72%);display:grid;place-items:center;margin-bottom:11px;position:relative;overflow:hidden}.sprite{width:64px;height:64px;image-rendering:pixelated;image-rendering:crisp-edges;filter:drop-shadow(0 5px 7px rgba(0,0,0,.4));background-repeat:no-repeat}.match-badge{position:absolute;top:8px;right:8px;background:#111821db;border:1px solid #414c5d;color:#d6e7c5;border-radius:8px;padding:4px 6px;font-size:10px;font-weight:800}.item-name{font-size:13px;font-weight:800;line-height:1.3;min-height:34px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:#f1f3f7}.item-meta{display:flex;justify-content:space-between;align-items:center;gap:6px;margin-top:9px}.category-tag{display:inline-block;background:#252d3a;color:#aeb9c8;padding:4px 7px;border-radius:7px;font-size:9px;font-weight:750;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}.item-id{font-size:10px;color:#788596;font-variant-numeric:tabular-nums}.empty{grid-column:1/-1;border:1px dashed #3a4658;border-radius:18px;padding:44px 20px;text-align:center;color:#98a4b4;background:#141923}.empty strong{color:#ecf3e4;display:block;font-size:16px;margin-bottom:5px}.empty .empty-icon{font-size:30px;margin-bottom:10px}.more-row{text-align:center;margin:24px 0 0}.more-btn{border:1px solid #46543a;background:#1c2618;color:#d5f4b4;padding:11px 20px;border-radius:12px;font-weight:800}.more-btn:hover{background:#26351d}.footer{margin-top:42px;padding-top:20px;border-top:1px solid #252c37;color:#798494;font-size:11px;line-height:1.7;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer a{color:#b9d89b;text-decoration:none}.footer a:hover{text-decoration:underline}.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(3,5,8,.78);backdrop-filter:blur(8px);z-index:20}.modal.open{display:flex}.modal-card{width:min(520px,100%);background:#181e29;border:1px solid #414d60;border-radius:22px;padding:22px;box-shadow:0 24px 80px #000a;position:relative}.modal-close{position:absolute;right:14px;top:14px;border:1px solid #3c4657;background:#222a37;color:#d5dce6;width:34px;height:34px;border-radius:10px;font-size:18px}.modal-preview{height:190px;display:grid;place-items:center;background:radial-gradient(ellipse,#30394a,#141923 68%);border-radius:15px;margin-bottom:17px}.modal-preview .sprite{width:128px;height:128px;filter:drop-shadow(0 10px 14px #0009)}.modal-title{font-size:21px;font-weight:900;margin:0 40px 5px 0}.modal-sub{color:#9aa6b6;font-size:12px}.modal-details{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:17px 0}.detail{background:#111720;border:1px solid #2d3746;border-radius:11px;padding:10px}.detail span{display:block;font-size:10px;color:#8491a2;text-transform:uppercase;letter-spacing:.7px}.detail strong{display:block;font-size:13px;margin-top:3px}.wiki-link{display:inline-flex;text-decoration:none;color:#19210f;font-weight:850;font-size:12px;background:var(--accent);border-radius:10px;padding:10px 13px}.note{color:#7f8a9b;font-size:10px;margin-top:13px}.load-error{display:none;background:#2a1a1d;border:1px solid #6d363b;color:#ffc6c6;border-radius:13px;padding:14px;margin:12px 0;font-size:12px}.small-spinner{display:inline-block;width:12px;height:12px;border:2px solid #556247;border-top-color:#d7ffa5;border-radius:50%;animation:spin .75s linear infinite;vertical-align:-2px;margin-right:6px}@keyframes spin{to{transform:rotate(360deg)}}
@@ -72,7 +72,7 @@
 
   <footer class="footer">
     <div>Unofficial fan-made tool. Growtopia names and game art belong to Ubisoft / Robinson Technologies.<br>Item metadata & sprite coordinates: <a href="https://github.com/araeys/growtopia-explorer" target="_blank" rel="noopener">Growtopia Explorer — Raey (@araeys)</a>.</div>
-    <div>GT Palette Lab v7 · Asset index: community extraction of <b>items.dat v26</b> (not a guaranteed live 2026 snapshot) · Images are inventory sprites, not full equipped character renders.<br><a href="https://growpedia.cc/wiki" target="_blank" rel="noopener">Growpedia item reference</a> · <a href="https://growtopia-explorer.vercel.app" target="_blank" rel="noopener">Growtopia Explorer</a></div>
+    <div>GT Palette Lab v8 · Asset index: community extraction of <b>items.dat v26</b> (not a guaranteed live 2026 snapshot) · Images are inventory sprites, not full equipped character renders.<br><a href="https://growpedia.cc/wiki" target="_blank" rel="noopener">Growpedia item reference</a> · <a href="https://growtopia-explorer.vercel.app" target="_blank" rel="noopener">Growtopia Explorer</a></div>
   </footer>
 </div>
 
@@ -90,10 +90,14 @@
 <script>
 (() => {
   'use strict';
-  const BASE = 'https://raw.githubusercontent.com/araeys/growtopia-explorer/main/public/';
-  const DB_URL = BASE + 'items_db.json';
-  const META_URL = BASE + 'tilesheets_info.json';
-  const TILE_URL = BASE + 'tilesheets/';
+  // Mirror fallbacks keep the catalog reachable if one CDN is slow or blocked.
+  const ASSET_BASES = [
+    'https://raw.githubusercontent.com/araeys/growtopia-explorer/main/public/',
+    'https://cdn.jsdelivr.net/gh/araeys/growtopia-explorer@main/public/',
+    'https://growtopia-explorer.vercel.app/'
+  ];
+  let ASSET_BASE = ASSET_BASES[0];
+  let TILE_URL = ASSET_BASE + 'tilesheets/';
   const TILE_SIZE = 32;
   const PAGE_SIZE = 96;
   const COLORS = {
@@ -123,6 +127,9 @@
   const activeFilters = new Set();
   let currentColor = null;
   let analysisPromise = null;
+  let databasePromise = null;
+  let searchSequence = 0;
+  let inputDebounceTimer = null;
   let lastQuery = '';
   let sortMode = 'match';
 
@@ -263,7 +270,27 @@
     el.style.backgroundPosition=`-${Number(item.tx)*TILE_SIZE*scale}px -${Number(item.ty)*TILE_SIZE*scale}px`;
     el.style.backgroundRepeat='no-repeat';
   }
-  function loadImage(url){return new Promise((resolve,reject)=>{const img=new Image();img.crossOrigin='anonymous';img.decoding='async';img.onload=()=>resolve(img);img.onerror=()=>reject(new Error('Could not load '+url));img.src=url;});}
+  function loadImage(url){
+    return new Promise((resolve,reject)=>{
+      const marker='/tilesheets/';
+      const markerIndex=url.indexOf(marker);
+      const relative=markerIndex>=0?url.slice(markerIndex+1):url;
+      const bases=[ASSET_BASE,...ASSET_BASES.filter(base=>base!==ASSET_BASE)];
+      const candidates=[url,...bases.slice(1).map(base=>base+relative)];
+      let attempt=0;
+      const tryNext=()=>{
+        if(attempt>=candidates.length){reject(new Error('Could not load sprite sheet from any asset mirror.'));return;}
+        const src=candidates[attempt++];
+        const img=new Image();let settled=false;
+        const timer=setTimeout(()=>{if(!settled){settled=true;tryNext();}},18000);
+        img.crossOrigin='anonymous';img.decoding='async';
+        img.onload=()=>{if(settled)return;settled=true;clearTimeout(timer);resolve(img);};
+        img.onerror=()=>{if(settled)return;settled=true;clearTimeout(timer);tryNext();};
+        img.src=src;
+      };
+      tryNext();
+    });
+  }
   function profileSprite(ctx,img,item){
     const sx=Number(item.tx),sy=Number(item.ty);
     if(!Number.isFinite(sx)||!Number.isFinite(sy)||sx<0||sy<0||sx*TILE_SIZE+TILE_SIZE>img.naturalWidth||sy*TILE_SIZE+TILE_SIZE>img.naturalHeight) return null;
@@ -515,69 +542,115 @@
   }
   function closeModal(){$('itemModal').classList.remove('open');}
   async function runSearch(){
+    const token=++searchSequence;
     const q=colorInput.value.trim();
-    if(!items.length)return;
-    if(!q){currentColor=null;applyFilters();statusEl.textContent='Choose a color or enter an item name';return;}
-    const target=parseColor(q);
-    if(!target){$('loadError').style.display='block';$('loadError').textContent='Color not recognized. Try a common color name or a HEX value such as #D94343.';return;}
-    $('loadError').style.display='none';currentColor=target;lastQuery=q;
-    colorPicker.value=target.hex;
+    const nameTerm=nameInput.value.trim();
+    if(!q&&!nameTerm){
+      if(items.length){currentColor=null;applyFilters();}
+      statusEl.textContent=items.length?'Enter a color or item name to search':'Waiting for the item catalog…';
+      return;
+    }
+    const target=q?parseColor(q):null;
+    if(q&&!target){$('loadError').style.display='block';$('loadError').textContent='Color not recognized. Try a common color name or a HEX value such as #D94343.';return;}
+    $('loadError').style.display='none';
+    if(target){currentColor=target;lastQuery=q;colorPicker.value=target.hex;}
+    else currentColor=null;
     try{
-      await analyzeDatabase();
+      if(!items.length){
+        statusEl.innerHTML='<span class="small-spinner"></span>Loading item catalog — your search is queued…';
+        if(!databasePromise) throw new Error('The item catalog has not started loading. Reload the page.');
+        await databasePromise;
+      }
+      if(token!==searchSequence)return;
+      if(target){
+        statusEl.innerHTML='<span class="small-spinner"></span>Preparing color scan…';
+        await analyzeDatabase();
+      }
+      if(token!==searchSequence)return;
       applyFilters();
+      if(!target)statusEl.textContent='Item name search ready';
     }catch(error){
+      if(token!==searchSequence)return;
       console.error(error);
       $('loadError').style.display='block';
-      $('loadError').textContent='Color scan failed: '+(error&&error.message?error.message:'unknown error')+' Reload the page and try again.';
-      statusEl.textContent='Color scan unavailable';
-      resultEl.innerHTML='<div class="empty"><div class="empty-icon">⚠</div><strong>Could not analyze item sprites</strong>The item catalog loaded, but the sprite color index could not be built.</div>';
+      $('loadError').textContent='Search could not start: '+(error&&error.message?error.message:'unknown error')+' You can retry by pressing FIND ITEMS.';
+      statusEl.textContent='Search stopped · see error above';
+      resultEl.innerHTML='<div class="empty"><div class="empty-icon">⚠</div><strong>Search could not start</strong>Check the catalog connection or sprite host, then retry.</div>';
     }
   }
-  async function init(){
+  async function fetchJsonWithTimeout(url,timeoutMs=45000){
+    const controller=new AbortController();
+    const timer=setTimeout(()=>controller.abort(),timeoutMs);
     try{
-      statusEl.innerHTML='<span class="small-spinner"></span>Loading community item index…';
-      const [dbRes,metaRes]=await Promise.all([fetch(DB_URL,{cache:'no-cache'}),fetch(META_URL,{cache:'no-cache'})]);
-      if(!dbRes.ok)throw new Error('Could not download item database ('+dbRes.status+').');
-      const payload=await dbRes.json();const meta=metaRes.ok?await metaRes.json():[];
-      const raw=Array.isArray(payload)?payload:(Array.isArray(payload.items)?payload.items:(Array.isArray(payload.data)?payload.data:null));
-      if(!raw)throw new Error('Unexpected item database format.');
-      metadata=new Map((meta||[]).map(x=>[x.filename,x]));
-      items=raw.filter(x=>x&&x.name&&x.name!=='Blank').map(x=>({...x, id:x.id??x.itemId??x.itemID, itemCategory:x.itemCategory??x.item_category, tx:x.tx??x.textureX??x.texture_x, ty:x.ty??x.textureY??x.texture_y, texture:x.texture??x.textureFile??x.texture_name}));
-      countEl.innerHTML=`<span>${items.length.toLocaleString()}</span> items loaded · 96 per page`;
-      statusEl.textContent='Item database ready · choose a color to scan sprites';
-      $('loadError').style.display='none';
-      runSearch();
+      const response=await fetch(url,{cache:'force-cache',signal:controller.signal});
+      if(!response.ok)throw new Error('HTTP '+response.status+' for '+url);
+      return await response.json();
+    }finally{clearTimeout(timer);}
+  }
+  async function loadDatabase(){
+    const errors=[];
+    for(const base of ASSET_BASES){
+      try{
+        statusEl.innerHTML='<span class="small-spinner"></span>Connecting to item catalog…';
+        const payload=await fetchJsonWithTimeout(base+'items_db.json',60000);
+        const raw=Array.isArray(payload)?payload:(Array.isArray(payload.items)?payload.items:(Array.isArray(payload.data)?payload.data:null));
+        if(!raw||!raw.length)throw new Error('The catalog response contains no item records.');
+        ASSET_BASE=base;TILE_URL=ASSET_BASE+'tilesheets/';
+        let meta=[];
+        try{meta=await fetchJsonWithTimeout(base+'tilesheets_info.json',20000);}catch(metaError){console.warn('Optional texture metadata unavailable:',metaError);}
+        metadata=new Map((Array.isArray(meta)?meta:[]).map(x=>[x.filename,x]));
+        items=raw.filter(x=>x&&x.name&&x.name!=='Blank').map(x=>({...x,id:x.id??x.itemId??x.itemID,itemCategory:x.itemCategory??x.item_category,tx:x.tx??x.textureX??x.texture_x,ty:x.ty??x.textureY??x.texture_y,texture:x.texture??x.textureFile??x.texture_name}));
+        if(!items.length)throw new Error('The item catalog loaded but could not be normalized.');
+        countEl.innerHTML=`<span>${items.length.toLocaleString()}</span> items loaded · 96 per page`;
+        statusEl.textContent=`Catalog ready · ${items.length.toLocaleString()} items · source ${new URL(base).hostname}`;
+        $('loadError').style.display='none';
+        return items;
+      }catch(error){
+        console.warn('Catalog mirror failed:',base,error);
+        errors.push(error&&error.message?error.message:String(error));
+      }
+    }
+    throw new Error('All item catalog mirrors failed. '+errors.join(' | '));
+  }
+  async function init(){
+    databasePromise=loadDatabase();
+    try{
+      await databasePromise;
+      // Search the default color or the latest query the user entered while loading.
+      if(colorInput.value.trim()||nameInput.value.trim())await runSearch();
+      else {applyFilters();statusEl.textContent='Catalog ready · enter a color to begin';}
     }catch(err){
-      console.error(err);statusEl.textContent='Database unavailable';$('loadError').style.display='block';$('loadError').innerHTML='Could not connect to the public item database. Check your internet connection, then reload this page. <a style="color:#ffd4b7" href="https://github.com/araeys/growtopia-explorer/tree/main/public" target="_blank" rel="noopener">Open source files ↗</a>';
-      resultEl.innerHTML='<div class="empty"><div class="empty-icon">⚠</div><strong>Could not load the item index</strong>The app fetches the community item catalog and sprite sheets from GitHub when opened online.</div>';
+      console.error(err);statusEl.textContent='Database unavailable';$('loadError').style.display='block';$('loadError').textContent='Could not load the item catalog. Tried GitHub, jsDelivr, and the Growtopia Explorer host. '+(err&&err.message?err.message:'');
+      resultEl.innerHTML='<div class="empty"><div class="empty-icon">⚠</div><strong>Could not load the item index</strong>Check your connection, then press FIND ITEMS to retry or reload the page.</div>';
     }
   }
 
-  $('searchBtn').addEventListener('click',runSearch);
-  colorInput.addEventListener('keydown',e=>{if(e.key==='Enter')runSearch();});
-  nameInput.addEventListener('input',()=>{if(profiles.size||!currentColor)applyFilters();});
+  $('searchBtn').addEventListener('click',()=>{runSearch();});
+  colorInput.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();runSearch();}});
+  colorInput.addEventListener('input',()=>{
+    if(inputDebounceTimer)clearTimeout(inputDebounceTimer);
+    inputDebounceTimer=setTimeout(()=>{if(colorInput.value.trim())runSearch();},650);
+  });
+  nameInput.addEventListener('input',()=>{if(profiles.size||!currentColor){if(items.length)applyFilters();}});
   $('strictness').addEventListener('input',()=>{$('strictnessValue').textContent=getStrictness()+'%';if(profiles.size&&currentColor)applyFilters();});
   $('minCoverage').addEventListener('input',()=>{$('minCoverageValue').textContent=getMinCoverage()*100+'%';if(profiles.size&&currentColor)applyFilters();});
   $('moreBtn').addEventListener('click',()=>{visibleCount+=PAGE_SIZE;renderResults();});
   document.querySelectorAll('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{
     const value=btn.dataset.filter;
-    if(value==='All'){
-      activeFilters.clear();
-    } else {
-      if(activeFilters.has(value))activeFilters.delete(value);else activeFilters.add(value);
-    }
+    if(value==='All')activeFilters.clear();
+    else {if(activeFilters.has(value))activeFilters.delete(value);else activeFilters.add(value);}
     document.querySelectorAll('.filter-btn').forEach(b=>{
       const active=b.dataset.filter==='All'?activeFilters.size===0:activeFilters.has(b.dataset.filter);
       b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));
     });
-    applyFilters();
+    if(items.length)applyFilters();
   }));
   $('clearFilters').addEventListener('click',()=>{
     activeFilters.clear();
     document.querySelectorAll('.filter-btn').forEach(b=>{
       const active=b.dataset.filter==='All';b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));
     });
-    applyFilters();
+    if(items.length)applyFilters();
   });
   document.querySelectorAll('.example').forEach(btn=>btn.addEventListener('click',()=>{colorInput.value=btn.dataset.color;runSearch();}));
   colorPicker.addEventListener('input',()=>{colorInput.value=colorPicker.value;});
