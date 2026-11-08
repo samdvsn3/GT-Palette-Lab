@@ -7,7 +7,7 @@
 <title>GT Palette Lab — Growtopia Color Finder</title>
 <style>
 :root{color-scheme:dark;--bg:#0d0f14;--panel:#151922;--panel2:#1b202b;--line:#2b3341;--muted:#929cad;--text:#f3f5f8;--accent:#b7f36b;--accent2:#82c83b;--danger:#ff7777;--shadow:0 16px 45px rgba(0,0,0,.28)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(900px 520px at 8% -10%,rgba(183,243,107,.12),transparent 60%),radial-gradient(700px 400px at 100% 0%,rgba(93,145,255,.09),transparent 55%),var(--bg);color:var(--text);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}button,input,select{font:inherit}button{cursor:pointer}.shell{max-width:1440px;margin:auto;padding:28px 28px 50px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:34px}.brand{display:flex;gap:12px;align-items:center}.brand-mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#d8ff9b,#74b83b);display:grid;place-items:center;box-shadow:0 7px 24px rgba(139,214,76,.2);color:#18210e;font-weight:1000;font-size:18px;letter-spacing:-2px}.brand-name{font-size:16px;font-weight:850;letter-spacing:.2px}.brand-sub{font-size:11px;color:var(--muted);letter-spacing:1.8px;text-transform:uppercase}.top-tag{border:1px solid #3c4b2a;background:rgba(183,243,107,.08);color:#cbf79e;border-radius:99px;padding:7px 12px;font-size:11px;font-weight:700;letter-spacing:.5px}.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:end;margin-bottom:24px}.eyebrow{font-size:11px;letter-spacing:2.3px;color:var(--accent);font-weight:800;text-transform:uppercase;margin-bottom:10px}.hero h1{margin:0;font-size:clamp(34px,5vw,58px);line-height:1.02;letter-spacing:-2.7px;max-width:760px}.hero h1 span{color:var(--accent)}.hero p{color:#aab2c0;max-width:640px;font-size:15px;margin:16px 0 0}.hero-note{background:linear-gradient(145deg,rgba(183,243,107,.09),rgba(183,243,107,.025));border:1px solid #35402b;border-radius:18px;padding:17px 18px;color:#c9d3c1;font-size:12px}.hero-note strong{color:#e4f6ce;display:block;font-size:13px;margin-bottom:4px}.search-panel{background:rgba(21,25,34,.94);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow);margin-bottom:18px}.search-row{display:grid;grid-template-columns:minmax(220px,1.1fr) minmax(180px,.8fr) auto;gap:12px;align-items:end}.field label{font-size:11px;color:#a3adbd;font-weight:750;display:block;margin:0 0 8px 2px;letter-spacing:.7px;text-transform:uppercase}.input-wrap{height:52px;display:flex;align-items:center;gap:10px;padding:0 14px;background:#0f131a;border:1px solid #333c4b;border-radius:13px;transition:.2s}.input-wrap:focus-within{border-color:#91cd54;box-shadow:0 0 0 3px rgba(183,243,107,.1)}.input-wrap input{background:transparent;color:#fff;border:0;outline:0;width:100%;min-width:0;font-size:15px}.input-wrap input::placeholder{color:#677183}.search-icon{color:var(--accent);font-size:18px}.color-picker{width:35px;height:35px;flex:0 0 auto;border:0;background:transparent;padding:0;cursor:pointer}.color-picker::-webkit-color-swatch-wrapper{padding:0}.color-picker::-webkit-color-swatch{border:2px solid #ffffff33;border-radius:9px}.go-btn{height:52px;padding:0 23px;border:0;border-radius:13px;background:var(--accent);color:#19220f;font-weight:900;letter-spacing:.2px;box-shadow:0 8px 20px rgba(183,243,107,.16);transition:.18s}.go-btn:hover{background:#cbff8d;transform:translateY(-1px)}.helper-row{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:13px;flex-wrap:wrap}.examples{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.examples span{font-size:11px;color:#7f8999}.example{border:1px solid #303847;background:#1a202a;color:#bdc6d3;border-radius:99px;padding:5px 10px;font-size:11px}.example:hover{border-color:#a0d96a;color:#e9f6dc}.tolerance{display:flex;align-items:center;gap:9px;color:#a0aabd;font-size:11px}.tolerance input{accent-color:var(--accent);width:100px}.tolerance strong{color:#e2edda;min-width:32px}.filter-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:18px 0 16px}.filter-label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#768294;margin-right:5px;font-weight:800}.filter-btn{padding:8px 13px;border-radius:99px;border:1px solid #303847;background:#151a23;color:#aab4c3;font-size:12px;font-weight:650}.filter-btn:hover{color:white;border-color:#67768b}.filter-btn.active{background:rgba(183,243,107,.13);border-color:#719c45;color:#d7f7b0}.filter-help{font-size:11px;color:#7f8999;margin:-6px 2px 13px}.filter-actions{display:flex;gap:7px;margin-left:auto}.filter-mini{border:1px solid #303847;background:#151a23;color:#9eabbc;padding:6px 10px;border-radius:9px;font-size:10px}.filter-mini:hover{border-color:#789d51;color:#e4f4d4}.category-tag{max-width:100%}.item-meta{align-items:center}.item-meta-left{display:flex;align-items:center;gap:5px;min-width:0;flex-wrap:wrap}.category-tag.block{color:#d5f4b4;background:#27351f}.category-tag.wallpaper{color:#c8d8ff;background:#202c47}.category-tag.clothes{color:#ffd4e7;background:#45263a}.category-tag.seed{color:#e2d1a8;background:#403821}.status-row{display:flex;justify-content:space-between;gap:14px;align-items:center;margin:18px 2px 12px;flex-wrap:wrap}.result-count{font-size:13px;color:#dce2eb;font-weight:750}.result-count span{color:var(--accent)}.status-message{font-size:11px;color:#8792a3}.progress-wrap{display:none;height:5px;border-radius:99px;background:#252c38;overflow:hidden;margin:10px 0 17px}.progress-bar{width:0;height:100%;background:linear-gradient(90deg,#79b93b,#c5fa83);transition:width .18s}.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:13px}.item-card{min-width:0;position:relative;overflow:hidden;background:linear-gradient(155deg,#1a202b,#141922);border:1px solid #2b3341;border-radius:17px;padding:13px;transition:transform .16s,border-color .16s,box-shadow .16s;cursor:pointer}.item-card:hover{transform:translateY(-3px);border-color:#627b48;box-shadow:0 13px 26px rgba(0,0,0,.22)}.item-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.thumb-wrap{height:112px;border-radius:12px;background:radial-gradient(ellipse at 50% 55%,#283140,#141922 72%);display:grid;place-items:center;margin-bottom:11px;position:relative;overflow:hidden}.sprite{width:64px;height:64px;image-rendering:pixelated;image-rendering:crisp-edges;filter:drop-shadow(0 5px 7px rgba(0,0,0,.4));background-repeat:no-repeat}.match-badge{position:absolute;top:8px;right:8px;background:#111821db;border:1px solid #414c5d;color:#d6e7c5;border-radius:8px;padding:4px 6px;font-size:10px;font-weight:800}.item-name{font-size:13px;font-weight:800;line-height:1.3;min-height:34px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:#f1f3f7}.item-meta{display:flex;justify-content:space-between;align-items:center;gap:6px;margin-top:9px}.category-tag{display:inline-block;background:#252d3a;color:#aeb9c8;padding:4px 7px;border-radius:7px;font-size:9px;font-weight:750;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}.item-id{font-size:10px;color:#788596;font-variant-numeric:tabular-nums}.empty{grid-column:1/-1;border:1px dashed #3a4658;border-radius:18px;padding:44px 20px;text-align:center;color:#98a4b4;background:#141923}.empty strong{color:#ecf3e4;display:block;font-size:16px;margin-bottom:5px}.empty .empty-icon{font-size:30px;margin-bottom:10px}.more-row{text-align:center;margin:24px 0 0}.more-btn{border:1px solid #46543a;background:#1c2618;color:#d5f4b4;padding:11px 20px;border-radius:12px;font-weight:800}.more-btn:hover{background:#26351d}.footer{margin-top:42px;padding-top:20px;border-top:1px solid #252c37;color:#798494;font-size:11px;line-height:1.7;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer a{color:#b9d89b;text-decoration:none}.footer a:hover{text-decoration:underline}.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(3,5,8,.78);backdrop-filter:blur(8px);z-index:20}.modal.open{display:flex}.modal-card{width:min(520px,100%);background:#181e29;border:1px solid #414d60;border-radius:22px;padding:22px;box-shadow:0 24px 80px #000a;position:relative}.modal-close{position:absolute;right:14px;top:14px;border:1px solid #3c4657;background:#222a37;color:#d5dce6;width:34px;height:34px;border-radius:10px;font-size:18px}.modal-preview{height:190px;display:grid;place-items:center;background:radial-gradient(ellipse,#30394a,#141923 68%);border-radius:15px;margin-bottom:17px}.modal-preview .sprite{width:128px;height:128px;filter:drop-shadow(0 10px 14px #0009)}.modal-title{font-size:21px;font-weight:900;margin:0 40px 5px 0}.modal-sub{color:#9aa6b6;font-size:12px}.modal-details{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:17px 0}.detail{background:#111720;border:1px solid #2d3746;border-radius:11px;padding:10px}.detail span{display:block;font-size:10px;color:#8491a2;text-transform:uppercase;letter-spacing:.7px}.detail strong{display:block;font-size:13px;margin-top:3px}.wiki-link{display:inline-flex;text-decoration:none;color:#19210f;font-weight:850;font-size:12px;background:var(--accent);border-radius:10px;padding:10px 13px}.note{color:#7f8a9b;font-size:10px;margin-top:13px}.load-error{display:none;background:#2a1a1d;border:1px solid #6d363b;color:#ffc6c6;border-radius:13px;padding:14px;margin:12px 0;font-size:12px}.small-spinner{display:inline-block;width:12px;height:12px;border:2px solid #556247;border-top-color:#d7ffa5;border-radius:50%;animation:spin .75s linear infinite;vertical-align:-2px;margin-right:6px}@keyframes spin{to{transform:rotate(360deg)}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(900px 520px at 8% -10%,rgba(183,243,107,.12),transparent 60%),radial-gradient(700px 400px at 100% 0%,rgba(93,145,255,.09),transparent 55%),var(--bg);color:var(--text);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}button,input,select{font:inherit}button{cursor:pointer}.shell{max-width:1440px;margin:auto;padding:28px 28px 50px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:34px}.brand{display:flex;gap:12px;align-items:center}.brand-mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#d8ff9b,#74b83b);display:grid;place-items:center;box-shadow:0 7px 24px rgba(139,214,76,.2);color:#18210e;font-weight:1000;font-size:18px;letter-spacing:-2px}.brand-name{font-size:16px;font-weight:850;letter-spacing:.2px}.brand-sub{font-size:11px;color:var(--muted);letter-spacing:1.8px;text-transform:uppercase}.top-tag{border:1px solid #3c4b2a;background:rgba(183,243,107,.08);color:#cbf79e;border-radius:99px;padding:7px 12px;font-size:11px;font-weight:700;letter-spacing:.5px}.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:end;margin-bottom:24px}.eyebrow{font-size:11px;letter-spacing:2.3px;color:var(--accent);font-weight:800;text-transform:uppercase;margin-bottom:10px}.hero h1{margin:0;font-size:clamp(34px,5vw,58px);line-height:1.02;letter-spacing:-2.7px;max-width:760px}.hero h1 span{color:var(--accent)}.hero p{color:#aab2c0;max-width:640px;font-size:15px;margin:16px 0 0}.hero-note{background:linear-gradient(145deg,rgba(183,243,107,.09),rgba(183,243,107,.025));border:1px solid #35402b;border-radius:18px;padding:17px 18px;color:#c9d3c1;font-size:12px}.hero-note strong{color:#e4f6ce;display:block;font-size:13px;margin-bottom:4px}.search-panel{background:rgba(21,25,34,.94);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow);margin-bottom:18px}.search-row{display:grid;grid-template-columns:minmax(220px,1.1fr) minmax(180px,.8fr) auto;gap:12px;align-items:end}.field label{font-size:11px;color:#a3adbd;font-weight:750;display:block;margin:0 0 8px 2px;letter-spacing:.7px;text-transform:uppercase}.input-wrap{height:52px;display:flex;align-items:center;gap:10px;padding:0 14px;background:#0f131a;border:1px solid #333c4b;border-radius:13px;transition:.2s}.input-wrap:focus-within{border-color:#91cd54;box-shadow:0 0 0 3px rgba(183,243,107,.1)}.input-wrap input{background:transparent;color:#fff;border:0;outline:0;width:100%;min-width:0;font-size:15px}.input-wrap input::placeholder{color:#677183}.search-icon{color:var(--accent);font-size:18px}.color-picker{width:35px;height:35px;flex:0 0 auto;border:0;background:transparent;padding:0;cursor:pointer}.color-picker::-webkit-color-swatch-wrapper{padding:0}.color-picker::-webkit-color-swatch{border:2px solid #ffffff33;border-radius:9px}.go-btn{height:52px;padding:0 23px;border:0;border-radius:13px;background:var(--accent);color:#19220f;font-weight:900;letter-spacing:.2px;box-shadow:0 8px 20px rgba(183,243,107,.16);transition:.18s}.go-btn:hover{background:#cbff8d;transform:translateY(-1px)}.helper-row{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:13px;flex-wrap:wrap}.examples{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.examples span{font-size:11px;color:#7f8999}.example{border:1px solid #303847;background:#1a202a;color:#bdc6d3;border-radius:99px;padding:5px 10px;font-size:11px}.example:hover{border-color:#a0d96a;color:#e9f6dc}.tolerance{display:flex;align-items:center;gap:9px;color:#a0aabd;font-size:11px;flex-wrap:wrap}.tolerance input{accent-color:var(--accent);width:100px}.tolerance strong{color:#e2edda;min-width:38px}.coverage-control{display:flex;align-items:center;gap:9px;color:#a0aabd;font-size:11px;flex-wrap:wrap}.coverage-control input{accent-color:var(--accent);width:110px}.coverage-control strong{color:#e2edda;min-width:38px}.helper-row{align-items:flex-start}.filter-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:18px 0 16px}.filter-label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#768294;margin-right:5px;font-weight:800}.filter-btn{padding:8px 13px;border-radius:99px;border:1px solid #303847;background:#151a23;color:#aab4c3;font-size:12px;font-weight:650}.filter-btn:hover{color:white;border-color:#67768b}.filter-btn.active{background:rgba(183,243,107,.13);border-color:#719c45;color:#d7f7b0}.filter-help{font-size:11px;color:#7f8999;margin:-6px 2px 13px}.filter-actions{display:flex;gap:7px;margin-left:auto}.filter-mini{border:1px solid #303847;background:#151a23;color:#9eabbc;padding:6px 10px;border-radius:9px;font-size:10px}.filter-mini:hover{border-color:#789d51;color:#e4f4d4}.category-tag{max-width:100%}.item-meta{align-items:center}.item-meta-left{display:flex;align-items:center;gap:5px;min-width:0;flex-wrap:wrap}.category-tag.block{color:#d5f4b4;background:#27351f}.category-tag.wallpaper{color:#c8d8ff;background:#202c47}.category-tag.clothes{color:#ffd4e7;background:#45263a}.category-tag.seed{color:#e2d1a8;background:#403821}.status-row{display:flex;justify-content:space-between;gap:14px;align-items:center;margin:18px 2px 12px;flex-wrap:wrap}.result-count{font-size:13px;color:#dce2eb;font-weight:750}.result-count span{color:var(--accent)}.status-message{font-size:11px;color:#8792a3}.progress-wrap{display:none;height:5px;border-radius:99px;background:#252c38;overflow:hidden;margin:10px 0 17px}.progress-bar{width:0;height:100%;background:linear-gradient(90deg,#79b93b,#c5fa83);transition:width .18s}.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:13px}.item-card{min-width:0;position:relative;overflow:hidden;background:linear-gradient(155deg,#1a202b,#141922);border:1px solid #2b3341;border-radius:17px;padding:13px;transition:transform .16s,border-color .16s,box-shadow .16s;cursor:pointer}.item-card:hover{transform:translateY(-3px);border-color:#627b48;box-shadow:0 13px 26px rgba(0,0,0,.22)}.item-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.thumb-wrap{height:112px;border-radius:12px;background:radial-gradient(ellipse at 50% 55%,#283140,#141922 72%);display:grid;place-items:center;margin-bottom:11px;position:relative;overflow:hidden}.sprite{width:64px;height:64px;image-rendering:pixelated;image-rendering:crisp-edges;filter:drop-shadow(0 5px 7px rgba(0,0,0,.4));background-repeat:no-repeat}.match-badge{position:absolute;top:8px;right:8px;background:#111821db;border:1px solid #414c5d;color:#d6e7c5;border-radius:8px;padding:4px 6px;font-size:10px;font-weight:800}.item-name{font-size:13px;font-weight:800;line-height:1.3;min-height:34px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:#f1f3f7}.item-meta{display:flex;justify-content:space-between;align-items:center;gap:6px;margin-top:9px}.category-tag{display:inline-block;background:#252d3a;color:#aeb9c8;padding:4px 7px;border-radius:7px;font-size:9px;font-weight:750;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}.item-id{font-size:10px;color:#788596;font-variant-numeric:tabular-nums}.empty{grid-column:1/-1;border:1px dashed #3a4658;border-radius:18px;padding:44px 20px;text-align:center;color:#98a4b4;background:#141923}.empty strong{color:#ecf3e4;display:block;font-size:16px;margin-bottom:5px}.empty .empty-icon{font-size:30px;margin-bottom:10px}.more-row{text-align:center;margin:24px 0 0}.more-btn{border:1px solid #46543a;background:#1c2618;color:#d5f4b4;padding:11px 20px;border-radius:12px;font-weight:800}.more-btn:hover{background:#26351d}.footer{margin-top:42px;padding-top:20px;border-top:1px solid #252c37;color:#798494;font-size:11px;line-height:1.7;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer a{color:#b9d89b;text-decoration:none}.footer a:hover{text-decoration:underline}.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(3,5,8,.78);backdrop-filter:blur(8px);z-index:20}.modal.open{display:flex}.modal-card{width:min(520px,100%);background:#181e29;border:1px solid #414d60;border-radius:22px;padding:22px;box-shadow:0 24px 80px #000a;position:relative}.modal-close{position:absolute;right:14px;top:14px;border:1px solid #3c4657;background:#222a37;color:#d5dce6;width:34px;height:34px;border-radius:10px;font-size:18px}.modal-preview{height:190px;display:grid;place-items:center;background:radial-gradient(ellipse,#30394a,#141923 68%);border-radius:15px;margin-bottom:17px}.modal-preview .sprite{width:128px;height:128px;filter:drop-shadow(0 10px 14px #0009)}.modal-title{font-size:21px;font-weight:900;margin:0 40px 5px 0}.modal-sub{color:#9aa6b6;font-size:12px}.modal-details{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:17px 0}.detail{background:#111720;border:1px solid #2d3746;border-radius:11px;padding:10px}.detail span{display:block;font-size:10px;color:#8491a2;text-transform:uppercase;letter-spacing:.7px}.detail strong{display:block;font-size:13px;margin-top:3px}.wiki-link{display:inline-flex;text-decoration:none;color:#19210f;font-weight:850;font-size:12px;background:var(--accent);border-radius:10px;padding:10px 13px}.note{color:#7f8a9b;font-size:10px;margin-top:13px}.load-error{display:none;background:#2a1a1d;border:1px solid #6d363b;color:#ffc6c6;border-radius:13px;padding:14px;margin:12px 0;font-size:12px}.small-spinner{display:inline-block;width:12px;height:12px;border:2px solid #556247;border-top-color:#d7ffa5;border-radius:50%;animation:spin .75s linear infinite;vertical-align:-2px;margin-right:6px}@keyframes spin{to{transform:rotate(360deg)}}
 @media(max-width:1100px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:760px){.shell{padding:18px 14px 36px}.topbar{margin-bottom:26px}.hero{grid-template-columns:1fr;gap:16px}.hero h1{font-size:43px}.search-row{grid-template-columns:1fr 1fr}.search-row .field:first-child{grid-column:1/-1}.go-btn{grid-column:1/-1}.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.item-card{padding:9px}.thumb-wrap{height:94px}.item-name{font-size:12px}.hero-note{font-size:11px}}@media(max-width:430px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero h1{font-size:38px}.top-tag{font-size:9px}.search-panel{padding:13px}.tolerance{width:100%;justify-content:flex-start}.footer{display:block}.footer>div+div{margin-top:8px}}
 </style>
 </head>
@@ -24,7 +24,7 @@
       <h1>Find the right item.<br><span>Match your palette.</span></h1>
       <p>Search Growtopia items by the colors in their actual sprites. Find the reds, dusty pinks, deep maroons, warm oranges and every shade in between.</p>
     </div>
-    <aside class="hero-note"><strong>Dominant-color matching</strong>The search measures how much of the visible sprite is made up of your chosen color. Tiny highlights and small accents are ignored; the color must be one of the item's main palette colors.</aside>
+    <aside class="hero-note"><strong>Dominant-color coverage</strong>Results are ranked and filtered by the actual percentage of visible sprite pixels matching your color. A tiny gray edge on a white item will not count as a gray match.</aside>
   </section>
 
   <section class="search-panel">
@@ -41,7 +41,8 @@
     </div>
     <div class="helper-row">
       <div class="examples"><span>TRY:</span><button class="example" data-color="red">Red</button><button class="example" data-color="blue">Blue</button><button class="example" data-color="pink">Pink</button><button class="example" data-color="brown">Brown</button><button class="example" data-color="purple">Purple</button><button class="example" data-color="gold">Gold</button></div>
-      <div class="tolerance"><label for="tolerance">Color range</label><input id="tolerance" type="range" min="20" max="100" value="68"><strong id="toleranceValue">68°</strong><span>narrow ↔ broad · dominant colors only (min. 22% of sprite)</span></div>
+      <div class="tolerance"><label for="tolerance">Hue range</label><input id="tolerance" type="range" min="20" max="100" value="56"><strong id="toleranceValue">56°</strong><span>shade variation</span></div>
+      <div class="coverage-control"><label for="minCoverage">Minimum color area</label><input id="minCoverage" type="range" min="20" max="100" step="5" value="50"><strong id="minCoverageValue">50%</strong><span>raise to 90–100% for near-solid color matches</span></div>
     </div>
     <div id="loadError" class="load-error"></div>
   </section>
@@ -80,7 +81,7 @@
     <button id="modalClose" class="modal-close" aria-label="Close">×</button>
     <div class="modal-preview"><div id="modalSprite" class="sprite"></div></div>
     <h2 id="modalTitle" class="modal-title"></h2><div id="modalSub" class="modal-sub"></div>
-    <div class="modal-details"><div class="detail"><span>Item ID</span><strong id="modalId">—</strong></div><div class="detail"><span>Category</span><strong id="modalCategory">—</strong></div><div class="detail"><span>Texture</span><strong id="modalTexture">—</strong></div><div class="detail"><span>Dominant color area</span><strong id="modalMatch">—</strong></div></div>
+    <div class="modal-details"><div class="detail"><span>Item ID</span><strong id="modalId">—</strong></div><div class="detail"><span>Category</span><strong id="modalCategory">—</strong></div><div class="detail"><span>Texture</span><strong id="modalTexture">—</strong></div><div class="detail"><span>Dominant color coverage</span><strong id="modalMatch">—</strong></div></div>
     <a id="wikiLink" class="wiki-link" href="#" target="_blank" rel="noopener">OPEN ITEM REFERENCE ↗</a>
     <div class="note">Sprite shown at 4× native size with pixel edges preserved. Some animated or multi-part items may look different in-game.</div>
   </div>
@@ -152,7 +153,7 @@
       const c=document.createElement('canvas').getContext('2d');c.fillStyle='#000000';c.fillStyle=query;hex=c.fillStyle;
     }
     const rgb=hexToRgb(hex||''); if(!rgb) return null;
-    return {...rgb,...rgbToHsl(rgb.r,rgb.g,rgb.b),hex:rgbToHex(rgb),modifier,raw:query};
+    return {...rgb,...rgbToHsl(rgb.r,rgb.g,rgb.b),hex:rgbToHex(rgb),modifier,key:aliased,raw:query};
   }
   function rgbToHex({r,g,b}){return '#'+[r,g,b].map(x=>Math.round(x).toString(16).padStart(2,'0')).join('');}
   // Growtopia items.dat item type IDs (the category field, not arbitrary type fields).
@@ -253,36 +254,49 @@
     ctx.clearRect(0,0,TILE_SIZE,TILE_SIZE);
     ctx.drawImage(img,sx*TILE_SIZE,sy*TILE_SIZE,TILE_SIZE,TILE_SIZE,0,0,TILE_SIZE,TILE_SIZE);
     const data=ctx.getImageData(0,0,TILE_SIZE,TILE_SIZE).data;
-    const hue=new Float32Array(36), neutral=new Float32Array(16);
-    let vivid=0,gray=0,total=0,lightSum=0,lightWeight=0,satSum=0;
+
+    // Histograms store REAL visible pixel area (alpha-weighted), without the
+    // old saturation weighting that could turn small accents into high scores.
+    const hue=new Float32Array(36);       // 10-degree hue bins, chromatic pixels only
+    const neutral=new Float32Array(32);   // 1/32 lightness bins, neutral pixels only
+    let total=0, chromaticTotal=0, neutralTotal=0;
     for(let i=0;i<data.length;i+=4){
-      const a=data[i+3]/255;if(a<.2)continue;
-      const {h,s,l}=rgbToHsl(data[i],data[i+1],data[i+2]);total+=a;
-      if(s>.13){
-        const bin=Math.min(35,Math.floor(h/10));
-        // Saturation weighting softens noisy hues but still counts pastel tints.
-        const satWeight=Math.max(.55,Math.min(1,(s-.08)/.42));
-        const weight=a*satWeight;
-        hue[bin]+=weight;vivid+=weight;lightSum+=l*weight;satSum+=s*weight;lightWeight+=weight;
-      } else {
-        const bin=Math.min(15,Math.floor(l*16));neutral[bin]+=a;gray+=a;
+      const alpha=data[i+3]/255;
+      if(alpha<0.20)continue;
+      const weight=alpha;
+      const {h,s,l}=rgbToHsl(data[i],data[i+1],data[i+2]);
+      total+=weight;
+      if(s<0.18){
+        const bin=Math.max(0,Math.min(31,Math.floor(l*32)));
+        neutral[bin]+=weight;neutralTotal+=weight;
+      }else{
+        const bin=Math.max(0,Math.min(35,Math.floor(h/10)));
+        hue[bin]+=weight;chromaticTotal+=weight;
       }
     }
     if(total<1)return null;
-    // Estimate the largest visible palette family. Adjacent hue sectors are
-    // combined so reds straddling 0° and nearby shades count as one family.
-    const sectors=new Float32Array(12);
-    for(let i=0;i<36;i++)sectors[Math.floor(i/3)]+=hue[i];
-    let dominant=0;
-    for(let i=0;i<12;i++)dominant=Math.max(dominant,sectors[i]+sectors[(i+1)%12]);
-    // Neutral colors are grouped into five lightness bands (black → white).
-    const neutralBands=[0,0,0,0,0];
-    for(let i=0;i<16;i++)neutralBands[Math.min(4,Math.floor(i/3.2))]+=neutral[i];
-    for(const band of neutralBands)dominant=Math.max(dominant,band);
-    return {hue,neutral,vivid,gray,total,dominantShare:dominant/total,
-      meanL:lightWeight?lightSum/lightWeight:.5,meanS:lightWeight?satSum/lightWeight:0,
-      coverage:vivid/Math.max(.001,total)};
+    return {hue,neutral,total,chromaticTotal,neutralTotal};
   }
+
+  function neutralLightnessRange(target){
+    const key=String(target.key||'').toLowerCase();
+    let range;
+    if(key==='white') range=[0.80,1.00];
+    else if(key==='black') range=[0.00,0.20];
+    else if(key==='charcoal') range=[0.10,0.43];
+    else if(key==='silver') range=[0.58,0.91];
+    else if(key==='gray'||key==='grey') range=[0.22,0.80];
+    else range=[Math.max(0,target.l-0.11),Math.min(1,target.l+0.11)];
+
+    if(/dark|deep|tua|gelap/.test(target.modifier||'')){
+      range=[Math.max(0,range[0]-0.12),Math.min(range[1],0.53)];
+    }
+    if(/light|pale|pastel|muda|terang/.test(target.modifier||'')){
+      range=[Math.max(range[0],0.48),Math.min(1,range[1]+0.08)];
+    }
+    return range;
+  }
+
   async function analyzeDatabase(){
     if(analysisPromise)return analysisPromise;
     analysisPromise=(async()=>{
@@ -312,44 +326,45 @@
   }
   function hueDistance(a,b){const d=Math.abs(a-b)%360;return Math.min(d,360-d);}
   function scoreProfile(p,target,tolerance){
-    if(!p || !p.total)return {score:0,dominance:0};
+    if(!p || !p.total)return {coverage:0};
     let matchedArea=0;
-    if(target.s<.17){
-      // White / black / gray searches must be measured against ALL visible
-      // pixels, not only the few neutral pixels in an otherwise colorful item.
-      const targetBin=Math.max(0,Math.min(15,Math.floor(target.l*16)));
-      for(let i=0;i<16;i++){
-        const d=Math.abs(i-targetBin);
-        const similarity=Math.exp(-0.5*Math.pow(d/1.55,2));
-        matchedArea+=p.neutral[i]*similarity;
+    const key=String(target.key||'').toLowerCase();
+    const neutralNames=['white','black','gray','grey','silver','charcoal'];
+    const neutralQuery=neutralNames.includes(key) || target.s<0.17;
+
+    if(neutralQuery){
+      // Generic gray deliberately excludes near-white highlights and deep-black
+      // outlines. A white object with a few gray bevel pixels therefore has a
+      // low gray coverage percentage instead of being treated as a gray item.
+      const [minL,maxL]=neutralLightnessRange(target);
+      for(let i=0;i<32;i++){
+        const binMin=i/32,binMax=(i+1)/32;
+        const overlap=Math.max(0,Math.min(binMax,maxL)-Math.max(binMin,minL));
+        if(overlap>0)matchedArea+=p.neutral[i]*Math.min(1,overlap*32);
       }
     }else{
-      const sigma=Math.max(12,(tolerance+8)/2.0);
+      // Count only pixels inside the chosen hue window. Partial edge-bin
+      // weighting avoids a coarse histogram making a near-miss look exact.
+      const halfWidth=Math.max(10,Math.min(90,tolerance/2));
       for(let i=0;i<36;i++){
         const count=p.hue[i];if(!count)continue;
         const center=i*10+5;
         const d=hueDistance(center,target.h);
-        const hueSimilarity=Math.exp(-0.5*Math.pow(d/sigma,2));
-        matchedArea+=count*hueSimilarity;
+        const binInner=Math.max(0,d-5),binOuter=d+5;
+        let weight=0;
+        if(binOuter<=halfWidth)weight=1;
+        else if(binInner<halfWidth)weight=(halfWidth-binInner)/10;
+        matchedArea+=count*weight;
       }
     }
 
-    // This is the fraction of the complete opaque sprite occupied by the
-    // queried color family. Tiny accents no longer receive a perfect score.
-    let score=matchedArea/p.total;
-    const lightnessDistance=Math.abs(p.meanL-target.l);
-    if(target.s>=.17) score*=.92+.08*Math.exp(-0.5*Math.pow(lightnessDistance/.48,2));
-    if(target.modifier){
-      const dark=/dark|deep|tua|gelap/.test(target.modifier);
-      const light=/light|pale|pastel|muda|terang/.test(target.modifier);
-      if(dark)score*=.78+.22*Math.max(0,Math.min(1,(.78-p.meanL)/.48));
-      if(light)score*=.78+.22*Math.max(0,Math.min(1,(p.meanL-.18)/.48));
-    }
-    score=Math.max(0,Math.min(1,score));
-    const dominance=score/Math.max(.001,p.dominantShare||0);
-    return {score,dominance};
+    // Coverage is a percentage of ALL visible pixels in the sprite, not a
+    // similarity score among only the pixels that happened to match.
+    const coverage=Math.max(0,Math.min(1,matchedArea/p.total));
+    return {coverage};
   }
-  function getTolerance(){return Number($('tolerance').value)||68;}
+  function getMinCoverage(){return (Number($('minCoverage').value)||50)/100;}
+  function getTolerance(){return Number($('tolerance').value)||56;}
   function applyFilters(){
     const nameTerm=nameInput.value.trim().toLowerCase();
     const hasCategoryFilter=activeFilters.size>0;
@@ -362,18 +377,19 @@
       const tolerance=getTolerance();
       // Require a substantial share of the complete sprite AND require the
       // query color to be close to the item's leading palette family.
+      const minCoverage=getMinCoverage();
       list=list.map(item=>({item,...scoreProfile(profiles.get(item.id),currentColor,tolerance)}))
-        .filter(x=>x.score>=.22 && x.dominance>=.72);
-      list.sort((a,b)=>b.score-a.score||a.item.id-b.item.id);
+        .filter(x=>x.coverage>=minCoverage);
+      list.sort((a,b)=>b.coverage-a.coverage||a.item.id-b.item.id);
       filtered=list;
     }else{
-      list.sort((a,b)=>(a.id||0)-(b.id||0));filtered=list.map(item=>({item,score:0,dominance:0}));
+      list.sort((a,b)=>(a.id||0)-(b.id||0));filtered=list.map(item=>({item,coverage:0}));
     }
     visibleCount=PAGE_SIZE;renderResults();
   }
   function renderResults(){
     const visible=filtered.slice(0,visibleCount);
-    const matchText=currentColor?` dominant-color matches`:' items';
+    const matchText=currentColor?` items with dominant color coverage`:' items';
     const filterText=activeFilters.size?` · ${[...activeFilters].join(' + ')}`:'';
     countEl.innerHTML=`<span>${filtered.length.toLocaleString()}</span>${matchText}<span style="color:#7d899b;font-weight:500"> · showing ${visible.length.toLocaleString()}${filterText}</span>`;
     $('moreRow').hidden=filtered.length<=visibleCount;
@@ -384,7 +400,7 @@
     for(const entry of visible){
       const item=entry.item;const card=document.createElement('article');card.className='item-card';card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label',`Open ${item.name} details`);
       const thumb=document.createElement('div');thumb.className='thumb-wrap';const sprite=document.createElement('div');sprite.className='sprite';setSprite(sprite,item,2);thumb.appendChild(sprite);
-      if(currentColor){const badge=document.createElement('div');badge.className='match-badge';badge.textContent=Math.round(entry.score*100)+'% area';thumb.appendChild(badge);}
+      if(currentColor){const badge=document.createElement('div');badge.className='match-badge';badge.textContent=Math.round(entry.coverage*100)+'% color area';thumb.appendChild(badge);}
       const title=document.createElement('div');title.className='item-name';title.textContent=item.name||'Unknown item';
       const meta=document.createElement('div');meta.className='item-meta';const left=document.createElement('div');left.className='item-meta-left';const cat=document.createElement('span');const itemCategory=classify(item);cat.className='category-tag '+itemCategory.toLowerCase();cat.textContent=itemCategory;left.append(cat);const id=document.createElement('span');id.className='item-id';id.textContent='#'+item.id;meta.append(left,id);
       card.append(thumb,title,meta);card.addEventListener('click',()=>openItem(entry));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openItem(entry);}});frag.appendChild(card);
@@ -392,7 +408,7 @@
     resultEl.appendChild(frag);
   }
   function openItem(entry){
-    const item=entry.item;setSprite($('modalSprite'),item,4);$('modalTitle').textContent=item.name||'Unknown item';$('modalSub').textContent='Growtopia inventory sprite preview';$('modalId').textContent=item.id;$('modalCategory').textContent=classify(item);$('modalTexture').textContent=item.texture||'—';$('modalMatch').textContent=currentColor?Math.round(entry.score*100)+'% of sprite':'Not searched';
+    const item=entry.item;setSprite($('modalSprite'),item,4);$('modalTitle').textContent=item.name||'Unknown item';$('modalSub').textContent='Growtopia inventory sprite preview';$('modalId').textContent=item.id;$('modalCategory').textContent=classify(item);$('modalTexture').textContent=item.texture||'—';$('modalMatch').textContent=currentColor?Math.round(entry.coverage*100)+'% of visible pixels':'Not searched';
     $('wikiLink').href='https://growtopia.fandom.com/wiki/'+encodeURIComponent((item.name||'').replace(/ /g,'_'));$('itemModal').classList.add('open');
   }
   function closeModal(){$('itemModal').classList.remove('open');}
@@ -430,6 +446,7 @@
   colorInput.addEventListener('keydown',e=>{if(e.key==='Enter')runSearch();});
   nameInput.addEventListener('input',()=>{if(profiles.size||!currentColor)applyFilters();});
   $('tolerance').addEventListener('input',()=>{$('toleranceValue').textContent=getTolerance()+'°';if(profiles.size&&currentColor)applyFilters();});
+  $('minCoverage').addEventListener('input',()=>{$('minCoverageValue').textContent=getMinCoverage()*100+'%';if(profiles.size&&currentColor)applyFilters();});
   $('moreBtn').addEventListener('click',()=>{visibleCount+=PAGE_SIZE;renderResults();});
   document.querySelectorAll('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{
     const value=btn.dataset.filter;
