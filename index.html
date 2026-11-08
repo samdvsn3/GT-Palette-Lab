@@ -24,7 +24,7 @@
       <h1>Find the right item.<br><span>Match your palette.</span></h1>
       <p>Search Growtopia items by the colors in their actual sprites. Find the reds, dusty pinks, deep maroons, warm oranges and every shade in between.</p>
     </div>
-    <aside class="hero-note"><strong>How the color match works</strong>Each item sprite is sampled pixel-by-pixel. The match score ranks visual similarity; it is a guide for palette discovery, not a guaranteed color measurement.</aside>
+    <aside class="hero-note"><strong>Dominant-color matching</strong>The search measures how much of the visible sprite is made up of your chosen color. Tiny highlights and small accents are ignored; the color must be one of the item's main palette colors.</aside>
   </section>
 
   <section class="search-panel">
@@ -41,7 +41,7 @@
     </div>
     <div class="helper-row">
       <div class="examples"><span>TRY:</span><button class="example" data-color="red">Red</button><button class="example" data-color="blue">Blue</button><button class="example" data-color="pink">Pink</button><button class="example" data-color="brown">Brown</button><button class="example" data-color="purple">Purple</button><button class="example" data-color="gold">Gold</button></div>
-      <div class="tolerance"><label for="tolerance">Color range</label><input id="tolerance" type="range" min="20" max="100" value="68"><strong id="toleranceValue">68°</strong><span>narrow ↔ broad</span></div>
+      <div class="tolerance"><label for="tolerance">Color range</label><input id="tolerance" type="range" min="20" max="100" value="68"><strong id="toleranceValue">68°</strong><span>narrow ↔ broad · dominant colors only (min. 22% of sprite)</span></div>
     </div>
     <div id="loadError" class="load-error"></div>
   </section>
@@ -80,7 +80,7 @@
     <button id="modalClose" class="modal-close" aria-label="Close">×</button>
     <div class="modal-preview"><div id="modalSprite" class="sprite"></div></div>
     <h2 id="modalTitle" class="modal-title"></h2><div id="modalSub" class="modal-sub"></div>
-    <div class="modal-details"><div class="detail"><span>Item ID</span><strong id="modalId">—</strong></div><div class="detail"><span>Category</span><strong id="modalCategory">—</strong></div><div class="detail"><span>Texture</span><strong id="modalTexture">—</strong></div><div class="detail"><span>Color match</span><strong id="modalMatch">—</strong></div></div>
+    <div class="modal-details"><div class="detail"><span>Item ID</span><strong id="modalId">—</strong></div><div class="detail"><span>Category</span><strong id="modalCategory">—</strong></div><div class="detail"><span>Texture</span><strong id="modalTexture">—</strong></div><div class="detail"><span>Dominant color area</span><strong id="modalMatch">—</strong></div></div>
     <a id="wikiLink" class="wiki-link" href="#" target="_blank" rel="noopener">OPEN ITEM REFERENCE ↗</a>
     <div class="note">Sprite shown at 4× native size with pixel edges preserved. Some animated or multi-part items may look different in-game.</div>
   </div>
@@ -155,45 +155,76 @@
     return {...rgb,...rgbToHsl(rgb.r,rgb.g,rgb.b),hex:rgbToHex(rgb),modifier,raw:query};
   }
   function rgbToHex({r,g,b}){return '#'+[r,g,b].map(x=>Math.round(x).toString(16).padStart(2,'0')).join('');}
-  // items.dat category values: Seed=19, Clothes=20, Wallpaper variants=22/23.
-  // Prefer the original numeric itemCategory over fuzzy name matching.
+  // Growtopia items.dat item type IDs (the category field, not arbitrary type fields).
+  // Only read explicit category identifiers. Generic `type` values can describe
+  // unrelated metadata in community exports and previously caused false categories.
+  const ITEM_CATEGORY = new Map([
+    [0,'Tools'],[1,'Tools'],
+    [2,'Doors'],[3,'Decoration'],[4,'Decoration'],
+    [5,'Block'],[6,'Block'],[7,'Block'],[8,'Consumables'],[9,'Doors'],
+    [10,'Block'],[11,'Block'],[12,'Block'],[13,'Doors'],[14,'Block'],
+    [15,'Block'],[16,'Block'],[17,'Block'],[18,'Background'],[19,'Seeds'],
+    [20,'Clothes'],[21,'Block'],[22,'Wallpaper'],[23,'Wallpaper'],
+    [24,'Block'],[25,'Block'],[26,'Doors'],[27,'Block'],[28,'Background'],
+    [29,'Block'],[31,'Block'],[32,'Decoration'],[33,'Decoration'],[34,'Decoration'],
+    [35,'Block'],[36,'Block'],[37,'Components'],[38,'Decoration'],[39,'Decoration'],
+    [40,'Decoration'],[41,'Decoration'],[42,'Decoration'],[43,'Block'],
+    [45,'Block'],[46,'Decoration'],[47,'Decoration'],[49,'Decoration'],
+    [50,'Decoration'],[51,'Decoration'],[52,'Block'],[53,'Decoration'],
+    [54,'Decoration'],[55,'Decoration'],[56,'Decoration'],[57,'Decoration'],
+    [58,'Decoration'],[59,'Decoration'],[60,'Block'],[61,'Decoration'],
+    [62,'Decoration'],[63,'Decoration'],[65,'Decoration'],[66,'Decoration'],
+    [67,'Decoration'],[68,'Decoration'],[69,'Block'],[70,'Block'],[71,'Block'],
+    [72,'Decoration'],[73,'Decoration'],[74,'Decoration'],[75,'Decoration'],
+    [76,'Decoration'],[77,'Decoration'],[78,'Decoration'],[79,'Decoration'],
+    [80,'Decoration'],[81,'Decoration'],[82,'Decoration'],[83,'Decoration'],
+    [84,'Doors'],[85,'Decoration'],[86,'Decoration'],[87,'Decoration'],
+    [88,'Decoration'],[89,'Decoration'],[90,'Decoration'],[91,'Decoration'],
+    [92,'Decoration'],[93,'Decoration'],[94,'Decoration'],[95,'Decoration'],
+    [96,'Decoration'],[97,'Decoration'],[98,'Decoration'],[99,'Decoration'],
+    [100,'Decoration'],[101,'Decoration'],[102,'Decoration'],[103,'Decoration'],
+    [104,'Doors'],[105,'Doors'],[106,'Doors'],[108,'Block'],[109,'Decoration'],
+    [110,'Block'],[111,'Decoration'],[112,'Other'],[113,'Decoration'],
+    [114,'Decoration'],[115,'Decoration'],[116,'Decoration'],[117,'Decoration'],
+    [118,'Decoration'],[119,'Decoration'],[120,'Block'],[122,'Block'],
+    [123,'Block'],[124,'Decoration'],[125,'Decoration'],[126,'Decoration'],
+    [127,'Block'],[128,'Block'],[129,'Components'],[130,'Decoration'],
+    [131,'Decoration'],[132,'Decoration'],[134,'Decoration'],[135,'Block'],
+    [136,'Block'],[138,'Block'],[140,'Decoration'],[141,'Block'],
+    [142,'Doors'],[144,'Block'],[145,'Block']
+  ]);
   function classify(item){
-    const numericCandidates = [item.itemCategory, item.item_category, item.categoryId, item.category_id, item.itemTypeId, item.category, item.itemType, item.type];
-    let typeId = null;
-    for (const value of numericCandidates) {
-      if (value !== undefined && value !== null && value !== '' && Number.isFinite(Number(value))) {
-        typeId = Number(value); break;
+    // These are explicit item category keys used by community item exports.
+    const idKeys = ['itemCategory','item_category','itemCategoryId','item_category_id',
+      'categoryId','category_id','categoryID','itemTypeId','item_type_id','typeId','type_id'];
+    for (const key of idKeys) {
+      const value = item[key];
+      if (value !== undefined && value !== null && value !== '' && /^\d+$/.test(String(value).trim())) {
+        const label = ITEM_CATEGORY.get(Number(value));
+        if (label) return label;
       }
     }
-    if (typeId !== null) {
-      if (typeId === 19) return 'Seeds';
-      if (typeId === 20) return 'Clothes';
-      if (typeId === 22 || typeId === 23) return 'Wallpaper';
-      if (typeId === 18 || typeId === 28) return 'Background';
-      if (typeId === 0 || typeId === 1) return 'Tools';
-      if (typeId === 8) return 'Consumables';
-      if (typeId === 37) return 'Components';
-      if ([2,9,13,26,84].includes(typeId)) return 'Doors';
-      // Structural / hazard / animated foreground item categories.
-      if ([5,6,7,10,11,12,14,15,16,17,21,24,25,27,29,31,35,36,43,45,52,60,69,70,71].includes(typeId)) return 'Block';
-      // Placeable functional props and furnishings used as world decoration.
-      if ([3,4,32,33,34,38,39,40,41,42,46,47,49,50,53,54,55,56,57,58,59,61,62,63,65,66,67,68,72,73,74,75,76,77,78,79,80,81,82,83,85].includes(typeId)) return 'Decoration';
+
+    // String labels are safe to use; numeric generic fields are intentionally ignored.
+    const labelFields = [item.categoryName,item.category_name,item.itemCategoryName,
+      item.item_category_name,item.category,item.itemCategory,item.itemType,item.type];
+    for (const value of labelFields) {
+      if (typeof value !== 'string' || /^\d+$/.test(value.trim())) continue;
+      const normalized = value.trim().toLowerCase().replace(/[_-]+/g,' ').replace(/\s+/g,' ');
+      if (/wallpaper/.test(normalized)) return 'Wallpaper';
+      if (/\b(seed|seeds)\b/.test(normalized)) return 'Seeds';
+      if (/\b(clothes|clothing|wearable|equipment)\b/.test(normalized)) return 'Clothes';
+      if (/\b(tool|tools|weapon|fist|wrench)\b/.test(normalized)) return 'Tools';
+      if (/\b(door|doors|portal|portals|entrance)\b/.test(normalized)) return 'Doors';
+      if (/\b(background|backdrop)\b/.test(normalized)) return 'Background';
+      if (/\b(component|components|ingredient)\b/.test(normalized)) return 'Components';
+      if (/\b(consumable|consumables|currency|food)\b/.test(normalized)) return 'Consumables';
+      if (/\b(decoration|decor|furniture|furnishing|prop)\b/.test(normalized)) return 'Decoration';
+      if (/\b(foreground|block|blocks)\b/.test(normalized)) return 'Block';
     }
 
-    const raw = String(item.category ?? item.itemCategory ?? item.itemType ?? item.type ?? item.categoryName ?? '').trim().toLowerCase();
-    const normalized = raw.replace(/[_-]+/g, ' ').replace(/\s+/g, ' ');
-    if (/wallpaper|background wallpaper/.test(normalized)) return 'Wallpaper';
-    if (/\b(seed|seeds)\b/.test(normalized)) return 'Seeds';
-    if (/\b(clothes|clothing|wearable|equipment)\b/.test(normalized)) return 'Clothes';
-    if (/\b(tool|tools|weapon)\b/.test(normalized)) return 'Tools';
-    if (/\b(door|doors|portal|portals|entrance)\b/.test(normalized)) return 'Doors';
-    if (/\b(background|backdrop)\b/.test(normalized)) return 'Background';
-    if (/\b(component|components|ingredient)\b/.test(normalized)) return 'Components';
-    if (/\b(consumable|consumables|currency|food)\b/.test(normalized)) return 'Consumables';
-    if (/\b(decoration|decor|furniture|furnishing|prop)\b/.test(normalized)) return 'Decoration';
-    if (/\b(block|blocks|foreground block)\b/.test(normalized)) return 'Block';
-
-    // Safe name-based fallback only after structured fields are exhausted.
+    // Conservative fallback for older/incomplete records. Unclear items become
+    // Other instead of being guessed into Blocks or Wallpapers.
     const n = String(item.name || '').toLowerCase();
     if (/\bseed$/.test(n)) return 'Seeds';
     if (/wallpaper/.test(n)) return 'Wallpaper';
@@ -222,22 +253,35 @@
     ctx.clearRect(0,0,TILE_SIZE,TILE_SIZE);
     ctx.drawImage(img,sx*TILE_SIZE,sy*TILE_SIZE,TILE_SIZE,TILE_SIZE,0,0,TILE_SIZE,TILE_SIZE);
     const data=ctx.getImageData(0,0,TILE_SIZE,TILE_SIZE).data;
-    const hue=new Float32Array(36), neutral=new Float32Array(12);
+    const hue=new Float32Array(36), neutral=new Float32Array(16);
     let vivid=0,gray=0,total=0,lightSum=0,lightWeight=0,satSum=0;
     for(let i=0;i<data.length;i+=4){
       const a=data[i+3]/255;if(a<.2)continue;
       const {h,s,l}=rgbToHsl(data[i],data[i+1],data[i+2]);total+=a;
       if(s>.13){
         const bin=Math.min(35,Math.floor(h/10));
-        // Weight saturated pixels more, but keep pastel tints in the profile.
-        const weight=a*Math.min(1,Math.max(.18,s*1.35));
+        // Saturation weighting softens noisy hues but still counts pastel tints.
+        const satWeight=Math.max(.55,Math.min(1,(s-.08)/.42));
+        const weight=a*satWeight;
         hue[bin]+=weight;vivid+=weight;lightSum+=l*weight;satSum+=s*weight;lightWeight+=weight;
       } else {
-        const bin=Math.min(11,Math.floor(l*12));neutral[bin]+=a;gray+=a;
+        const bin=Math.min(15,Math.floor(l*16));neutral[bin]+=a;gray+=a;
       }
     }
     if(total<1)return null;
-    return {hue,neutral,vivid,gray,total,meanL:lightWeight?lightSum/lightWeight:.5,meanS:lightWeight?satSum/lightWeight:0,coverage:vivid/Math.max(.001,total)};
+    // Estimate the largest visible palette family. Adjacent hue sectors are
+    // combined so reds straddling 0° and nearby shades count as one family.
+    const sectors=new Float32Array(12);
+    for(let i=0;i<36;i++)sectors[Math.floor(i/3)]+=hue[i];
+    let dominant=0;
+    for(let i=0;i<12;i++)dominant=Math.max(dominant,sectors[i]+sectors[(i+1)%12]);
+    // Neutral colors are grouped into five lightness bands (black → white).
+    const neutralBands=[0,0,0,0,0];
+    for(let i=0;i<16;i++)neutralBands[Math.min(4,Math.floor(i/3.2))]+=neutral[i];
+    for(const band of neutralBands)dominant=Math.max(dominant,band);
+    return {hue,neutral,vivid,gray,total,dominantShare:dominant/total,
+      meanL:lightWeight?lightSum/lightWeight:.5,meanS:lightWeight?satSum/lightWeight:0,
+      coverage:vivid/Math.max(.001,total)};
   }
   async function analyzeDatabase(){
     if(analysisPromise)return analysisPromise;
@@ -268,45 +312,42 @@
   }
   function hueDistance(a,b){const d=Math.abs(a-b)%360;return Math.min(d,360-d);}
   function scoreProfile(p,target,tolerance){
-    if(!p)return 0;
+    if(!p || !p.total)return {score:0,dominance:0};
+    let matchedArea=0;
     if(target.s<.17){
-      if(!p.gray)return 0;
-      const targetBin=Math.max(0,Math.min(11,Math.floor(target.l*12)));
-      let weighted=0,total=0;
-      for(let i=0;i<12;i++){
+      // White / black / gray searches must be measured against ALL visible
+      // pixels, not only the few neutral pixels in an otherwise colorful item.
+      const targetBin=Math.max(0,Math.min(15,Math.floor(target.l*16)));
+      for(let i=0;i<16;i++){
         const d=Math.abs(i-targetBin);
-        const similarity=Math.exp(-0.5*Math.pow(d/2.25,2));
-        weighted+=p.neutral[i]*similarity;total+=p.neutral[i];
+        const similarity=Math.exp(-0.5*Math.pow(d/1.55,2));
+        matchedArea+=p.neutral[i]*similarity;
       }
-      return total?weighted/total:0;
+    }else{
+      const sigma=Math.max(12,(tolerance+8)/2.0);
+      for(let i=0;i<36;i++){
+        const count=p.hue[i];if(!count)continue;
+        const center=i*10+5;
+        const d=hueDistance(center,target.h);
+        const hueSimilarity=Math.exp(-0.5*Math.pow(d/sigma,2));
+        matchedArea+=count*hueSimilarity;
+      }
     }
-    if(!p.vivid)return 0;
-    let weighted=0,total=0;
-    // Tolerance is a hue radius control. A Gaussian curve avoids inflating a
-    // sprite's score just because one tiny pixel happens to match the query.
-    const sigma=Math.max(13,(tolerance+8)/1.55);
-    for(let i=0;i<36;i++){
-      const count=p.hue[i];if(!count)continue;
-      const center=i*10+5;
-      const d=hueDistance(center,target.h);
-      const hueSimilarity=Math.exp(-0.5*Math.pow(d/sigma,2));
-      weighted+=count*hueSimilarity;total+=count;
-    }
-    if(!total)return 0;
-    let score=weighted/total;
-    // Keep dark and light variants discoverable for a base-color search;
-    // shade only gently influences ranking unless the query says dark/light.
+
+    // This is the fraction of the complete opaque sprite occupied by the
+    // queried color family. Tiny accents no longer receive a perfect score.
+    let score=matchedArea/p.total;
     const lightnessDistance=Math.abs(p.meanL-target.l);
-    score*=.88+.12*Math.exp(-0.5*Math.pow(lightnessDistance/.42,2));
+    if(target.s>=.17) score*=.92+.08*Math.exp(-0.5*Math.pow(lightnessDistance/.48,2));
     if(target.modifier){
       const dark=/dark|deep|tua|gelap/.test(target.modifier);
       const light=/light|pale|pastel|muda|terang/.test(target.modifier);
-      if(dark)score*=.72+.28*Math.max(0,Math.min(1,(.78-p.meanL)/.48));
-      if(light)score*=.72+.28*Math.max(0,Math.min(1,(p.meanL-.18)/.48));
+      if(dark)score*=.78+.22*Math.max(0,Math.min(1,(.78-p.meanL)/.48));
+      if(light)score*=.78+.22*Math.max(0,Math.min(1,(p.meanL-.18)/.48));
     }
-    // Avoid giving very low-saturation grey sprites a strong chromatic score.
-    score*=.82+.18*Math.min(1,p.meanS/.45);
-    return Math.max(0,Math.min(1,score));
+    score=Math.max(0,Math.min(1,score));
+    const dominance=score/Math.max(.001,p.dominantShare||0);
+    return {score,dominance};
   }
   function getTolerance(){return Number($('tolerance').value)||68;}
   function applyFilters(){
@@ -319,18 +360,20 @@
     });
     if(currentColor){
       const tolerance=getTolerance();
-      // Lower floor deliberately keeps secondary palette matches discoverable.
-      list=list.map(item=>({item,score:scoreProfile(profiles.get(item.id),currentColor,tolerance)})).filter(x=>x.score>=.19);
+      // Require a substantial share of the complete sprite AND require the
+      // query color to be close to the item's leading palette family.
+      list=list.map(item=>({item,...scoreProfile(profiles.get(item.id),currentColor,tolerance)}))
+        .filter(x=>x.score>=.22 && x.dominance>=.72);
       list.sort((a,b)=>b.score-a.score||a.item.id-b.item.id);
       filtered=list;
     }else{
-      list.sort((a,b)=>(a.id||0)-(b.id||0));filtered=list.map(item=>({item,score:0}));
+      list.sort((a,b)=>(a.id||0)-(b.id||0));filtered=list.map(item=>({item,score:0,dominance:0}));
     }
     visibleCount=PAGE_SIZE;renderResults();
   }
   function renderResults(){
     const visible=filtered.slice(0,visibleCount);
-    const matchText=currentColor?` visual color matches`:' items';
+    const matchText=currentColor?` dominant-color matches`:' items';
     const filterText=activeFilters.size?` · ${[...activeFilters].join(' + ')}`:'';
     countEl.innerHTML=`<span>${filtered.length.toLocaleString()}</span>${matchText}<span style="color:#7d899b;font-weight:500"> · showing ${visible.length.toLocaleString()}${filterText}</span>`;
     $('moreRow').hidden=filtered.length<=visibleCount;
@@ -341,7 +384,7 @@
     for(const entry of visible){
       const item=entry.item;const card=document.createElement('article');card.className='item-card';card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label',`Open ${item.name} details`);
       const thumb=document.createElement('div');thumb.className='thumb-wrap';const sprite=document.createElement('div');sprite.className='sprite';setSprite(sprite,item,2);thumb.appendChild(sprite);
-      if(currentColor){const badge=document.createElement('div');badge.className='match-badge';badge.textContent=Math.round(entry.score*100)+'% match';thumb.appendChild(badge);}
+      if(currentColor){const badge=document.createElement('div');badge.className='match-badge';badge.textContent=Math.round(entry.score*100)+'% area';thumb.appendChild(badge);}
       const title=document.createElement('div');title.className='item-name';title.textContent=item.name||'Unknown item';
       const meta=document.createElement('div');meta.className='item-meta';const left=document.createElement('div');left.className='item-meta-left';const cat=document.createElement('span');const itemCategory=classify(item);cat.className='category-tag '+itemCategory.toLowerCase();cat.textContent=itemCategory;left.append(cat);const id=document.createElement('span');id.className='item-id';id.textContent='#'+item.id;meta.append(left,id);
       card.append(thumb,title,meta);card.addEventListener('click',()=>openItem(entry));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openItem(entry);}});frag.appendChild(card);
@@ -349,7 +392,7 @@
     resultEl.appendChild(frag);
   }
   function openItem(entry){
-    const item=entry.item;setSprite($('modalSprite'),item,4);$('modalTitle').textContent=item.name||'Unknown item';$('modalSub').textContent='Growtopia inventory sprite preview';$('modalId').textContent=item.id;$('modalCategory').textContent=classify(item);$('modalTexture').textContent=item.texture||'—';$('modalMatch').textContent=currentColor?Math.round(entry.score*100)+'%':'Not searched';
+    const item=entry.item;setSprite($('modalSprite'),item,4);$('modalTitle').textContent=item.name||'Unknown item';$('modalSub').textContent='Growtopia inventory sprite preview';$('modalId').textContent=item.id;$('modalCategory').textContent=classify(item);$('modalTexture').textContent=item.texture||'—';$('modalMatch').textContent=currentColor?Math.round(entry.score*100)+'% of sprite':'Not searched';
     $('wikiLink').href='https://growtopia.fandom.com/wiki/'+encodeURIComponent((item.name||'').replace(/ /g,'_'));$('itemModal').classList.add('open');
   }
   function closeModal(){$('itemModal').classList.remove('open');}
@@ -365,7 +408,7 @@
   }
   async function init(){
     try{
-      statusEl.innerHTML='<span class="small-spinner"></span>Loading 2026 item index…';
+      statusEl.innerHTML='<span class="small-spinner"></span>Loading community item index…';
       const [dbRes,metaRes]=await Promise.all([fetch(DB_URL,{cache:'no-cache'}),fetch(META_URL,{cache:'no-cache'})]);
       if(!dbRes.ok)throw new Error('Could not download item database ('+dbRes.status+').');
       const payload=await dbRes.json();const meta=metaRes.ok?await metaRes.json():[];
