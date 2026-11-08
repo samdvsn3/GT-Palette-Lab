@@ -41,8 +41,8 @@
     </div>
     <div class="helper-row">
       <div class="examples"><span>TRY:</span><button class="example" data-color="red">Red</button><button class="example" data-color="blue">Blue</button><button class="example" data-color="pink">Pink</button><button class="example" data-color="brown">Brown</button><button class="example" data-color="purple">Purple</button><button class="example" data-color="gold">Gold</button></div>
-      <div class="tolerance"><label for="tolerance">Hue range</label><input id="tolerance" type="range" min="20" max="100" value="56"><strong id="toleranceValue">56°</strong><span>shade variation</span></div>
-      <div class="coverage-control"><label for="minCoverage">Minimum color area</label><input id="minCoverage" type="range" min="20" max="100" step="5" value="50"><strong id="minCoverageValue">50%</strong><span>raise to 90–100% for near-solid color matches</span></div>
+      <div class="tolerance"><label for="tolerance">Hue range</label><input id="tolerance" type="range" min="12" max="72" step="2" value="26"><strong id="toleranceValue">26°</strong><span>smaller = more precise</span></div>
+      <div class="coverage-control"><label for="minCoverage">Minimum color area</label><input id="minCoverage" type="range" min="20" max="100" step="5" value="50"><strong id="minCoverageValue">50%</strong><span>minimum percentage of the whole visible sprite</span></div>
     </div>
     <div id="loadError" class="load-error"></div>
   </section>
@@ -257,7 +257,8 @@
 
     // Histograms store REAL visible pixel area (alpha-weighted), without the
     // old saturation weighting that could turn small accents into high scores.
-    const hue=new Float32Array(36);       // 10-degree hue bins, chromatic pixels only
+    const hue=new Float32Array(72);       // 5-degree hue bins for tighter color-family matching
+    const hueSat=new Float32Array(72);   // saturation sum for each hue bin
     const neutral=new Float32Array(32);   // 1/32 lightness bins, neutral pixels only
     let total=0, chromaticTotal=0, neutralTotal=0;
     for(let i=0;i<data.length;i+=4){
@@ -270,12 +271,12 @@
         const bin=Math.max(0,Math.min(31,Math.floor(l*32)));
         neutral[bin]+=weight;neutralTotal+=weight;
       }else{
-        const bin=Math.max(0,Math.min(35,Math.floor(h/10)));
-        hue[bin]+=weight;chromaticTotal+=weight;
+        const bin=Math.max(0,Math.min(71,Math.floor(h/5)));
+        hue[bin]+=weight;hueSat[bin]+=s*weight;chromaticTotal+=weight;
       }
     }
     if(total<1)return null;
-    return {hue,neutral,total,chromaticTotal,neutralTotal};
+    return {hue,hueSat,neutral,total,chromaticTotal,neutralTotal};
   }
 
   function neutralLightnessRange(target){
@@ -343,17 +344,25 @@
         if(overlap>0)matchedArea+=p.neutral[i]*Math.min(1,overlap*32);
       }
     }else{
-      // Count only pixels inside the chosen hue window. Partial edge-bin
-      // weighting avoids a coarse histogram making a near-miss look exact.
-      const halfWidth=Math.max(10,Math.min(90,tolerance/2));
-      for(let i=0;i<36;i++){
+      // Chromatic searches use a narrow hue window. The old 10-degree bins
+      // plus a 28-degree half-window let red bleed into orange, pink and brown.
+      // 5-degree bins and a smaller default window preserve shade variation
+      // (light/dark reds) without treating neighboring color families as red.
+      const halfWidth=Math.max(6,Math.min(36,tolerance/2));
+      const minSaturation=Math.max(0.18,Math.min(0.30,target.s*0.34));
+      for(let i=0;i<72;i++){
         const count=p.hue[i];if(!count)continue;
-        const center=i*10+5;
+        const center=i*5+2.5;
         const d=hueDistance(center,target.h);
-        const binInner=Math.max(0,d-5),binOuter=d+5;
+        const binInner=Math.max(0,d-2.5),binOuter=d+2.5;
         let weight=0;
         if(binOuter<=halfWidth)weight=1;
-        else if(binInner<halfWidth)weight=(halfWidth-binInner)/10;
+        else if(binInner<halfWidth)weight=(halfWidth-binInner)/5;
+        // Exclude weakly tinted near-neutrals from chromatic color searches.
+        // Their gray/white/black coverage is handled by the neutral histogram.
+        if(weight>0 && p.hueSat && p.hueSat[i] < minSaturation*count) {
+          weight *= Math.max(0, Math.min(1, p.hueSat[i] / Math.max(0.001, minSaturation*count)));
+        }
         matchedArea+=count*weight;
       }
     }
@@ -364,7 +373,7 @@
     return {coverage};
   }
   function getMinCoverage(){return (Number($('minCoverage').value)||50)/100;}
-  function getTolerance(){return Number($('tolerance').value)||56;}
+  function getTolerance(){return Number($('tolerance').value)||26;}
   function applyFilters(){
     const nameTerm=nameInput.value.trim().toLowerCase();
     const hasCategoryFilter=activeFilters.size>0;
@@ -400,7 +409,7 @@
     for(const entry of visible){
       const item=entry.item;const card=document.createElement('article');card.className='item-card';card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label',`Open ${item.name} details`);
       const thumb=document.createElement('div');thumb.className='thumb-wrap';const sprite=document.createElement('div');sprite.className='sprite';setSprite(sprite,item,2);thumb.appendChild(sprite);
-      if(currentColor){const badge=document.createElement('div');badge.className='match-badge';badge.textContent=Math.round(entry.coverage*100)+'% color area';thumb.appendChild(badge);}
+      if(currentColor){const badge=document.createElement('div');badge.className='match-badge';badge.textContent=Math.round(entry.coverage*100)+'% area match';thumb.appendChild(badge);}
       const title=document.createElement('div');title.className='item-name';title.textContent=item.name||'Unknown item';
       const meta=document.createElement('div');meta.className='item-meta';const left=document.createElement('div');left.className='item-meta-left';const cat=document.createElement('span');const itemCategory=classify(item);cat.className='category-tag '+itemCategory.toLowerCase();cat.textContent=itemCategory;left.append(cat);const id=document.createElement('span');id.className='item-id';id.textContent='#'+item.id;meta.append(left,id);
       card.append(thumb,title,meta);card.addEventListener('click',()=>openItem(entry));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openItem(entry);}});frag.appendChild(card);
